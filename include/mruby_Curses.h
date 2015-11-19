@@ -10,13 +10,13 @@
  */
 
 #define Curses_module(mrb) mrb_module_get(mrb, "Curses")
-#define MEVENT_class(mrb) mrb_class_get_under(mrb, Curses_module(mrb), "MEVENT")
-#define MOUSESTATUS_class(mrb) mrb_class_get_under(mrb, Curses_module(mrb), "MOUSESTATUS")
-#define SCREEN_class(mrb) mrb_class_get_under(mrb, Curses_module(mrb), "SCREEN")
+#define MEVENT_class(mrb) mrb_class_get_under(mrb, Curses_module(mrb), "MEvent")
+#define MOUSESTATUS_class(mrb) mrb_class_get_under(mrb, Curses_module(mrb), "MouseStatus")
+#define SCREEN_class(mrb) mrb_class_get_under(mrb, Curses_module(mrb), "Screen")
 #define Win_class(mrb) mrb_class_get_under(mrb, Curses_module(mrb), "Win")
 #define Panel_class(mrb) mrb_class_get_under(mrb, Curses_module(mrb), "Panel")
 #define Panelobs_class(mrb) mrb_class_get_under(mrb, Curses_module(mrb), "Panelobs")
-#define TERMINAL_class(mrb) mrb_class_get_under(mrb, Curses_module(mrb), "TERMINAL")
+#define TERMINAL_class(mrb) mrb_class_get_under(mrb, Curses_module(mrb), "Terminal")
 
 /*
  * Class Bindings Options

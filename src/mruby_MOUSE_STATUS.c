@@ -247,7 +247,7 @@ mrb_Curses_MOUSESTATUS_set_changes(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_Curses_MOUSESTATUS_init(mrb_state* mrb) {
-  struct RClass* MOUSESTATUS_class = mrb_define_class_under(mrb, Curses_module(mrb), "MOUSESTATUS", mrb->object_class);
+  struct RClass* MOUSESTATUS_class = mrb_define_class_under(mrb, Curses_module(mrb), "MouseStatus", mrb->object_class);
   MRB_SET_INSTANCE_TT(MOUSESTATUS_class, MRB_TT_DATA);
 
 #if BIND_MOUSESTATUS_INITIALIZE

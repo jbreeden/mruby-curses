@@ -106,7 +106,7 @@ mrb_Curses_TERMINAL_set__termname(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_Curses_TERMINAL_init(mrb_state* mrb) {
-  struct RClass* TERMINAL_class = mrb_define_class_under(mrb, Curses_module(mrb), "TERMINAL", mrb->object_class);
+  struct RClass* TERMINAL_class = mrb_define_class_under(mrb, Curses_module(mrb), "Terminal", mrb->object_class);
   MRB_SET_INSTANCE_TT(TERMINAL_class, MRB_TT_DATA);
 
 #if BIND_TERMINAL_INITIALIZE

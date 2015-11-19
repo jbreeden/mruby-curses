@@ -1538,7 +1538,7 @@ mrb_Curses_SCREEN_set_line_color(mrb_state* mrb, mrb_value self) {
 
 
 void mrb_Curses_SCREEN_init(mrb_state* mrb) {
-  struct RClass* SCREEN_class = mrb_define_class_under(mrb, Curses_module(mrb), "SCREEN", mrb->object_class);
+  struct RClass* SCREEN_class = mrb_define_class_under(mrb, Curses_module(mrb), "Screen", mrb->object_class);
   MRB_SET_INSTANCE_TT(SCREEN_class, MRB_TT_DATA);
 
 #if BIND_SCREEN_INITIALIZE

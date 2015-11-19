@@ -1208,7 +1208,8 @@ mrb_Curses_Win_set__parent(mrb_state* mrb, mrb_value self) {
 #endif
 
 
-void mrb_Curses_Win_init(mrb_state* mrb) {  struct RClass* Win_class = mrb_define_class_under(mrb, Curses_module(mrb), "Win", mrb->object_class);
+void mrb_Curses_Win_init(mrb_state* mrb) {
+  struct RClass* Win_class = mrb_define_class_under(mrb, Curses_module(mrb), "Win", mrb->object_class);
   MRB_SET_INSTANCE_TT(Win_class, MRB_TT_DATA);
 
 #if BIND_Win_INITIALIZE
