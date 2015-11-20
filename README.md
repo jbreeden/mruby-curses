@@ -11,6 +11,10 @@ Demo
 Building
 --------
 
+You can checkout an example build_config.rb for MRuby + mruby-curses [here](https://github.com/jbreeden/mruby/blob/curses/build_config.rb).
+
+The exact steps are as follows:
+
 - Download/clone [MRuby](https://github.com/mruby)
 - Download/clone `mruby-curses`
 - All required headers are included with the gem. No setup required.
@@ -22,7 +26,7 @@ Building
   + Ex: Building against pdcurses  
     `conf.linker.libraries = %w(pdcurses)`  
     `conf.linker.library_paths = ['WHERE/YOU/BUILT/pdcurses']`
-- Run `rake`.
+- Run `rake` in MRuby's root directory.
 
 You can try running the scripts in the `examples/` directory to test your build.
 Note that on Mac it may be required (read: it was on my machine) to `make install`
