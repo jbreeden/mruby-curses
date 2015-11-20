@@ -39,7 +39,7 @@ mruby_Curses_define_macro_constants(mrb_state* mrb) {
 #endif
 #ifdef A_BUTTON_CHANGED
   /* A_BUTTON_CHANGED appears to be a floating point number */
-  mrb_define_const(mrb, Curses_module(mrb), "A_BUTTON_CHANGED", mrb_float_value(mrb, A_BUTTON_CHANGED));
+  // mrb_define_const(mrb, Curses_module(mrb), "A_BUTTON_CHANGED", mrb_float_value(mrb, A_BUTTON_CHANGED));
 #endif
 #ifdef A_CHARTEXT
   /* A_CHARTEXT assumed to be an integer value */
@@ -1388,15 +1388,15 @@ mruby_Curses_define_macro_constants(mrb_state* mrb) {
 #endif
 #ifdef MOUSE_MOVED
   /* MOUSE_MOVED appears to be a floating point number */
-  mrb_define_const(mrb, Curses_module(mrb), "MOUSE_MOVED", mrb_float_value(mrb, MOUSE_MOVED));
+  // mrb_define_const(mrb, Curses_module(mrb), "MOUSE_MOVED", mrb_float_value(mrb, MOUSE_MOVED));
 #endif
 #ifdef MOUSE_POS_REPORT
   /* MOUSE_POS_REPORT appears to be a floating point number */
-  mrb_define_const(mrb, Curses_module(mrb), "MOUSE_POS_REPORT", mrb_float_value(mrb, MOUSE_POS_REPORT));
+  // mrb_define_const(mrb, Curses_module(mrb), "MOUSE_POS_REPORT", mrb_float_value(mrb, MOUSE_POS_REPORT));
 #endif
 #ifdef MOUSE_WHEEL_DOWN
   /* MOUSE_WHEEL_DOWN appears to be a floating point number */
-  mrb_define_const(mrb, Curses_module(mrb), "MOUSE_WHEEL_DOWN", mrb_float_value(mrb, MOUSE_WHEEL_DOWN));
+  // mrb_define_const(mrb, Curses_module(mrb), "MOUSE_WHEEL_DOWN", mrb_float_value(mrb, MOUSE_WHEEL_DOWN));
 #endif
 #ifdef MOUSE_WHEEL_SCROLL
   /* MOUSE_WHEEL_SCROLL assumed to be an integer value */
@@ -1404,19 +1404,19 @@ mruby_Curses_define_macro_constants(mrb_state* mrb) {
 #endif
 #ifdef MOUSE_WHEEL_UP
   /* MOUSE_WHEEL_UP appears to be a floating point number */
-  mrb_define_const(mrb, Curses_module(mrb), "MOUSE_WHEEL_UP", mrb_float_value(mrb, MOUSE_WHEEL_UP));
+  // mrb_define_const(mrb, Curses_module(mrb), "MOUSE_WHEEL_UP", mrb_float_value(mrb, MOUSE_WHEEL_UP));
 #endif
 #ifdef MOUSE_X_POS
   /* MOUSE_X_POS appears to be a floating point number */
-  mrb_define_const(mrb, Curses_module(mrb), "MOUSE_X_POS", mrb_float_value(mrb, MOUSE_X_POS));
+  // mrb_define_const(mrb, Curses_module(mrb), "MOUSE_X_POS", mrb_float_value(mrb, MOUSE_X_POS));
 #endif
 #ifdef MOUSE_Y_POS
   /* MOUSE_Y_POS appears to be a floating point number */
-  mrb_define_const(mrb, Curses_module(mrb), "MOUSE_Y_POS", mrb_float_value(mrb, MOUSE_Y_POS));
+  // mrb_define_const(mrb, Curses_module(mrb), "MOUSE_Y_POS", mrb_float_value(mrb, MOUSE_Y_POS));
 #endif
 #ifdef NULL
   /* NULL assumed to be an integer value */
-  mrb_define_const(mrb, Curses_module(mrb), "NULL", mrb_fixnum_value(NULL));
+  // mrb_define_const(mrb, Curses_module(mrb), "NULL", mrb_fixnum_value(NULL));
 #endif
 #ifdef OK
   /* OK assumed to be an integer value */

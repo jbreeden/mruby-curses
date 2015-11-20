@@ -229,7 +229,7 @@
  #define BIND_addchnstr_FUNCTION FALSE
  #define BIND_addchstr_FUNCTION FALSE
  #define BIND_addnstr_FUNCTION TRUE
- #define BIND_addrawch_FUNCTION TRUE
+ #define BIND_addrawch_FUNCTION FALSE /* PDCurses specific */
  #define BIND_addstr_FUNCTION TRUE
  #define BIND_assume_default_colors_FUNCTION TRUE
  #define BIND_attr_get_FUNCTION FALSE
@@ -256,7 +256,7 @@
  #define BIND_color_content_FUNCTION FALSE
  #define BIND_color_set_FUNCTION FALSE
  #define BIND_copywin_FUNCTION TRUE
- #define BIND_crmode_FUNCTION TRUE
+ #define BIND_crmode_FUNCTION FALSE /* PDCurses specific */
  #define BIND_curs_set_FUNCTION TRUE
  #define BIND_curses_version_FUNCTION TRUE
  #define BIND_def_prog_mode_FUNCTION TRUE
@@ -270,7 +270,7 @@
  #define BIND_delwin_FUNCTION TRUE
  #define BIND_derwin_FUNCTION TRUE
  #define BIND_doupdate_FUNCTION TRUE
- #define BIND_draino_FUNCTION TRUE
+ #define BIND_draino_FUNCTION FALSE /* PDCurses specific (equivalent to napms) */
  #define BIND_dupwin_FUNCTION TRUE
  #define BIND_echo_FUNCTION TRUE
  #define BIND_echochar_FUNCTION TRUE
@@ -278,19 +278,19 @@
  #define BIND_erase_FUNCTION TRUE
  #define BIND_erasechar_FUNCTION TRUE
  #define BIND_filter_FUNCTION TRUE
- #define BIND_fixterm_FUNCTION TRUE
+ #define BIND_fixterm_FUNCTION FALSE /* PDCurses specific (equivalient to reset_prog_mode) */
  #define BIND_flash_FUNCTION TRUE
  #define BIND_flushinp_FUNCTION TRUE
  #define BIND_getattrs_FUNCTION TRUE
  #define BIND_getbegx_FUNCTION TRUE
  #define BIND_getbegy_FUNCTION TRUE
  #define BIND_getbkgd_FUNCTION TRUE
- #define BIND_getbmap_FUNCTION TRUE
+ #define BIND_getbmap_FUNCTION FALSE /* PDCurses specific */
  #define BIND_getcurx_FUNCTION TRUE
  #define BIND_getcury_FUNCTION TRUE
  #define BIND_getmaxx_FUNCTION TRUE
  #define BIND_getmaxy_FUNCTION TRUE
- #define BIND_getmouse_FUNCTION TRUE
+ #define BIND_getmouse_FUNCTION FALSE /* PDCurses specific */
  #define BIND_getnstr_FUNCTION TRUE
  #define BIND_getparx_FUNCTION TRUE
  #define BIND_getpary_FUNCTION TRUE
@@ -317,12 +317,12 @@
  #define BIND_insdelln_FUNCTION TRUE
  #define BIND_insertln_FUNCTION TRUE
  #define BIND_insnstr_FUNCTION TRUE
- #define BIND_insrawch_FUNCTION TRUE
+ #define BIND_insrawch_FUNCTION FALSE /* PDCurses specific */
  #define BIND_insstr_FUNCTION TRUE
  #define BIND_instr_FUNCTION TRUE
  #define BIND_intrflush_FUNCTION TRUE
  #define BIND_is_linetouched_FUNCTION TRUE
- #define BIND_is_termresized_FUNCTION TRUE
+ #define BIND_is_termresized_FUNCTION FALSE /* PDCurses specific */
  #define BIND_is_wintouched_FUNCTION TRUE
  #define BIND_isendwin_FUNCTION TRUE
  #define BIND_keyname_FUNCTION TRUE
@@ -330,11 +330,11 @@
  #define BIND_killchar_FUNCTION TRUE
  #define BIND_leaveok_FUNCTION TRUE
  #define BIND_longname_FUNCTION TRUE
- #define BIND_map_button_FUNCTION TRUE
+ #define BIND_map_button_FUNCTION FALSE /* PDCurses specific */
  #define BIND_meta_FUNCTION TRUE
- #define BIND_mouse_off_FUNCTION TRUE
- #define BIND_mouse_on_FUNCTION TRUE
- #define BIND_mouse_set_FUNCTION TRUE
+ #define BIND_mouse_off_FUNCTION FALSE /* PDCurses specific */
+ #define BIND_mouse_on_FUNCTION FALSE /* PDCurses specific */
+ #define BIND_mouse_set_FUNCTION FALSE /* PDCurses specific */
  #define BIND_mouse_trafo_FUNCTION FALSE
  #define BIND_mouseinterval_FUNCTION TRUE
  #define BIND_mousemask_FUNCTION FALSE
@@ -344,12 +344,12 @@
  #define BIND_mvaddchnstr_FUNCTION FALSE
  #define BIND_mvaddchstr_FUNCTION FALSE
  #define BIND_mvaddnstr_FUNCTION TRUE
- #define BIND_mvaddrawch_FUNCTION TRUE
+ #define BIND_mvaddrawch_FUNCTION FALSE /* PDCurses specific */
  #define BIND_mvaddstr_FUNCTION TRUE
  #define BIND_mvchgat_FUNCTION FALSE
  #define BIND_mvcur_FUNCTION TRUE
  #define BIND_mvdelch_FUNCTION TRUE
- #define BIND_mvdeleteln_FUNCTION TRUE
+ #define BIND_mvdeleteln_FUNCTION FALSE /* PDCurses specific */
  #define BIND_mvderwin_FUNCTION TRUE
  #define BIND_mvgetch_FUNCTION TRUE
  #define BIND_mvgetnstr_FUNCTION TRUE
@@ -360,9 +360,9 @@
  #define BIND_mvinchstr_FUNCTION FALSE
  #define BIND_mvinnstr_FUNCTION TRUE
  #define BIND_mvinsch_FUNCTION TRUE
- #define BIND_mvinsertln_FUNCTION TRUE
+ #define BIND_mvinsertln_FUNCTION FALSE /* PDCurses specific */
  #define BIND_mvinsnstr_FUNCTION TRUE
- #define BIND_mvinsrawch_FUNCTION TRUE
+ #define BIND_mvinsrawch_FUNCTION FALSE /* PDCurses specific */
  #define BIND_mvinsstr_FUNCTION TRUE
  #define BIND_mvinstr_FUNCTION TRUE
  #define BIND_mvprintw_FUNCTION TRUE
@@ -372,11 +372,11 @@
  #define BIND_mvwaddchnstr_FUNCTION FALSE
  #define BIND_mvwaddchstr_FUNCTION FALSE
  #define BIND_mvwaddnstr_FUNCTION TRUE
- #define BIND_mvwaddrawch_FUNCTION TRUE
+ #define BIND_mvwaddrawch_FUNCTION FALSE /* PDCurses specific */
  #define BIND_mvwaddstr_FUNCTION TRUE
  #define BIND_mvwchgat_FUNCTION FALSE
  #define BIND_mvwdelch_FUNCTION TRUE
- #define BIND_mvwdeleteln_FUNCTION TRUE
+ #define BIND_mvwdeleteln_FUNCTION FALSE /* PDCurses specific */
  #define BIND_mvwgetch_FUNCTION TRUE
  #define BIND_mvwgetnstr_FUNCTION TRUE
  #define BIND_mvwgetstr_FUNCTION TRUE
@@ -387,23 +387,23 @@
  #define BIND_mvwinchstr_FUNCTION FALSE
  #define BIND_mvwinnstr_FUNCTION TRUE
  #define BIND_mvwinsch_FUNCTION TRUE
- #define BIND_mvwinsertln_FUNCTION TRUE
+ #define BIND_mvwinsertln_FUNCTION FALSE /* PDCurses specific */
  #define BIND_mvwinsnstr_FUNCTION TRUE
- #define BIND_mvwinsrawch_FUNCTION TRUE
+ #define BIND_mvwinsrawch_FUNCTION FALSE /* PDCurses specific */
  #define BIND_mvwinsstr_FUNCTION TRUE
  #define BIND_mvwinstr_FUNCTION TRUE
  #define BIND_mvwprintw_FUNCTION TRUE
  #define BIND_mvwscanw_FUNCTION TRUE
  #define BIND_mvwvline_FUNCTION TRUE
  #define BIND_napms_FUNCTION TRUE
- #define BIND_nc_getmouse_FUNCTION TRUE
+ #define BIND_nc_getmouse_FUNCTION FALSE /* Not found in ncurses on mac...? should be portable */
  #define BIND_new_panel_FUNCTION TRUE
  #define BIND_newpad_FUNCTION TRUE
  #define BIND_newterm_FUNCTION FALSE
  #define BIND_newwin_FUNCTION TRUE
  #define BIND_nl_FUNCTION TRUE
  #define BIND_nocbreak_FUNCTION TRUE
- #define BIND_nocrmode_FUNCTION TRUE
+ #define BIND_nocrmode_FUNCTION FALSE /* PDCurses specific */
  #define BIND_nodelay_FUNCTION TRUE
  #define BIND_noecho_FUNCTION TRUE
  #define BIND_nonl_FUNCTION TRUE
@@ -418,19 +418,19 @@
  #define BIND_panel_hidden_FUNCTION TRUE
  #define BIND_panel_userptr_FUNCTION FALSE
  #define BIND_panel_window_FUNCTION TRUE
- #define BIND_PDC_clearclipboard_FUNCTION TRUE
- #define BIND_PDC_debug_FUNCTION TRUE
- #define BIND_PDC_freeclipboard_FUNCTION TRUE
- #define BIND_PDC_get_input_fd_FUNCTION TRUE
- #define BIND_PDC_get_key_modifiers_FUNCTION TRUE
- #define BIND_PDC_getclipboard_FUNCTION FALSE
- #define BIND_PDC_return_key_modifiers_FUNCTION TRUE
- #define BIND_PDC_save_key_modifiers_FUNCTION TRUE
- #define BIND_PDC_set_blink_FUNCTION TRUE
- #define BIND_PDC_set_line_color_FUNCTION TRUE
- #define BIND_PDC_set_title_FUNCTION TRUE
- #define BIND_PDC_setclipboard_FUNCTION TRUE
- #define BIND_PDC_ungetch_FUNCTION TRUE
+ #define BIND_PDC_clearclipboard_FUNCTION FALSE /* PDCurses specific */
+ #define BIND_PDC_debug_FUNCTION FALSE /* PDCurses specific */
+ #define BIND_PDC_freeclipboard_FUNCTION FALSE /* PDCurses specific */
+ #define BIND_PDC_get_input_fd_FUNCTION FALSE /* PDCurses specific */
+ #define BIND_PDC_get_key_modifiers_FUNCTION FALSE /* PDCurses specific */
+ #define BIND_PDC_getclipboard_FUNCTION FALSE /* PDCurses specific */
+ #define BIND_PDC_return_key_modifiers_FUNCTION FALSE /* PDCurses specific */
+ #define BIND_PDC_save_key_modifiers_FUNCTION FALSE /* PDCurses specific */
+ #define BIND_PDC_set_blink_FUNCTION FALSE /* PDCurses specific */
+ #define BIND_PDC_set_line_color_FUNCTION FALSE /* PDCurses specific */
+ #define BIND_PDC_set_title_FUNCTION FALSE /* PDCurses specific */
+ #define BIND_PDC_setclipboard_FUNCTION FALSE /* PDCurses specific */
+ #define BIND_PDC_ungetch_FUNCTION FALSE /* PDCurses specific */
  #define BIND_pechochar_FUNCTION TRUE
  #define BIND_pnoutrefresh_FUNCTION TRUE
  #define BIND_prefresh_FUNCTION TRUE
@@ -439,20 +439,20 @@
  #define BIND_putwin_FUNCTION FALSE
  #define BIND_qiflush_FUNCTION TRUE
  #define BIND_raw_FUNCTION TRUE
- #define BIND_raw_output_FUNCTION TRUE
+ #define BIND_raw_output_FUNCTION FALSE /* PDCurses specific */
  #define BIND_redrawwin_FUNCTION TRUE
  #define BIND_refresh_FUNCTION TRUE
  #define BIND_replace_panel_FUNCTION TRUE
- #define BIND_request_mouse_pos_FUNCTION TRUE
+ #define BIND_request_mouse_pos_FUNCTION FALSE /* PDCurses specific */
  #define BIND_reset_prog_mode_FUNCTION TRUE
  #define BIND_reset_shell_mode_FUNCTION TRUE
- #define BIND_resetterm_FUNCTION TRUE
+ #define BIND_resetterm_FUNCTION FALSE /* PDCurses specific (equivalent to reset_shell_mode) */
  #define BIND_resetty_FUNCTION TRUE
  #define BIND_resize_term_FUNCTION TRUE
- #define BIND_resize_window_FUNCTION TRUE
+ #define BIND_resize_window_FUNCTION FALSE /* PDCurses specific */
  #define BIND_restartterm_FUNCTION FALSE
  #define BIND_ripoffline_FUNCTION FALSE
- #define BIND_saveterm_FUNCTION TRUE
+ #define BIND_saveterm_FUNCTION FALSE /* PDCurses specific */
  #define BIND_savetty_FUNCTION TRUE
  #define BIND_scanw_FUNCTION TRUE
  #define BIND_scr_dump_FUNCTION TRUE
@@ -466,8 +466,8 @@
  #define BIND_set_panel_userptr_FUNCTION FALSE
  #define BIND_set_term_FUNCTION TRUE
  #define BIND_setscrreg_FUNCTION TRUE
- #define BIND_setsyx_FUNCTION TRUE
- #define BIND_setterm_FUNCTION TRUE
+ #define BIND_setsyx_FUNCTION FALSE /* PDCurses specific */
+ #define BIND_setterm_FUNCTION FALSE /* PDCurses specific */
  #define BIND_setupterm_FUNCTION FALSE
  #define BIND_show_panel_FUNCTION TRUE
  #define BIND_slk_attr_off_FUNCTION FALSE
@@ -508,8 +508,8 @@
  #define BIND_touchwin_FUNCTION TRUE
  #define BIND_tparm_FUNCTION TRUE
  #define BIND_tputs_FUNCTION FALSE
- #define BIND_traceoff_FUNCTION TRUE
- #define BIND_traceon_FUNCTION TRUE
+ #define BIND_traceoff_FUNCTION FALSE /* PDCurses specific */
+ #define BIND_traceon_FUNCTION FALSE /* PDCurses specific */
  #define BIND_typeahead_FUNCTION TRUE
  #define BIND_unctrl_FUNCTION TRUE
  #define BIND_ungetmouse_FUNCTION TRUE
@@ -530,7 +530,7 @@
  #define BIND_waddchnstr_FUNCTION FALSE
  #define BIND_waddchstr_FUNCTION FALSE
  #define BIND_waddnstr_FUNCTION TRUE
- #define BIND_waddrawch_FUNCTION TRUE
+ #define BIND_waddrawch_FUNCTION FALSE /* PDCurses specific */
  #define BIND_waddstr_FUNCTION TRUE
  #define BIND_wattr_get_FUNCTION FALSE
  #define BIND_wattr_off_FUNCTION FALSE
@@ -565,14 +565,14 @@
  #define BIND_winsdelln_FUNCTION TRUE
  #define BIND_winsertln_FUNCTION TRUE
  #define BIND_winsnstr_FUNCTION TRUE
- #define BIND_winsrawch_FUNCTION TRUE
+ #define BIND_winsrawch_FUNCTION FALSE /* PDCurses specific */
  #define BIND_winsstr_FUNCTION TRUE
  #define BIND_winstr_FUNCTION TRUE
- #define BIND_wmouse_position_FUNCTION FALSE
+ #define BIND_wmouse_position_FUNCTION FALSE /* PDCurses specific */
  #define BIND_wmouse_trafo_FUNCTION FALSE
  #define BIND_wmove_FUNCTION TRUE
  #define BIND_wnoutrefresh_FUNCTION TRUE
- #define BIND_wordchar_FUNCTION TRUE
+ #define BIND_wordchar_FUNCTION FALSE /* PDCurses specific */
  #define BIND_wprintw_FUNCTION TRUE
  #define BIND_wredrawln_FUNCTION TRUE
  #define BIND_wrefresh_FUNCTION TRUE

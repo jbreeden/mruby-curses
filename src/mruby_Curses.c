@@ -16390,7 +16390,7 @@ mrb_Curses_wvline(mrb_state* mrb, mrb_value self) {
 #endif
 
 
-void mrb_mruby_pdcurses_gem_init(mrb_state* mrb) {
+void mrb_mruby_curses_gem_init(mrb_state* mrb) {
   struct RClass* Curses_module = mrb_define_module(mrb, "Curses");
   mruby_Curses_define_macro_constants(mrb);
 
@@ -17511,7 +17511,7 @@ void mrb_mruby_pdcurses_gem_init(mrb_state* mrb) {
 
 }
 
-void mrb_mruby_pdcurses_gem_final(mrb_state* mrb){
+void mrb_mruby_curses_gem_final(mrb_state* mrb){
 
 }
 
