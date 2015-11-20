@@ -3,6 +3,11 @@ mruby-curses
 
 Curses bindings for MRuby. Links against PDCurses or NCurses.
 
+Demo
+----
+
+![Demo GIF](/demo.gif?raw=true)
+
 Building
 --------
 
