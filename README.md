@@ -32,6 +32,16 @@ and linking into MRuby resulted in errors like "Error opening terminal xterm-256
 On windows, building pdcurses with clang (via mingw32-make & cygwin) then linking
 to MRuby (also building with clang) is very straightforward and "just works."
 
+API
+---
+
+The API is 1-to-1 with the C API for curses. Parameters map the way you would expect (char* to String, int to Fixnum, etc).
+A point of note is that characters in curses are handled as numbers (same as the MRI Curses gem). Though, the *addch family
+of functions will allow you to pass a single character string as well.
+
+The bound functions are listed below. If you're new to curses development, you can find documentation online.
+You might start [here](http://tldp.org/HOWTO/NCURSES-Programming-HOWTO/) or [here](http://pdcurses.sourceforge.net/doc/).
+
 Bound Functions
 ---------------
 
