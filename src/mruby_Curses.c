@@ -3419,6 +3419,9 @@ mrb_Curses_insdelln(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_insertln(mrb_state* mrb, mrb_value self) {
+  /* Raises if any arguments are passed */
+  mrb_get_args(mrb, "");
+
   /* Invocation */
   int result = insertln();
 
@@ -16063,6 +16066,11 @@ mrb_Curses_wvline(mrb_state* mrb, mrb_value self) {
 #endif
 
 mrb_value
+mruby_Curses_stdscr(mrb_state* mrb, mrb_value self) {
+  return stdscr == NULL ? mrb_nil_value() : mruby_box__win(mrb, stdscr);
+}
+
+mrb_value
 mrb_Curses_LINES(mrb_state* mrb, mrb_value self) {
   return mrb_fixnum_value(LINES);
 }
@@ -16119,6 +16127,7 @@ void mrb_mruby_curses_gem_init(mrb_state* mrb) {
   /*
    * Global Functions
    */
+mrb_define_class_method(mrb, Curses_module, "stdscr", mruby_Curses_stdscr, MRB_ARGS_ARG(0, 0));
 mrb_define_class_method(mrb, Curses_module, "LINES", mrb_Curses_LINES, MRB_ARGS_ARG(0, 0));
 mrb_define_class_method(mrb, Curses_module, "COLS", mrb_Curses_COLS, MRB_ARGS_ARG(0, 0));
 mrb_define_class_method(mrb, Curses_module, "COLORS", mrb_Curses_COLORS, MRB_ARGS_ARG(0, 0));
