@@ -11,6 +11,10 @@ Demo
 Building
 --------
 
+You can checkout an example build_config.rb for MRuby + mruby-curses [here](https://github.com/jbreeden/mruby/blob/curses/build_config.rb).
+
+The exact steps are as follows:
+
 - Download/clone [MRuby](https://github.com/mruby)
 - Download/clone `mruby-curses`
 - All required headers are included with the gem. No setup required.
@@ -22,7 +26,7 @@ Building
   + Ex: Building against pdcurses  
     `conf.linker.libraries = %w(pdcurses)`  
     `conf.linker.library_paths = ['WHERE/YOU/BUILT/pdcurses']`
-- Run `rake`.
+- Run `rake` in MRuby's root directory.
 
 You can try running the scripts in the `examples/` directory to test your build.
 Note that on Mac it may be required (read: it was on my machine) to `make install`
@@ -31,6 +35,16 @@ and linking into MRuby resulted in errors like "Error opening terminal xterm-256
 
 On windows, building pdcurses with clang (via mingw32-make & cygwin) then linking
 to MRuby (also building with clang) is very straightforward and "just works."
+
+API
+---
+
+The API is 1-to-1 with the C API for curses. Parameters map the way you would expect (char* to String, int to Fixnum, etc).
+A point of note is that characters in curses are handled as numbers (same as the MRI Curses gem). Though, the *addch family
+of functions will allow you to pass a single character string as well.
+
+The bound functions are listed below. If you're new to curses development, you can find documentation online.
+You might start [here](http://tldp.org/HOWTO/NCURSES-Programming-HOWTO/) or [here](http://pdcurses.sourceforge.net/doc/).
 
 Bound Functions
 ---------------
