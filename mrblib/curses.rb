@@ -1,10 +1,4 @@
 class << Curses
-  def COLOR_PAIR(n)
-    (((n) << Curses::PDC_COLOR_SHIFT) & Curses::A_COLOR)
-  end
-  alias color_pair COLOR_PAIR
-
-
   alias _c_addch addch
   def addch(*args)
     if args.last.kind_of?(String)
@@ -41,4 +35,12 @@ class << Curses
     _c_waddch(*args)
   end
 
+  def getch
+    self.wgetch(self.stdscr)
+  end
+
+  def COLOR_PAIR(n)
+    (((n) << Curses::PDC_COLOR_SHIFT) & Curses::A_COLOR)
+  end
+  alias color_pair COLOR_PAIR
 end
