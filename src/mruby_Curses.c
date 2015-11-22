@@ -1233,48 +1233,20 @@ mrb_Curses_color_content(mrb_state* mrb, mrb_value self) {
 #endif
 
 #if BIND_color_set_FUNCTION
-#define color_set_REQUIRED_ARGC 2
+#define color_set_REQUIRED_ARGC 1
 #define color_set_OPTIONAL_ARGC 0
 /* color_set
  *
  * Parameters:
  * - arg1: short
- * - arg2: void *
  * Return Type: int
  */
 mrb_value
 mrb_Curses_color_set(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  mrb_value arg2;
-
-  /* Fetch the args */
-  mrb_get_args(mrb, "oo", &arg1, &arg2);
-
-
-  /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->fixnum_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected");
-    return mrb_nil_value();
-  }
-  TODO_type_check_void_PTR(arg2);
-
-
-  /* Unbox parameters */
-  short native_arg1 = mrb_fixnum(arg1);
-
-  void * native_arg2 = TODO_mruby_unbox_void_PTR(arg2);
-
-  /* Invocation */
-  int result = color_set(native_arg1, native_arg2);
-
-  /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
-  mrb_value return_value = mrb_fixnum_value(result);
-
-  return return_value;
+  mrb_value native_arg1;
+  mrb_get_args(mrb, "i", &native_arg1);
+  /* Third param is not used, only reserved */
+  return mrb_fixnum_value(color_set(native_arg1, NULL));
 }
 #endif
 
@@ -13798,7 +13770,7 @@ mrb_Curses_wclrtoeol(mrb_state* mrb, mrb_value self) {
 #endif
 
 #if BIND_wcolor_set_FUNCTION
-#define wcolor_set_REQUIRED_ARGC 3
+#define wcolor_set_REQUIRED_ARGC 2
 #define wcolor_set_OPTIONAL_ARGC 0
 /* wcolor_set
  *
@@ -13811,43 +13783,23 @@ mrb_Curses_wclrtoeol(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_wcolor_set(mrb_state* mrb, mrb_value self) {
   mrb_value arg1;
-  mrb_value arg2;
-  mrb_value arg3;
+  mrb_int native_arg2;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "ooo", &arg1, &arg2, &arg3);
-
+  mrb_get_args(mrb, "oi", &arg1, &native_arg2);
 
   /* Type checking */
   if (!mrb_obj_is_kind_of(mrb, arg1, Win_class(mrb))) {
     mrb_raise(mrb, E_TYPE_ERROR, "Win expected");
     return mrb_nil_value();
   }
-  if (!mrb_obj_is_kind_of(mrb, arg2, mrb->fixnum_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected");
-    return mrb_nil_value();
-  }
-  TODO_type_check_void_PTR(arg3);
-
 
   /* Unbox parameters */
   struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-  short native_arg2 = mrb_fixnum(arg2);
-
-  void * native_arg3 = TODO_mruby_unbox_void_PTR(arg3);
-
   /* Invocation */
-  int result = wcolor_set(native_arg1, native_arg2, native_arg3);
-
-  /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
-  mrb_value return_value = mrb_fixnum_value(result);
-
-  return return_value;
+  /* Third param is not used, only reserved */
+  return mrb_fixnum_value(wcolor_set(native_arg1, native_arg2, NULL));
 }
 #endif
 
