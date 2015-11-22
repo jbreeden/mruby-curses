@@ -17,15 +17,21 @@ The exact steps are as follows:
 
 - Download/clone [MRuby](https://github.com/mruby)
 - Download/clone `mruby-curses`
-- All required headers are included with the gem. No setup required.
-- Set the linker options in MRuby's `build_config.rb` to link with your
-  curses library of choice.
+- Add the directory containing your system's curses headers to `include_paths`
+  in MRuby's `build_config.rb` file.
+  + Ex: Building with NCurses  
+    `conf.cc.include_paths << 'PATH/TO/NCURSES/include'`
+  + Ex: Building with PDCurses  
+    `conf.cc.include_paths << 'PATH/TO/PDCURSES'`
+- Add the directory containing your system's curses libraries to `library_paths`,
+  then add the library names to `libraries` in MRuby's `build_config.rb` file, .
   + Ex: Build against ncurses  
-    `conf.linker.libraries = %w(panel ncurses)`  
-    `conf.linker.library_paths = ['WHERE/YOU/BUILT/NCURSE/lib']`
+    `conf.linker.library_paths = ['PATH/TO/NCURSES/lib']`  
+    `conf.linker.libraries = %w(panel ncurses)`
   + Ex: Building against pdcurses  
-    `conf.linker.libraries = %w(pdcurses)`  
-    `conf.linker.library_paths = ['WHERE/YOU/BUILT/pdcurses']`
+    _I renamed pdcurses.a to libpdcurses.s so the linker would find it under the -L directories_
+    `conf.linker.library_paths = ['PATH/TO/PDCURSES']`  
+    `conf.linker.libraries = %w(pdcurses)`
 - Run `rake` in MRuby's root directory.
 
 You can try running the scripts in the `examples/` directory to test your build.

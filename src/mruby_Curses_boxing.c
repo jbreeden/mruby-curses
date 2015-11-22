@@ -246,7 +246,7 @@ mruby_unbox_TERMINAL(mrb_value boxed) {
 
 #if BIND_Win_TYPE
 /*
- * Boxing implementation for struct _win
+ * Boxing implementation for WINDOW
  */
 
 static void free__win(mrb_state* mrb, void* ptr) {
@@ -267,7 +267,7 @@ static const mrb_data_type _win_data_type = {
 };
 
 mrb_value
-mruby_box__win(mrb_state* mrb, struct _win *unboxed) {
+mruby_box__win(mrb_state* mrb, WINDOW *unboxed) {
   mruby_to_native_ref* box = (mruby_to_native_ref*)malloc(sizeof(mruby_to_native_ref));
   box->belongs_to_ruby = FALSE;
   box->obj = unboxed;
@@ -275,7 +275,7 @@ mruby_box__win(mrb_state* mrb, struct _win *unboxed) {
 }
 
 mrb_value
-mruby_giftwrap__win(mrb_state* mrb, struct _win *unboxed) {
+mruby_giftwrap__win(mrb_state* mrb, WINDOW *unboxed) {
    mruby_to_native_ref* box = (mruby_to_native_ref*)malloc(sizeof(mruby_to_native_ref));
    box->belongs_to_ruby = TRUE;
    box->obj = unboxed;
@@ -283,7 +283,7 @@ mruby_giftwrap__win(mrb_state* mrb, struct _win *unboxed) {
 }
 
 void
-mruby_set__win_data_ptr(mrb_value obj, struct _win *unboxed) {
+mruby_set__win_data_ptr(mrb_value obj, WINDOW *unboxed) {
   mruby_to_native_ref* box = (mruby_to_native_ref*)malloc(sizeof(mruby_to_native_ref));
   box->belongs_to_ruby = FALSE;
   box->obj = unboxed;
@@ -291,16 +291,16 @@ mruby_set__win_data_ptr(mrb_value obj, struct _win *unboxed) {
 }
 
 void
-mruby_gift__win_data_ptr(mrb_value obj, struct _win *unboxed) {
+mruby_gift__win_data_ptr(mrb_value obj, WINDOW *unboxed) {
   mruby_to_native_ref* box = (mruby_to_native_ref*)malloc(sizeof(mruby_to_native_ref));
   box->belongs_to_ruby = TRUE;
   box->obj = unboxed;
   mrb_data_init(obj, box, &_win_data_type);
 }
 
-struct _win *
+WINDOW *
 mruby_unbox__win(mrb_value boxed) {
-  return (struct _win *)((mruby_to_native_ref *)DATA_PTR(boxed))->obj;
+  return (WINDOW *)((mruby_to_native_ref *)DATA_PTR(boxed))->obj;
 }
 #endif
 
@@ -423,4 +423,3 @@ mruby_unbox_panelobs(mrb_value boxed) {
   return (struct panelobs *)((mruby_to_native_ref *)DATA_PTR(boxed))->obj;
 }
 #endif
-

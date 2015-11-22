@@ -50,7 +50,7 @@
 #define BIND_MEVENT_z_FIELD_READER FALSE
 #define BIND_MEVENT_z_FIELD_WRITER FALSE
 
-#define BIND_MOUSESTATUS_TYPE TRUE
+#define BIND_MOUSESTATUS_TYPE FALSE
 #define BIND_MOUSESTATUS_INITIALIZE FALSE
 #define BIND_MOUSESTATUS_button_FIELD_READER FALSE
 #define BIND_MOUSESTATUS_button_FIELD_WRITER FALSE
@@ -202,7 +202,7 @@
 #define BIND_Panel_wstarty_FIELD_READER FALSE
 #define BIND_Panel_wstarty_FIELD_WRITER FALSE
 
-#define BIND_Panelobs_TYPE TRUE
+#define BIND_Panelobs_TYPE FALSE
 #define BIND_Panelobs_INITIALIZE FALSE
 #define BIND_Panelobs_above_FIELD_READER FALSE
 #define BIND_Panelobs_above_FIELD_WRITER FALSE
@@ -610,9 +610,9 @@
 #include "mruby/string.h"
 #include "mruby/value.h"
 #include "mruby/variable.h"
-#include "curses.h"
-#include "panel.h"
-#include "term.h"
+#include <curses.h>
+#include <panel.h>
+#include <term.h>
 
 /*
  * Class initialization function declarations
@@ -733,18 +733,18 @@ mruby_unbox_SCREEN(mrb_value boxed);
 
 #if BIND_Win_TYPE
 mrb_value
-mruby_box__win(mrb_state* mrb, struct _win *unboxed);
+mruby_box__win(mrb_state* mrb, WINDOW *unboxed);
 
 mrb_value
-mruby_giftwrap__win(mrb_state* mrb, struct _win *unboxed);
+mruby_giftwrap__win(mrb_state* mrb, WINDOW *unboxed);
 
 void
-mruby_set__win_data_ptr(mrb_value obj, struct _win *unboxed);
+mruby_set__win_data_ptr(mrb_value obj, WINDOW *unboxed);
 
 void
-mruby_gift__win_data_ptr(mrb_value obj, struct _win *unboxed);
+mruby_gift__win_data_ptr(mrb_value obj, WINDOW *unboxed);
 
-struct _win *
+WINDOW *
 mruby_unbox__win(mrb_value boxed);
 #endif
 

@@ -39,8 +39,6 @@ class << Curses
     self.wgetch(self.stdscr)
   end
 
-  def COLOR_PAIR(n)
-    (((n) << Curses::PDC_COLOR_SHIFT) & Curses::A_COLOR)
-  end
+  # Provide more rubiomatic names for funciton-like macros
   alias color_pair COLOR_PAIR
 end

@@ -1,5 +1,5 @@
 /*
- * struct _win
+ * WINDOW 
  * Defined in file curses.h @ line 236
  */
 
@@ -18,7 +18,7 @@
 #if BIND_Win_INITIALIZE
 mrb_value
 mrb_Curses_Win_initialize(mrb_state* mrb, mrb_value self) {
-  struct _win* native_object = (struct _win*)malloc(sizeof(struct _win));
+  WINDOW * native_object = (WINDOW *)malloc(sizeof(struct _win));
   mruby_gift_struct _win_data_ptr(self, native_object);
   return self;
 }
@@ -67,7 +67,7 @@ mrb_Curses_Win_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_get__cury(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
 
   int native_field = native_self->_cury;
 
@@ -89,7 +89,7 @@ mrb_Curses_Win_get__cury(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_set__cury(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -115,7 +115,7 @@ mrb_Curses_Win_set__cury(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_get__curx(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
 
   int native_field = native_self->_curx;
 
@@ -137,7 +137,7 @@ mrb_Curses_Win_get__curx(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_set__curx(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -163,7 +163,7 @@ mrb_Curses_Win_set__curx(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_get__maxy(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
 
   int native_field = native_self->_maxy;
 
@@ -185,7 +185,7 @@ mrb_Curses_Win_get__maxy(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_set__maxy(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -211,7 +211,7 @@ mrb_Curses_Win_set__maxy(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_get__maxx(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
 
   int native_field = native_self->_maxx;
 
@@ -233,7 +233,7 @@ mrb_Curses_Win_get__maxx(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_set__maxx(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -259,7 +259,7 @@ mrb_Curses_Win_set__maxx(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_get__begy(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
 
   int native_field = native_self->_begy;
 
@@ -281,7 +281,7 @@ mrb_Curses_Win_get__begy(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_set__begy(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -307,7 +307,7 @@ mrb_Curses_Win_set__begy(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_get__begx(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
 
   int native_field = native_self->_begx;
 
@@ -329,7 +329,7 @@ mrb_Curses_Win_get__begx(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_set__begx(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -355,7 +355,7 @@ mrb_Curses_Win_set__begx(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_get__flags(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
 
   int native_field = native_self->_flags;
 
@@ -377,7 +377,7 @@ mrb_Curses_Win_get__flags(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_set__flags(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -403,7 +403,7 @@ mrb_Curses_Win_set__flags(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_get__attrs(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
 
   chtype native_field = native_self->_attrs;
 
@@ -425,7 +425,7 @@ mrb_Curses_Win_get__attrs(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_set__attrs(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -451,7 +451,7 @@ mrb_Curses_Win_set__attrs(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_get__bkgd(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
 
   chtype native_field = native_self->_bkgd;
 
@@ -473,7 +473,7 @@ mrb_Curses_Win_get__bkgd(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_set__bkgd(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -499,7 +499,7 @@ mrb_Curses_Win_set__bkgd(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_get__clear(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
 
   bool native_field = native_self->_clear;
 
@@ -517,7 +517,7 @@ mrb_Curses_Win_get__clear(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_set__clear(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -543,7 +543,7 @@ mrb_Curses_Win_set__clear(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_get__leaveit(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
 
   bool native_field = native_self->_leaveit;
 
@@ -561,7 +561,7 @@ mrb_Curses_Win_get__leaveit(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_set__leaveit(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -587,7 +587,7 @@ mrb_Curses_Win_set__leaveit(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_get__scroll(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
 
   bool native_field = native_self->_scroll;
 
@@ -605,7 +605,7 @@ mrb_Curses_Win_get__scroll(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_set__scroll(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -631,7 +631,7 @@ mrb_Curses_Win_set__scroll(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_get__nodelay(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
 
   bool native_field = native_self->_nodelay;
 
@@ -649,7 +649,7 @@ mrb_Curses_Win_get__nodelay(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_set__nodelay(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -675,7 +675,7 @@ mrb_Curses_Win_set__nodelay(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_get__immed(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
 
   bool native_field = native_self->_immed;
 
@@ -693,7 +693,7 @@ mrb_Curses_Win_get__immed(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_set__immed(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -719,7 +719,7 @@ mrb_Curses_Win_set__immed(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_get__sync(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
 
   bool native_field = native_self->_sync;
 
@@ -737,7 +737,7 @@ mrb_Curses_Win_get__sync(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_set__sync(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -763,7 +763,7 @@ mrb_Curses_Win_set__sync(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_get__use_keypad(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
 
   bool native_field = native_self->_use_keypad;
 
@@ -781,7 +781,7 @@ mrb_Curses_Win_get__use_keypad(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_set__use_keypad(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -807,7 +807,7 @@ mrb_Curses_Win_set__use_keypad(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_get__y(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
 
   chtype ** native_field = native_self->_y;
 
@@ -825,7 +825,7 @@ mrb_Curses_Win_get__y(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_set__y(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -848,7 +848,7 @@ mrb_Curses_Win_set__y(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_get__firstch(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
 
   int * native_field = native_self->_firstch;
 
@@ -866,7 +866,7 @@ mrb_Curses_Win_get__firstch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_set__firstch(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -889,7 +889,7 @@ mrb_Curses_Win_set__firstch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_get__lastch(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
 
   int * native_field = native_self->_lastch;
 
@@ -907,7 +907,7 @@ mrb_Curses_Win_get__lastch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_set__lastch(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -930,7 +930,7 @@ mrb_Curses_Win_set__lastch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_get__tmarg(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
 
   int native_field = native_self->_tmarg;
 
@@ -952,7 +952,7 @@ mrb_Curses_Win_get__tmarg(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_set__tmarg(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -978,7 +978,7 @@ mrb_Curses_Win_set__tmarg(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_get__bmarg(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
 
   int native_field = native_self->_bmarg;
 
@@ -1000,7 +1000,7 @@ mrb_Curses_Win_get__bmarg(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_set__bmarg(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -1026,7 +1026,7 @@ mrb_Curses_Win_set__bmarg(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_get__delayms(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
 
   int native_field = native_self->_delayms;
 
@@ -1048,7 +1048,7 @@ mrb_Curses_Win_get__delayms(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_set__delayms(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -1074,7 +1074,7 @@ mrb_Curses_Win_set__delayms(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_get__parx(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
 
   int native_field = native_self->_parx;
 
@@ -1096,7 +1096,7 @@ mrb_Curses_Win_get__parx(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_set__parx(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -1122,7 +1122,7 @@ mrb_Curses_Win_set__parx(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_get__pary(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
 
   int native_field = native_self->_pary;
 
@@ -1144,7 +1144,7 @@ mrb_Curses_Win_get__pary(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_Win_set__pary(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -1166,13 +1166,13 @@ mrb_Curses_Win_set__pary(mrb_state* mrb, mrb_value self) {
 #if BIND_Win__parent_FIELD_READER
 /* get__parent
  *
- * Return Type: struct _win *
+ * Return Type: WINDOW *
  */
 mrb_value
 mrb_Curses_Win_get__parent(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
 
-  struct _win * native_field = native_self->_parent;
+  WINDOW * native_field = native_self->_parent;
 
   mrb_value ruby_field = (native_field == NULL ? mrb_nil_value() : mruby_box__win(mrb, native_field));
 
@@ -1184,11 +1184,11 @@ mrb_Curses_Win_get__parent(mrb_state* mrb, mrb_value self) {
 /* set__parent
  *
  * Parameters:
- * - value: struct _win *
+ * - value: WINDOW *
  */
 mrb_value
 mrb_Curses_Win_set__parent(mrb_state* mrb, mrb_value self) {
-  struct _win * native_self = mruby_unbox_struct _win(self);
+  WINDOW * native_self = mruby_unbox_struct _win(self);
   mrb_value ruby_field;
 
   mrb_get_args(mrb, "o", &ruby_field);
@@ -1199,7 +1199,7 @@ mrb_Curses_Win_set__parent(mrb_state* mrb, mrb_value self) {
     return mrb_nil_value();
   }
 
-  struct _win * native_field = (mrb_nil_p(ruby_field) ? NULL : mruby_unbox__win(ruby_field));
+  WINDOW * native_field = (mrb_nil_p(ruby_field) ? NULL : mruby_unbox__win(ruby_field));
 
   native_self->_parent = native_field;
 

@@ -908,7 +908,7 @@ mrb_Curses_bottom_panel(mrb_state* mrb, mrb_value self) {
 /* box
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned long
  * - arg3: unsigned long
  * Return Type: int
@@ -939,7 +939,7 @@ mrb_Curses_box(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   unsigned long native_arg2 = mrb_fixnum(arg2);
 
@@ -1090,7 +1090,7 @@ mrb_Curses_clear(mrb_state* mrb, mrb_value self) {
 /* clearok
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned char
  * Return Type: int
  */
@@ -1111,7 +1111,7 @@ mrb_Curses_clearok(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
 
   /* Invocation */
@@ -1256,8 +1256,8 @@ mrb_Curses_color_set(mrb_state* mrb, mrb_value self) {
 /* copywin
  *
  * Parameters:
- * - arg1: const struct _win *
- * - arg2: struct _win *
+ * - arg1: const WINDOW *
+ * - arg2: WINDOW *
  * - arg3: int
  * - arg4: int
  * - arg5: int
@@ -1323,9 +1323,9 @@ mrb_Curses_copywin(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  const struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  const WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-  struct _win * native_arg2 = (mrb_nil_p(arg2) ? NULL : mruby_unbox__win(arg2));
+  WINDOW * native_arg2 = (mrb_nil_p(arg2) ? NULL : mruby_unbox__win(arg2));
 
   int native_arg3 = mrb_fixnum(arg3);
 
@@ -1699,7 +1699,7 @@ mrb_Curses_delscreen(mrb_state* mrb, mrb_value self) {
 /* delwin
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -1718,7 +1718,7 @@ mrb_Curses_delwin(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = delwin(native_arg1);
@@ -1740,7 +1740,7 @@ mrb_Curses_delwin(mrb_state* mrb, mrb_value self) {
 /* derwin
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * - arg4: int
@@ -1783,7 +1783,7 @@ mrb_Curses_derwin(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -1874,7 +1874,7 @@ mrb_Curses_draino(mrb_state* mrb, mrb_value self) {
 /* dupwin
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: WINDOW *
  */
 mrb_value
@@ -1893,7 +1893,7 @@ mrb_Curses_dupwin(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   WINDOW * result = dupwin(native_arg1);
@@ -2133,7 +2133,7 @@ mrb_Curses_flushinp(mrb_state* mrb, mrb_value self) {
 /* getattrs
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: chtype
  */
 mrb_value
@@ -2152,7 +2152,7 @@ mrb_Curses_getattrs(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   chtype result = getattrs(native_arg1);
@@ -2174,7 +2174,7 @@ mrb_Curses_getattrs(mrb_state* mrb, mrb_value self) {
 /* getbegx
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -2193,7 +2193,7 @@ mrb_Curses_getbegx(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = getbegx(native_arg1);
@@ -2215,7 +2215,7 @@ mrb_Curses_getbegx(mrb_state* mrb, mrb_value self) {
 /* getbegy
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -2234,7 +2234,7 @@ mrb_Curses_getbegy(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = getbegy(native_arg1);
@@ -2256,7 +2256,7 @@ mrb_Curses_getbegy(mrb_state* mrb, mrb_value self) {
 /* getbkgd
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: chtype
  */
 mrb_value
@@ -2275,7 +2275,7 @@ mrb_Curses_getbkgd(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   chtype result = getbkgd(native_arg1);
@@ -2321,7 +2321,7 @@ mrb_Curses_getbmap(mrb_state* mrb, mrb_value self) {
 /* getcurx
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -2340,7 +2340,7 @@ mrb_Curses_getcurx(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = getcurx(native_arg1);
@@ -2362,7 +2362,7 @@ mrb_Curses_getcurx(mrb_state* mrb, mrb_value self) {
 /* getcury
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -2381,7 +2381,7 @@ mrb_Curses_getcury(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = getcury(native_arg1);
@@ -2403,7 +2403,7 @@ mrb_Curses_getcury(mrb_state* mrb, mrb_value self) {
 /* getmaxx
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -2422,7 +2422,7 @@ mrb_Curses_getmaxx(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = getmaxx(native_arg1);
@@ -2444,7 +2444,7 @@ mrb_Curses_getmaxx(mrb_state* mrb, mrb_value self) {
 /* getmaxy
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -2463,7 +2463,7 @@ mrb_Curses_getmaxy(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = getmaxy(native_arg1);
@@ -2532,7 +2532,7 @@ mrb_Curses_getnstr(mrb_state* mrb, mrb_value self) {
 /* getparx
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -2551,7 +2551,7 @@ mrb_Curses_getparx(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = getparx(native_arg1);
@@ -2573,7 +2573,7 @@ mrb_Curses_getparx(mrb_state* mrb, mrb_value self) {
 /* getpary
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -2592,7 +2592,7 @@ mrb_Curses_getpary(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = getpary(native_arg1);
@@ -2873,7 +2873,7 @@ mrb_Curses_hline(mrb_state* mrb, mrb_value self) {
 /* idcok
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned char
  * Return Type: void
  */
@@ -2894,7 +2894,7 @@ mrb_Curses_idcok(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
 
   /* Invocation */
@@ -2910,7 +2910,7 @@ mrb_Curses_idcok(mrb_state* mrb, mrb_value self) {
 /* idlok
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned char
  * Return Type: int
  */
@@ -2931,7 +2931,7 @@ mrb_Curses_idlok(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
 
   /* Invocation */
@@ -2954,7 +2954,7 @@ mrb_Curses_idlok(mrb_state* mrb, mrb_value self) {
 /* immedok
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned char
  * Return Type: void
  */
@@ -2975,7 +2975,7 @@ mrb_Curses_immedok(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
 
   /* Invocation */
@@ -3525,7 +3525,7 @@ mrb_Curses_instr(mrb_state* mrb, mrb_value self) {
 /* intrflush
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned char
  * Return Type: int
  */
@@ -3546,7 +3546,7 @@ mrb_Curses_intrflush(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
 
   /* Invocation */
@@ -3569,7 +3569,7 @@ mrb_Curses_intrflush(mrb_state* mrb, mrb_value self) {
 /* is_linetouched
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * Return Type: bool
  */
@@ -3594,7 +3594,7 @@ mrb_Curses_is_linetouched(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -3624,7 +3624,7 @@ mrb_Curses_is_termresized(mrb_state* mrb, mrb_value self) {
 /* is_wintouched
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: bool
  */
 mrb_value
@@ -3643,7 +3643,7 @@ mrb_Curses_is_wintouched(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   return is_wintouched(native_arg1) ? mrb_true_value() : mrb_false_value();
@@ -3693,7 +3693,7 @@ mrb_Curses_keyname(mrb_state* mrb, mrb_value self) {
   int native_arg1 = mrb_fixnum(arg1);
 
   /* Invocation */
-  char * result = keyname(native_arg1);
+  const char * result = keyname(native_arg1);
 
   /* Box the return value */
   mrb_value return_value = mrb_str_new_cstr(mrb, result);
@@ -3708,7 +3708,7 @@ mrb_Curses_keyname(mrb_state* mrb, mrb_value self) {
 /* keypad
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned char
  * Return Type: int
  */
@@ -3728,7 +3728,7 @@ mrb_Curses_keypad(mrb_state* mrb, mrb_value self) {
   }
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = keypad(native_arg1, native_arg2);
@@ -3770,7 +3770,7 @@ mrb_Curses_killchar(mrb_state* mrb, mrb_value self) {
 /* leaveok
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned char
  * Return Type: int
  */
@@ -3791,7 +3791,7 @@ mrb_Curses_leaveok(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
 
   /* Invocation */
@@ -3875,7 +3875,7 @@ mrb_Curses_map_button(mrb_state* mrb, mrb_value self) {
 /* meta
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned char
  * Return Type: int
  */
@@ -3896,7 +3896,7 @@ mrb_Curses_meta(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
 
   /* Invocation */
@@ -4864,7 +4864,7 @@ mrb_Curses_mvdeleteln(mrb_state* mrb, mrb_value self) {
 /* mvderwin
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * Return Type: int
@@ -4895,7 +4895,7 @@ mrb_Curses_mvderwin(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -5770,7 +5770,7 @@ mrb_Curses_mvvline(mrb_state* mrb, mrb_value self) {
 /* mvwaddch
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * - arg4: const unsigned long
@@ -5807,7 +5807,7 @@ mrb_Curses_mvwaddch(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -5835,7 +5835,7 @@ mrb_Curses_mvwaddch(mrb_state* mrb, mrb_value self) {
 /* mvwaddchnstr
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * - arg4: const unsigned long *
@@ -5875,7 +5875,7 @@ mrb_Curses_mvwaddchnstr(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -5905,7 +5905,7 @@ mrb_Curses_mvwaddchnstr(mrb_state* mrb, mrb_value self) {
 /* mvwaddchstr
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * - arg4: const unsigned long *
@@ -5939,7 +5939,7 @@ mrb_Curses_mvwaddchstr(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -5967,7 +5967,7 @@ mrb_Curses_mvwaddchstr(mrb_state* mrb, mrb_value self) {
 /* mvwaddnstr
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * - arg4: const char *
@@ -6010,7 +6010,7 @@ mrb_Curses_mvwaddnstr(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -6040,7 +6040,7 @@ mrb_Curses_mvwaddnstr(mrb_state* mrb, mrb_value self) {
 /* mvwaddrawch
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * - arg4: unsigned long
@@ -6077,7 +6077,7 @@ mrb_Curses_mvwaddrawch(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -6105,7 +6105,7 @@ mrb_Curses_mvwaddrawch(mrb_state* mrb, mrb_value self) {
 /* mvwaddstr
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * - arg4: const char *
@@ -6142,7 +6142,7 @@ mrb_Curses_mvwaddstr(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -6170,7 +6170,7 @@ mrb_Curses_mvwaddstr(mrb_state* mrb, mrb_value self) {
 /* mvwchgat
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * - arg4: int
@@ -6222,7 +6222,7 @@ mrb_Curses_mvwchgat(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -6256,7 +6256,7 @@ mrb_Curses_mvwchgat(mrb_state* mrb, mrb_value self) {
 /* mvwdelch
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * Return Type: int
@@ -6287,7 +6287,7 @@ mrb_Curses_mvwdelch(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -6313,7 +6313,7 @@ mrb_Curses_mvwdelch(mrb_state* mrb, mrb_value self) {
 /* mvwdeleteln
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * Return Type: int
@@ -6344,7 +6344,7 @@ mrb_Curses_mvwdeleteln(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -6370,7 +6370,7 @@ mrb_Curses_mvwdeleteln(mrb_state* mrb, mrb_value self) {
 /* mvwgetch
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * Return Type: int
@@ -6401,7 +6401,7 @@ mrb_Curses_mvwgetch(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -6427,7 +6427,7 @@ mrb_Curses_mvwgetch(mrb_state* mrb, mrb_value self) {
 /* mvwgetnstr
  *
  * Parameters:
- * - win: struct _win *
+ * - win: WINDOW *
  * - y: int
  * - x: int
  * - len: int
@@ -6450,7 +6450,7 @@ mrb_Curses_mvwgetnstr(mrb_state* mrb, mrb_value self) {
   }
 
   /* Unbox parameters */
-  struct _win * native_win = (mrb_nil_p(win) ? NULL : mruby_unbox__win(win));
+  WINDOW * native_win = (mrb_nil_p(win) ? NULL : mruby_unbox__win(win));
 
   /* Invocation */
   char* buffer = (char*)calloc(native_len + 1, sizeof(char));
@@ -6465,7 +6465,7 @@ mrb_Curses_mvwgetnstr(mrb_state* mrb, mrb_value self) {
 /* mvwgetstr
  *
  * Parameters:
- * - win: struct _win *
+ * - win: WINDOW *
  * - y: int
  * - x: int
  * Return Type: int
@@ -6486,7 +6486,7 @@ mrb_Curses_mvwgetstr(mrb_state* mrb, mrb_value self) {
   }
 
   /* Unbox parameters */
-  struct _win * native_win = (mrb_nil_p(win) ? NULL : mruby_unbox__win(win));
+  WINDOW * native_win = (mrb_nil_p(win) ? NULL : mruby_unbox__win(win));
 
   /* Invocation */
   char* buffer = (char*)calloc(GETSTR_BUF_SIZE, sizeof(char));
@@ -6501,7 +6501,7 @@ mrb_Curses_mvwgetstr(mrb_state* mrb, mrb_value self) {
 /* mvwhline
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * - arg4: unsigned long
@@ -6544,7 +6544,7 @@ mrb_Curses_mvwhline(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -6574,7 +6574,7 @@ mrb_Curses_mvwhline(mrb_state* mrb, mrb_value self) {
 /* mvwin
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * Return Type: int
@@ -6605,7 +6605,7 @@ mrb_Curses_mvwin(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -6631,7 +6631,7 @@ mrb_Curses_mvwin(mrb_state* mrb, mrb_value self) {
 /* mvwinch
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * Return Type: chtype
@@ -6662,7 +6662,7 @@ mrb_Curses_mvwinch(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -6688,7 +6688,7 @@ mrb_Curses_mvwinch(mrb_state* mrb, mrb_value self) {
 /* mvwinchnstr
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * - arg4: unsigned long *
@@ -6728,7 +6728,7 @@ mrb_Curses_mvwinchnstr(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -6758,7 +6758,7 @@ mrb_Curses_mvwinchnstr(mrb_state* mrb, mrb_value self) {
 /* mvwinchstr
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * - arg4: unsigned long *
@@ -6792,7 +6792,7 @@ mrb_Curses_mvwinchstr(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -6820,7 +6820,7 @@ mrb_Curses_mvwinchstr(mrb_state* mrb, mrb_value self) {
 /* mvwinnstr
  *
  * Parameters:
- * - win: struct _win *
+ * - win: WINDOW *
  * - y: int
  * - x: int
  * - len: int
@@ -6843,7 +6843,7 @@ mrb_Curses_mvwinnstr(mrb_state* mrb, mrb_value self) {
   }
 
   /* Unbox parameters */
-  struct _win * native_win = (mrb_nil_p(win) ? NULL : mruby_unbox__win(win));
+  WINDOW * native_win = (mrb_nil_p(win) ? NULL : mruby_unbox__win(win));
 
   /* Invocation */
   char* buffer = (char*)calloc(native_len + 1, sizeof(char));
@@ -6858,7 +6858,7 @@ mrb_Curses_mvwinnstr(mrb_state* mrb, mrb_value self) {
 /* mvwinsch
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * - arg4: unsigned long
@@ -6895,7 +6895,7 @@ mrb_Curses_mvwinsch(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -6923,7 +6923,7 @@ mrb_Curses_mvwinsch(mrb_state* mrb, mrb_value self) {
 /* mvwinsertln
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * Return Type: int
@@ -6954,7 +6954,7 @@ mrb_Curses_mvwinsertln(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -6980,7 +6980,7 @@ mrb_Curses_mvwinsertln(mrb_state* mrb, mrb_value self) {
 /* mvwinsnstr
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * - arg4: const char *
@@ -7023,7 +7023,7 @@ mrb_Curses_mvwinsnstr(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -7053,7 +7053,7 @@ mrb_Curses_mvwinsnstr(mrb_state* mrb, mrb_value self) {
 /* mvwinsrawch
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * - arg4: unsigned long
@@ -7090,7 +7090,7 @@ mrb_Curses_mvwinsrawch(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -7118,7 +7118,7 @@ mrb_Curses_mvwinsrawch(mrb_state* mrb, mrb_value self) {
 /* mvwinsstr
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * - arg4: const char *
@@ -7155,7 +7155,7 @@ mrb_Curses_mvwinsstr(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -7183,7 +7183,7 @@ mrb_Curses_mvwinsstr(mrb_state* mrb, mrb_value self) {
 /* mvwinstr
  *
  * Parameters:
- * - win: struct _win *
+ * - win: WINDOW *
  * - y: int
  * - x: int
  * Return Type: int
@@ -7204,7 +7204,7 @@ mrb_Curses_mvwinstr(mrb_state* mrb, mrb_value self) {
   }
 
   /* Unbox parameters */
-  struct _win * native_win = (mrb_nil_p(win) ? NULL : mruby_unbox__win(win));
+  WINDOW * native_win = (mrb_nil_p(win) ? NULL : mruby_unbox__win(win));
 
   /* Invocation */
   char* buffer = (char*)calloc(GETSTR_BUF_SIZE, sizeof(char));
@@ -7219,7 +7219,7 @@ mrb_Curses_mvwinstr(mrb_state* mrb, mrb_value self) {
 /* mvwprintw
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * - arg4: const char *
@@ -7256,7 +7256,7 @@ mrb_Curses_mvwprintw(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -7284,7 +7284,7 @@ mrb_Curses_mvwprintw(mrb_state* mrb, mrb_value self) {
 /* mvwscanw
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * - arg4: const char *
@@ -7321,7 +7321,7 @@ mrb_Curses_mvwscanw(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -7349,7 +7349,7 @@ mrb_Curses_mvwscanw(mrb_state* mrb, mrb_value self) {
 /* mvwvline
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * - arg4: unsigned long
@@ -7392,7 +7392,7 @@ mrb_Curses_mvwvline(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -7504,7 +7504,7 @@ mrb_Curses_nc_getmouse(mrb_state* mrb, mrb_value self) {
 /* new_panel
  *
  * Parameters:
- * - win: struct _win *
+ * - win: WINDOW *
  * Return Type: PANEL *
  */
 mrb_value
@@ -7523,7 +7523,7 @@ mrb_Curses_new_panel(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_win = (mrb_nil_p(win) ? NULL : mruby_unbox__win(win));
+  WINDOW * native_win = (mrb_nil_p(win) ? NULL : mruby_unbox__win(win));
 
   /* Invocation */
   PANEL * result = new_panel(native_win);
@@ -7766,7 +7766,7 @@ mrb_Curses_nocrmode(mrb_state* mrb, mrb_value self) {
 /* nodelay
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned char
  * Return Type: int
  */
@@ -7785,7 +7785,7 @@ mrb_Curses_nodelay(mrb_state* mrb, mrb_value self) {
   }
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = nodelay(native_arg1, native_arg2);
@@ -7896,7 +7896,7 @@ mrb_Curses_noraw(mrb_state* mrb, mrb_value self) {
 /* notimeout
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned char
  * Return Type: int
  */
@@ -7917,7 +7917,7 @@ mrb_Curses_notimeout(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
 
   /* Invocation */
@@ -7940,8 +7940,8 @@ mrb_Curses_notimeout(mrb_state* mrb, mrb_value self) {
 /* overlay
  *
  * Parameters:
- * - arg1: const struct _win *
- * - arg2: struct _win *
+ * - arg1: const WINDOW *
+ * - arg2: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -7965,9 +7965,9 @@ mrb_Curses_overlay(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  const struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  const WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-  struct _win * native_arg2 = (mrb_nil_p(arg2) ? NULL : mruby_unbox__win(arg2));
+  WINDOW * native_arg2 = (mrb_nil_p(arg2) ? NULL : mruby_unbox__win(arg2));
 
   /* Invocation */
   int result = overlay(native_arg1, native_arg2);
@@ -7989,8 +7989,8 @@ mrb_Curses_overlay(mrb_state* mrb, mrb_value self) {
 /* overwrite
  *
  * Parameters:
- * - arg1: const struct _win *
- * - arg2: struct _win *
+ * - arg1: const WINDOW *
+ * - arg2: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -8014,9 +8014,9 @@ mrb_Curses_overwrite(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  const struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  const WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-  struct _win * native_arg2 = (mrb_nil_p(arg2) ? NULL : mruby_unbox__win(arg2));
+  WINDOW * native_arg2 = (mrb_nil_p(arg2) ? NULL : mruby_unbox__win(arg2));
 
   /* Invocation */
   int result = overwrite(native_arg1, native_arg2);
@@ -8769,7 +8769,7 @@ mrb_Curses_PDC_ungetch(mrb_state* mrb, mrb_value self) {
 /* pechochar
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned long
  * Return Type: int
  */
@@ -8794,7 +8794,7 @@ mrb_Curses_pechochar(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   unsigned long native_arg2 = mrb_fixnum(arg2);
 
@@ -8818,7 +8818,7 @@ mrb_Curses_pechochar(mrb_state* mrb, mrb_value self) {
 /* pnoutrefresh
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * - arg4: int
@@ -8873,7 +8873,7 @@ mrb_Curses_pnoutrefresh(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -8907,7 +8907,7 @@ mrb_Curses_pnoutrefresh(mrb_state* mrb, mrb_value self) {
 /* prefresh
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * - arg4: int
@@ -8962,7 +8962,7 @@ mrb_Curses_prefresh(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -9078,7 +9078,7 @@ mrb_Curses_putp(mrb_state* mrb, mrb_value self) {
 /* putwin
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: struct _iobuf *
  * Return Type: int
  */
@@ -9100,7 +9100,7 @@ mrb_Curses_putwin(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   struct _iobuf * native_arg2 = TODO_mruby_unbox__iobuf_PTR(arg2);
 
@@ -9195,7 +9195,7 @@ mrb_Curses_raw_output(mrb_state* mrb, mrb_value self) {
 /* redrawwin
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -9214,7 +9214,7 @@ mrb_Curses_redrawwin(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = redrawwin(native_arg1);
@@ -9261,7 +9261,7 @@ mrb_Curses_refresh(mrb_state* mrb, mrb_value self) {
  *
  * Parameters:
  * - pan: struct panel *
- * - win: struct _win *
+ * - win: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -9287,7 +9287,7 @@ mrb_Curses_replace_panel(mrb_state* mrb, mrb_value self) {
   /* Unbox parameters */
   struct panel * native_pan = (mrb_nil_p(pan) ? NULL : mruby_unbox_panel(pan));
 
-  struct _win * native_win = (mrb_nil_p(win) ? NULL : mruby_unbox__win(win));
+  WINDOW * native_win = (mrb_nil_p(win) ? NULL : mruby_unbox__win(win));
 
   /* Invocation */
   int result = replace_panel(native_pan, native_win);
@@ -9478,7 +9478,7 @@ mrb_Curses_resize_term(mrb_state* mrb, mrb_value self) {
 /* resize_window
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * Return Type: WINDOW *
@@ -9509,7 +9509,7 @@ mrb_Curses_resize_window(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -9586,8 +9586,8 @@ mrb_Curses_restartterm(mrb_state* mrb, mrb_value self) {
  *
  * Parameters:
  * - arg1: int
- * - arg2: int (*)(struct _win *, int)
- * - arg3: struct _win *
+ * - arg2: int (*)(WINDOW *, int)
+ * - arg3: WINDOW *
  * - arg4: int
  * Return Type: int
  */
@@ -9621,9 +9621,9 @@ mrb_Curses_ripoffline(mrb_state* mrb, mrb_value self) {
   /* Unbox parameters */
   int native_arg1 = mrb_fixnum(arg1);
 
-  int (*native_arg2)(struct _win *, int) = TODO_mruby_unbox_int_LPAREN_PTR_RPAREN_LPAREN__win_PTR_COMMA_int_RPAREN(arg2);
+  int (*native_arg2)(WINDOW *, int) = TODO_mruby_unbox_int_LPAREN_PTR_RPAREN_LPAREN__win_PTR_COMMA_int_RPAREN(arg2);
 
-  struct _win * native_arg3 = (mrb_nil_p(arg3) ? NULL : mruby_unbox__win(arg3));
+  WINDOW * native_arg3 = (mrb_nil_p(arg3) ? NULL : mruby_unbox__win(arg3));
 
   int native_arg4 = mrb_fixnum(arg4);
 
@@ -9941,7 +9941,7 @@ mrb_Curses_scrl(mrb_state* mrb, mrb_value self) {
 /* scroll
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -9960,7 +9960,7 @@ mrb_Curses_scroll(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = scroll(native_arg1);
@@ -9982,7 +9982,7 @@ mrb_Curses_scroll(mrb_state* mrb, mrb_value self) {
 /* scrollok
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned char
  * Return Type: int
  */
@@ -10003,7 +10003,7 @@ mrb_Curses_scrollok(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
 
   /* Invocation */
@@ -11017,7 +11017,7 @@ mrb_Curses_start_color(mrb_state* mrb, mrb_value self) {
 /* subpad
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * - arg4: int
@@ -11060,7 +11060,7 @@ mrb_Curses_subpad(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -11086,7 +11086,7 @@ mrb_Curses_subpad(mrb_state* mrb, mrb_value self) {
 /* subwin
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * - arg4: int
@@ -11129,7 +11129,7 @@ mrb_Curses_subwin(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -11155,7 +11155,7 @@ mrb_Curses_subwin(mrb_state* mrb, mrb_value self) {
 /* syncok
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned char
  * Return Type: int
  */
@@ -11176,7 +11176,7 @@ mrb_Curses_syncok(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
 
   /* Invocation */
@@ -11689,7 +11689,7 @@ mrb_Curses_top_panel(mrb_state* mrb, mrb_value self) {
 /* touchline
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * Return Type: int
@@ -11720,7 +11720,7 @@ mrb_Curses_touchline(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -11746,7 +11746,7 @@ mrb_Curses_touchline(mrb_state* mrb, mrb_value self) {
 /* touchwin
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -11765,7 +11765,7 @@ mrb_Curses_touchwin(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = touchwin(native_arg1);
@@ -12055,7 +12055,7 @@ mrb_Curses_unctrl(mrb_state* mrb, mrb_value self) {
   unsigned long native_arg1 = mrb_fixnum(arg1);
 
   /* Invocation */
-  char * result = unctrl(native_arg1);
+  const char * result = unctrl(native_arg1);
 
   /* Box the return value */
   mrb_value return_value = mrb_str_new_cstr(mrb, result);
@@ -12111,7 +12111,7 @@ mrb_Curses_ungetmouse(mrb_state* mrb, mrb_value self) {
 /* untouchwin
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -12130,7 +12130,7 @@ mrb_Curses_untouchwin(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = untouchwin(native_arg1);
@@ -12481,7 +12481,7 @@ mrb_Curses_vline(mrb_state* mrb, mrb_value self) {
 /* vw_printw
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: const char *
  * - va_list: int
  * Return Type: int
@@ -12512,7 +12512,7 @@ mrb_Curses_vw_printw(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   const char * native_arg2 = mrb_string_value_cstr(mrb, &arg2);
 
@@ -12538,7 +12538,7 @@ mrb_Curses_vw_printw(mrb_state* mrb, mrb_value self) {
 /* vw_scanw
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: const char *
  * - va_list: int
  * Return Type: int
@@ -12569,7 +12569,7 @@ mrb_Curses_vw_scanw(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   const char * native_arg2 = mrb_string_value_cstr(mrb, &arg2);
 
@@ -12595,7 +12595,7 @@ mrb_Curses_vw_scanw(mrb_state* mrb, mrb_value self) {
 /* vwprintw
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: const char *
  * - va_list: int
  * Return Type: int
@@ -12626,7 +12626,7 @@ mrb_Curses_vwprintw(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   const char * native_arg2 = mrb_string_value_cstr(mrb, &arg2);
 
@@ -12652,7 +12652,7 @@ mrb_Curses_vwprintw(mrb_state* mrb, mrb_value self) {
 /* vwscanw
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: const char *
  * - va_list: int
  * Return Type: int
@@ -12683,7 +12683,7 @@ mrb_Curses_vwscanw(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   const char * native_arg2 = mrb_string_value_cstr(mrb, &arg2);
 
@@ -12709,7 +12709,7 @@ mrb_Curses_vwscanw(mrb_state* mrb, mrb_value self) {
 /* waddch
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: const unsigned long
  * Return Type: int
  */
@@ -12734,7 +12734,7 @@ mrb_Curses_waddch(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   const unsigned long native_arg2 = mrb_fixnum(arg2);
 
@@ -12758,7 +12758,7 @@ mrb_Curses_waddch(mrb_state* mrb, mrb_value self) {
 /* waddchnstr
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: const unsigned long *
  * - arg3: int
  * Return Type: int
@@ -12786,7 +12786,7 @@ mrb_Curses_waddchnstr(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   const unsigned long * native_arg2 = TODO_mruby_unbox_unsigned_long_PTR(arg2);
 
@@ -12812,7 +12812,7 @@ mrb_Curses_waddchnstr(mrb_state* mrb, mrb_value self) {
 /* waddchstr
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: const unsigned long *
  * Return Type: int
  */
@@ -12834,7 +12834,7 @@ mrb_Curses_waddchstr(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   const unsigned long * native_arg2 = TODO_mruby_unbox_unsigned_long_PTR(arg2);
 
@@ -12858,7 +12858,7 @@ mrb_Curses_waddchstr(mrb_state* mrb, mrb_value self) {
 /* waddnstr
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: const char *
  * - arg3: int
  * Return Type: int
@@ -12889,7 +12889,7 @@ mrb_Curses_waddnstr(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   const char * native_arg2 = mrb_string_value_cstr(mrb, &arg2);
 
@@ -12915,7 +12915,7 @@ mrb_Curses_waddnstr(mrb_state* mrb, mrb_value self) {
 /* waddrawch
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned long
  * Return Type: int
  */
@@ -12940,7 +12940,7 @@ mrb_Curses_waddrawch(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   unsigned long native_arg2 = mrb_fixnum(arg2);
 
@@ -12964,7 +12964,7 @@ mrb_Curses_waddrawch(mrb_state* mrb, mrb_value self) {
 /* waddstr
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: const char *
  * Return Type: int
  */
@@ -12989,7 +12989,7 @@ mrb_Curses_waddstr(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   const char * native_arg2 = mrb_string_value_cstr(mrb, &arg2);
 
@@ -13013,7 +13013,7 @@ mrb_Curses_waddstr(mrb_state* mrb, mrb_value self) {
 /* wattr_get
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned long *
  * - arg3: short *
  * - arg4: void *
@@ -13041,7 +13041,7 @@ mrb_Curses_wattr_get(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   unsigned long * native_arg2 = TODO_mruby_unbox_unsigned_long_PTR(arg2);
 
@@ -13069,7 +13069,7 @@ mrb_Curses_wattr_get(mrb_state* mrb, mrb_value self) {
 /* wattr_off
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned long
  * - arg3: void *
  * Return Type: int
@@ -13097,7 +13097,7 @@ mrb_Curses_wattr_off(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   unsigned long native_arg2 = mrb_fixnum(arg2);
 
@@ -13123,7 +13123,7 @@ mrb_Curses_wattr_off(mrb_state* mrb, mrb_value self) {
 /* wattr_on
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned long
  * - arg3: void *
  * Return Type: int
@@ -13151,7 +13151,7 @@ mrb_Curses_wattr_on(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   unsigned long native_arg2 = mrb_fixnum(arg2);
 
@@ -13177,7 +13177,7 @@ mrb_Curses_wattr_on(mrb_state* mrb, mrb_value self) {
 /* wattr_set
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned long
  * - arg3: short
  * - arg4: void *
@@ -13211,7 +13211,7 @@ mrb_Curses_wattr_set(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   unsigned long native_arg2 = mrb_fixnum(arg2);
 
@@ -13239,7 +13239,7 @@ mrb_Curses_wattr_set(mrb_state* mrb, mrb_value self) {
 /* wattroff
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned long
  * Return Type: int
  */
@@ -13264,7 +13264,7 @@ mrb_Curses_wattroff(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   unsigned long native_arg2 = mrb_fixnum(arg2);
 
@@ -13288,7 +13288,7 @@ mrb_Curses_wattroff(mrb_state* mrb, mrb_value self) {
 /* wattron
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned long
  * Return Type: int
  */
@@ -13313,7 +13313,7 @@ mrb_Curses_wattron(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   unsigned long native_arg2 = mrb_fixnum(arg2);
 
@@ -13337,7 +13337,7 @@ mrb_Curses_wattron(mrb_state* mrb, mrb_value self) {
 /* wattrset
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned long
  * Return Type: int
  */
@@ -13362,7 +13362,7 @@ mrb_Curses_wattrset(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   unsigned long native_arg2 = mrb_fixnum(arg2);
 
@@ -13386,7 +13386,7 @@ mrb_Curses_wattrset(mrb_state* mrb, mrb_value self) {
 /* wbkgd
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned long
  * Return Type: int
  */
@@ -13411,7 +13411,7 @@ mrb_Curses_wbkgd(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   unsigned long native_arg2 = mrb_fixnum(arg2);
 
@@ -13435,7 +13435,7 @@ mrb_Curses_wbkgd(mrb_state* mrb, mrb_value self) {
 /* wbkgdset
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned long
  * Return Type: void
  */
@@ -13460,7 +13460,7 @@ mrb_Curses_wbkgdset(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   unsigned long native_arg2 = mrb_fixnum(arg2);
 
@@ -13477,7 +13477,7 @@ mrb_Curses_wbkgdset(mrb_state* mrb, mrb_value self) {
 /* wborder
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned long
  * - arg3: unsigned long
  * - arg4: unsigned long
@@ -13544,7 +13544,7 @@ mrb_Curses_wborder(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   unsigned long native_arg2 = mrb_fixnum(arg2);
 
@@ -13582,7 +13582,7 @@ mrb_Curses_wborder(mrb_state* mrb, mrb_value self) {
 /* wchgat
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: unsigned long
  * - arg4: short
@@ -13622,7 +13622,7 @@ mrb_Curses_wchgat(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -13652,7 +13652,7 @@ mrb_Curses_wchgat(mrb_state* mrb, mrb_value self) {
 /* wclear
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -13671,7 +13671,7 @@ mrb_Curses_wclear(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = wclear(native_arg1);
@@ -13693,7 +13693,7 @@ mrb_Curses_wclear(mrb_state* mrb, mrb_value self) {
 /* wclrtobot
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -13712,7 +13712,7 @@ mrb_Curses_wclrtobot(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = wclrtobot(native_arg1);
@@ -13734,7 +13734,7 @@ mrb_Curses_wclrtobot(mrb_state* mrb, mrb_value self) {
 /* wclrtoeol
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -13753,7 +13753,7 @@ mrb_Curses_wclrtoeol(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = wclrtoeol(native_arg1);
@@ -13775,7 +13775,7 @@ mrb_Curses_wclrtoeol(mrb_state* mrb, mrb_value self) {
 /* wcolor_set
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: short
  * - arg3: void *
  * Return Type: int
@@ -13795,7 +13795,7 @@ mrb_Curses_wcolor_set(mrb_state* mrb, mrb_value self) {
   }
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   /* Third param is not used, only reserved */
@@ -13809,7 +13809,7 @@ mrb_Curses_wcolor_set(mrb_state* mrb, mrb_value self) {
 /* wcursyncup
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: void
  */
 mrb_value
@@ -13828,7 +13828,7 @@ mrb_Curses_wcursyncup(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   wcursyncup(native_arg1);
@@ -13843,7 +13843,7 @@ mrb_Curses_wcursyncup(mrb_state* mrb, mrb_value self) {
 /* wdelch
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -13862,7 +13862,7 @@ mrb_Curses_wdelch(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = wdelch(native_arg1);
@@ -13884,7 +13884,7 @@ mrb_Curses_wdelch(mrb_state* mrb, mrb_value self) {
 /* wdeleteln
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -13903,7 +13903,7 @@ mrb_Curses_wdeleteln(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = wdeleteln(native_arg1);
@@ -13925,7 +13925,7 @@ mrb_Curses_wdeleteln(mrb_state* mrb, mrb_value self) {
 /* wechochar
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: const unsigned long
  * Return Type: int
  */
@@ -13950,7 +13950,7 @@ mrb_Curses_wechochar(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   const unsigned long native_arg2 = mrb_fixnum(arg2);
 
@@ -13974,7 +13974,7 @@ mrb_Curses_wechochar(mrb_state* mrb, mrb_value self) {
 /* wenclose
  *
  * Parameters:
- * - arg1: const struct _win *
+ * - arg1: const WINDOW *
  * - arg2: int
  * - arg3: int
  * Return Type: bool
@@ -14005,7 +14005,7 @@ mrb_Curses_wenclose(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  const struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  const WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -14022,7 +14022,7 @@ mrb_Curses_wenclose(mrb_state* mrb, mrb_value self) {
 /* werase
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -14041,7 +14041,7 @@ mrb_Curses_werase(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = werase(native_arg1);
@@ -14063,7 +14063,7 @@ mrb_Curses_werase(mrb_state* mrb, mrb_value self) {
 /* wgetch
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -14080,7 +14080,7 @@ mrb_Curses_wgetch(mrb_state* mrb, mrb_value self) {
   }
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = wgetch(native_arg1);
@@ -14102,7 +14102,7 @@ mrb_Curses_wgetch(mrb_state* mrb, mrb_value self) {
 /* wgetnstr
  *
  * Parameters:
- * - win: struct _win *
+ * - win: WINDOW *
  * - arg2: char *
  * - len: int
  * Return Type: int
@@ -14122,7 +14122,7 @@ mrb_Curses_wgetnstr(mrb_state* mrb, mrb_value self) {
   }
 
   /* Unbox parameters */
-  struct _win * native_win = (mrb_nil_p(win) ? NULL : mruby_unbox__win(win));
+  WINDOW * native_win = (mrb_nil_p(win) ? NULL : mruby_unbox__win(win));
 
   /* Invocation */
   char* buffer = (char*)calloc(native_len + 1, sizeof(char));
@@ -14137,7 +14137,7 @@ mrb_Curses_wgetnstr(mrb_state* mrb, mrb_value self) {
 /* wgetstr
  *
  * Parameters:
- * - win: struct _win *
+ * - win: WINDOW *
  * - arg2: char *
  * Return Type: int
  */
@@ -14155,7 +14155,7 @@ mrb_Curses_wgetstr(mrb_state* mrb, mrb_value self) {
   }
 
   /* Unbox parameters */
-  struct _win * native_win = (mrb_nil_p(win) ? NULL : mruby_unbox__win(win));
+  WINDOW * native_win = (mrb_nil_p(win) ? NULL : mruby_unbox__win(win));
 
   /* Invocation */
   char* buffer = (char*)calloc(GETSTR_BUF_SIZE, sizeof(char));
@@ -14171,7 +14171,7 @@ mrb_Curses_wgetstr(mrb_state* mrb, mrb_value self) {
 /* whline
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned long
  * - arg3: int
  * Return Type: int
@@ -14202,7 +14202,7 @@ mrb_Curses_whline(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   unsigned long native_arg2 = mrb_fixnum(arg2);
 
@@ -14228,7 +14228,7 @@ mrb_Curses_whline(mrb_state* mrb, mrb_value self) {
 /* winch
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: chtype
  */
 mrb_value
@@ -14247,7 +14247,7 @@ mrb_Curses_winch(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   chtype result = winch(native_arg1);
@@ -14269,7 +14269,7 @@ mrb_Curses_winch(mrb_state* mrb, mrb_value self) {
 /* winchnstr
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned long *
  * - arg3: int
  * Return Type: int
@@ -14297,7 +14297,7 @@ mrb_Curses_winchnstr(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   unsigned long * native_arg2 = TODO_mruby_unbox_unsigned_long_PTR(arg2);
 
@@ -14323,7 +14323,7 @@ mrb_Curses_winchnstr(mrb_state* mrb, mrb_value self) {
 /* winchstr
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned long *
  * Return Type: int
  */
@@ -14345,7 +14345,7 @@ mrb_Curses_winchstr(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   unsigned long * native_arg2 = TODO_mruby_unbox_unsigned_long_PTR(arg2);
 
@@ -14369,7 +14369,7 @@ mrb_Curses_winchstr(mrb_state* mrb, mrb_value self) {
 /* winnstr
  *
  * Parameters:
- * - win: struct _win *
+ * - win: WINDOW *
  * - len: int
  * Return Type: int
  */
@@ -14388,7 +14388,7 @@ mrb_Curses_winnstr(mrb_state* mrb, mrb_value self) {
   }
 
   /* Unbox parameters */
-  struct _win * native_win = (mrb_nil_p(win) ? NULL : mruby_unbox__win(win));
+  WINDOW * native_win = (mrb_nil_p(win) ? NULL : mruby_unbox__win(win));
 
   /* Invocation */
   char* buffer = (char*)calloc(native_len + 1, sizeof(char));
@@ -14403,7 +14403,7 @@ mrb_Curses_winnstr(mrb_state* mrb, mrb_value self) {
 /* winsch
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned long
  * Return Type: int
  */
@@ -14428,7 +14428,7 @@ mrb_Curses_winsch(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   unsigned long native_arg2 = mrb_fixnum(arg2);
 
@@ -14452,7 +14452,7 @@ mrb_Curses_winsch(mrb_state* mrb, mrb_value self) {
 /* winsdelln
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * Return Type: int
  */
@@ -14477,7 +14477,7 @@ mrb_Curses_winsdelln(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -14501,7 +14501,7 @@ mrb_Curses_winsdelln(mrb_state* mrb, mrb_value self) {
 /* winsertln
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -14520,7 +14520,7 @@ mrb_Curses_winsertln(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = winsertln(native_arg1);
@@ -14542,7 +14542,7 @@ mrb_Curses_winsertln(mrb_state* mrb, mrb_value self) {
 /* winsnstr
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: const char *
  * - arg3: int
  * Return Type: int
@@ -14573,7 +14573,7 @@ mrb_Curses_winsnstr(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   const char * native_arg2 = mrb_string_value_cstr(mrb, &arg2);
 
@@ -14599,7 +14599,7 @@ mrb_Curses_winsnstr(mrb_state* mrb, mrb_value self) {
 /* winsrawch
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned long
  * Return Type: int
  */
@@ -14624,7 +14624,7 @@ mrb_Curses_winsrawch(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   unsigned long native_arg2 = mrb_fixnum(arg2);
 
@@ -14648,7 +14648,7 @@ mrb_Curses_winsrawch(mrb_state* mrb, mrb_value self) {
 /* winsstr
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: const char *
  * Return Type: int
  */
@@ -14673,7 +14673,7 @@ mrb_Curses_winsstr(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   const char * native_arg2 = mrb_string_value_cstr(mrb, &arg2);
 
@@ -14697,7 +14697,7 @@ mrb_Curses_winsstr(mrb_state* mrb, mrb_value self) {
 /* winstr
  *
  * Parameters:
- * - win: struct _win *
+ * - win: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -14714,7 +14714,7 @@ mrb_Curses_winstr(mrb_state* mrb, mrb_value self) {
   }
 
   /* Unbox parameters */
-  struct _win * native_win = (mrb_nil_p(win) ? NULL : mruby_unbox__win(win));
+  WINDOW * native_win = (mrb_nil_p(win) ? NULL : mruby_unbox__win(win));
 
   /* Invocation */
   char* buffer = (char*)calloc(GETSTR_BUF_SIZE, sizeof(char));
@@ -14729,7 +14729,7 @@ mrb_Curses_winstr(mrb_state* mrb, mrb_value self) {
 /* wmouse_position
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int *
  * - arg3: int *
  * Return Type: void
@@ -14754,7 +14754,7 @@ mrb_Curses_wmouse_position(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int * native_arg2 = TODO_mruby_unbox_int_PTR(arg2);
 
@@ -14773,7 +14773,7 @@ mrb_Curses_wmouse_position(mrb_state* mrb, mrb_value self) {
 /* wmouse_trafo
  *
  * Parameters:
- * - arg1: const struct _win *
+ * - arg1: const WINDOW *
  * - arg2: int *
  * - arg3: int *
  * - arg4: unsigned char
@@ -14800,7 +14800,7 @@ mrb_Curses_wmouse_trafo(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  const struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  const WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int * native_arg2 = TODO_mruby_unbox_int_PTR(arg2);
 
@@ -14817,7 +14817,7 @@ mrb_Curses_wmouse_trafo(mrb_state* mrb, mrb_value self) {
 /* wmove
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * Return Type: int
@@ -14848,7 +14848,7 @@ mrb_Curses_wmove(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -14874,7 +14874,7 @@ mrb_Curses_wmove(mrb_state* mrb, mrb_value self) {
 /* wnoutrefresh
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -14893,7 +14893,7 @@ mrb_Curses_wnoutrefresh(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = wnoutrefresh(native_arg1);
@@ -14935,7 +14935,7 @@ mrb_Curses_wordchar(mrb_state* mrb, mrb_value self) {
 /* wprintw
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: const char *
  * Return Type: int
  */
@@ -14960,7 +14960,7 @@ mrb_Curses_wprintw(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   const char * native_arg2 = mrb_string_value_cstr(mrb, &arg2);
 
@@ -14984,7 +14984,7 @@ mrb_Curses_wprintw(mrb_state* mrb, mrb_value self) {
 /* wredrawln
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * Return Type: int
@@ -15015,7 +15015,7 @@ mrb_Curses_wredrawln(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -15041,7 +15041,7 @@ mrb_Curses_wredrawln(mrb_state* mrb, mrb_value self) {
 /* wrefresh
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -15060,7 +15060,7 @@ mrb_Curses_wrefresh(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = wrefresh(native_arg1);
@@ -15082,7 +15082,7 @@ mrb_Curses_wrefresh(mrb_state* mrb, mrb_value self) {
 /* wresize
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * Return Type: int
@@ -15113,7 +15113,7 @@ mrb_Curses_wresize(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -15139,7 +15139,7 @@ mrb_Curses_wresize(mrb_state* mrb, mrb_value self) {
 /* wscanw
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: const char *
  * Return Type: int
  */
@@ -15164,7 +15164,7 @@ mrb_Curses_wscanw(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   const char * native_arg2 = mrb_string_value_cstr(mrb, &arg2);
 
@@ -15188,7 +15188,7 @@ mrb_Curses_wscanw(mrb_state* mrb, mrb_value self) {
 /* wscrl
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * Return Type: int
  */
@@ -15213,7 +15213,7 @@ mrb_Curses_wscrl(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -15237,7 +15237,7 @@ mrb_Curses_wscrl(mrb_state* mrb, mrb_value self) {
 /* wsetscrreg
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * Return Type: int
@@ -15268,7 +15268,7 @@ mrb_Curses_wsetscrreg(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -15294,7 +15294,7 @@ mrb_Curses_wsetscrreg(mrb_state* mrb, mrb_value self) {
 /* wstandend
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -15313,7 +15313,7 @@ mrb_Curses_wstandend(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = wstandend(native_arg1);
@@ -15335,7 +15335,7 @@ mrb_Curses_wstandend(mrb_state* mrb, mrb_value self) {
 /* wstandout
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: int
  */
 mrb_value
@@ -15354,7 +15354,7 @@ mrb_Curses_wstandout(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   int result = wstandout(native_arg1);
@@ -15376,7 +15376,7 @@ mrb_Curses_wstandout(mrb_state* mrb, mrb_value self) {
 /* wsyncdown
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: void
  */
 mrb_value
@@ -15395,7 +15395,7 @@ mrb_Curses_wsyncdown(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   wsyncdown(native_arg1);
@@ -15410,7 +15410,7 @@ mrb_Curses_wsyncdown(mrb_state* mrb, mrb_value self) {
 /* wsyncup
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * Return Type: void
  */
 mrb_value
@@ -15429,7 +15429,7 @@ mrb_Curses_wsyncup(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
   wsyncup(native_arg1);
@@ -15444,7 +15444,7 @@ mrb_Curses_wsyncup(mrb_state* mrb, mrb_value self) {
 /* wtimeout
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * Return Type: void
  */
@@ -15469,7 +15469,7 @@ mrb_Curses_wtimeout(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -15486,7 +15486,7 @@ mrb_Curses_wtimeout(mrb_state* mrb, mrb_value self) {
 /* wtouchln
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: int
  * - arg3: int
  * - arg4: int
@@ -15523,7 +15523,7 @@ mrb_Curses_wtouchln(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   int native_arg2 = mrb_fixnum(arg2);
 
@@ -15551,7 +15551,7 @@ mrb_Curses_wtouchln(mrb_state* mrb, mrb_value self) {
 /* wvline
  *
  * Parameters:
- * - arg1: struct _win *
+ * - arg1: WINDOW *
  * - arg2: unsigned long
  * - arg3: int
  * Return Type: int
@@ -15582,7 +15582,7 @@ mrb_Curses_wvline(mrb_state* mrb, mrb_value self) {
 
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
+  WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   unsigned long native_arg2 = mrb_fixnum(arg2);
 
@@ -15632,6 +15632,13 @@ mrb_Curses_TABSIZE(mrb_state* mrb, mrb_value self) {
   return mrb_fixnum_value(TABSIZE);
 }
 
+mrb_value
+mrb_Curses_COLOR_PAIR(mrb_state* mrb, mrb_value self) {
+  mrb_int num;
+  mrb_get_args(mrb, "i", &num);
+  return mrb_fixnum_value(COLOR_PAIR(num));
+}
+
 void mrb_mruby_curses_gem_init(mrb_state* mrb) {
   struct RClass* Curses_module = mrb_define_module(mrb, "Curses");
   mruby_Curses_define_macro_constants(mrb);
@@ -15670,6 +15677,7 @@ mrb_define_class_method(mrb, Curses_module, "COLS", mrb_Curses_COLS, MRB_ARGS_AR
 mrb_define_class_method(mrb, Curses_module, "COLORS", mrb_Curses_COLORS, MRB_ARGS_ARG(0, 0));
 mrb_define_class_method(mrb, Curses_module, "COLOR_PAIRS", mrb_Curses_COLOR_PAIRS, MRB_ARGS_ARG(0, 0));
 mrb_define_class_method(mrb, Curses_module, "TABSIZE", mrb_Curses_TABSIZE, MRB_ARGS_ARG(0, 0));
+mrb_define_class_method(mrb, Curses_module, "COLOR_PAIR", mrb_Curses_COLOR_PAIR, MRB_ARGS_ARG(0, 0));
 
 #if BIND_addch_FUNCTION
   mrb_define_class_method(mrb, Curses_module, "addch", mrb_Curses_addch, MRB_ARGS_ARG(addch_REQUIRED_ARGC, addch_OPTIONAL_ARGC));
