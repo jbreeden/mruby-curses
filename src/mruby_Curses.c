@@ -2537,19 +2537,19 @@ mrb_Curses_getmouse(mrb_state* mrb, mrb_value self) {
 /* getnstr
  *
  * Parameters:
- * - arg1: Fixnum
+ * - len: Fixnum
  * Return Type: String
  */
 mrb_value
 mrb_Curses_getnstr(mrb_state* mrb, mrb_value self) {
-  mrb_int native_arg1;
+  mrb_int native_len;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "i", &native_arg1);
+  mrb_get_args(mrb, "i", &native_len);
 
   /* Allocate a temp buffer, witch room for the trailing null */
-  char* buffer = (char*)calloc(native_arg1 + 1, sizeof(char));
-  int result = getnstr(buffer, native_arg1);
+  char* buffer = (char*)calloc(native_len + 1, sizeof(char));
+  int result = getnstr(buffer, native_len);
   RETURN_TEMP_BUF(result, buffer);
 }
 #endif
@@ -14145,134 +14145,71 @@ mrb_Curses_wgetch(mrb_state* mrb, mrb_value self) {
 #endif
 
 #if BIND_wgetnstr_FUNCTION
-#define wgetnstr_REQUIRED_ARGC 3
+#define wgetnstr_REQUIRED_ARGC 2
 #define wgetnstr_OPTIONAL_ARGC 0
 /* wgetnstr
  *
  * Parameters:
- * - arg1: struct _win *
+ * - win: struct _win *
  * - arg2: char *
- * - arg3: int
+ * - len: int
  * Return Type: int
  */
 mrb_value
 mrb_Curses_wgetnstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  mrb_value arg2;
-  mrb_value arg3;
+  mrb_value win;
+  mrb_int native_len;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "ooo", &arg1, &arg2, &arg3);
-
+  mrb_get_args(mrb, "oi", &win, &native_len);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, Win_class(mrb))) {
+  if (!mrb_obj_is_kind_of(mrb, win, Win_class(mrb))) {
     mrb_raise(mrb, E_TYPE_ERROR, "Win expected");
     return mrb_nil_value();
   }
-  if (!mrb_obj_is_kind_of(mrb, arg2, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
-  if (!mrb_obj_is_kind_of(mrb, arg3, mrb->fixnum_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected");
-    return mrb_nil_value();
-  }
-
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
-
-  /* WARNING: Allocating new memory to create 'char *' from 'const char *'.
-   *          Please verify that this memory is cleaned up correctly.
-   *
-   *          Has this been verified? [No]
-   */
-  char * native_arg2 = strdup(mrb_string_value_cstr(mrb, &arg2));
-
-  int native_arg3 = mrb_fixnum(arg3);
+  struct _win * native_win = (mrb_nil_p(win) ? NULL : mruby_unbox__win(win));
 
   /* Invocation */
-  int result = wgetnstr(native_arg1, native_arg2, native_arg3);
-
-  /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
-  mrb_value return_value = mrb_fixnum_value(result);
-
-  /* WARNING: Assuming that the new string can be deallocated after the function call.
-   *          Please verify that this is correct (the function does not save this parameter).
-   *
-   *          Has this been verified? [No]
-   */
-  free(native_arg2);
-  native_arg2 = NULL;
-
-  return return_value;
+  char* buffer = (char*)calloc(native_len + 1, sizeof(char));
+  int result = wgetnstr(native_win, buffer, native_len);
+  RETURN_TEMP_BUF(result, buffer);
 }
 #endif
 
 #if BIND_wgetstr_FUNCTION
-#define wgetstr_REQUIRED_ARGC 2
+#define wgetstr_REQUIRED_ARGC 1
 #define wgetstr_OPTIONAL_ARGC 0
 /* wgetstr
  *
  * Parameters:
- * - arg1: struct _win *
+ * - win: struct _win *
  * - arg2: char *
  * Return Type: int
  */
 mrb_value
 mrb_Curses_wgetstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  mrb_value arg2;
+  mrb_value win;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "oo", &arg1, &arg2);
-
+  mrb_get_args(mrb, "o", &win);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, Win_class(mrb))) {
+  if (!mrb_obj_is_kind_of(mrb, win, Win_class(mrb))) {
     mrb_raise(mrb, E_TYPE_ERROR, "Win expected");
     return mrb_nil_value();
   }
-  if (!mrb_obj_is_kind_of(mrb, arg2, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
-
 
   /* Unbox parameters */
-  struct _win * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
-
-  /* WARNING: Allocating new memory to create 'char *' from 'const char *'.
-   *          Please verify that this memory is cleaned up correctly.
-   *
-   *          Has this been verified? [No]
-   */
-  char * native_arg2 = strdup(mrb_string_value_cstr(mrb, &arg2));
+  struct _win * native_win = (mrb_nil_p(win) ? NULL : mruby_unbox__win(win));
 
   /* Invocation */
-  int result = wgetstr(native_arg1, native_arg2);
-
-  /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
-  mrb_value return_value = mrb_fixnum_value(result);
-
-  /* WARNING: Assuming that the new string can be deallocated after the function call.
-   *          Please verify that this is correct (the function does not save this parameter).
-   *
-   *          Has this been verified? [No]
-   */
-  free(native_arg2);
-  native_arg2 = NULL;
-
-  return return_value;
+  char* buffer = (char*)calloc(GETSTR_BUF_SIZE, sizeof(char));
+  /* User wgetnstr to avoid buffer overflow */
+  int result = wgetnstr(native_win, buffer, GETSTR_BUF_SIZE - 1);
+  RETURN_TEMP_BUF(result, buffer);
 }
 #endif
 
