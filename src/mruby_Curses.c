@@ -7427,32 +7427,10 @@ mrb_Curses_mvwvline(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_napms(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-
-  /* Fetch the args */
-  mrb_get_args(mrb, "o", &arg1);
-
-
-  /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->fixnum_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected");
-    return mrb_nil_value();
-  }
-
-
-  /* Unbox parameters */
-  int native_arg1 = mrb_fixnum(arg1);
-
-  /* Invocation */
+  mrb_int native_arg1;
+  mrb_get_args(mrb, "i", &native_arg1);
   int result = napms(native_arg1);
-
-  /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
-
   return return_value;
 }
 #endif
@@ -7633,53 +7611,24 @@ mrb_Curses_newterm(mrb_state* mrb, mrb_value self) {
 /* newwin
  *
  * Parameters:
- * - arg1: int
- * - arg2: int
- * - arg3: int
- * - arg4: int
+ * - nlines: int
+ * - ncols: int
+ * - beginy: int
+ * - beginx: int
  * Return Type: WINDOW *
  */
 mrb_value
 mrb_Curses_newwin(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  mrb_value arg2;
-  mrb_value arg3;
-  mrb_value arg4;
+  mrb_int native_nlines;
+  mrb_int native_ncols;
+  mrb_int native_beginy;
+  mrb_int native_beginx;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "oooo", &arg1, &arg2, &arg3, &arg4);
-
-
-  /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->fixnum_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected");
-    return mrb_nil_value();
-  }
-  if (!mrb_obj_is_kind_of(mrb, arg2, mrb->fixnum_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected");
-    return mrb_nil_value();
-  }
-  if (!mrb_obj_is_kind_of(mrb, arg3, mrb->fixnum_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected");
-    return mrb_nil_value();
-  }
-  if (!mrb_obj_is_kind_of(mrb, arg4, mrb->fixnum_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "Fixnum expected");
-    return mrb_nil_value();
-  }
-
-
-  /* Unbox parameters */
-  int native_arg1 = mrb_fixnum(arg1);
-
-  int native_arg2 = mrb_fixnum(arg2);
-
-  int native_arg3 = mrb_fixnum(arg3);
-
-  int native_arg4 = mrb_fixnum(arg4);
+  mrb_get_args(mrb, "iiii", &native_nlines, &native_ncols, &native_beginy, &native_beginx);
 
   /* Invocation */
-  WINDOW * result = newwin(native_arg1, native_arg2, native_arg3, native_arg4);
+  WINDOW * result = newwin(native_nlines, native_ncols, native_beginy, native_beginx);
 
   /* Box the return value */
   mrb_value return_value = (result == NULL ? mrb_nil_value() : mruby_box__win(mrb, result));
