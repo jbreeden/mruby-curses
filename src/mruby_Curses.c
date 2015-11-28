@@ -15552,7 +15552,7 @@ mrb_Curses_wvline(mrb_state* mrb, mrb_value self) {
 #endif
 
 mrb_value
-mruby_Curses_stdscr(mrb_state* mrb, mrb_value self) {
+mrb_Curses_stdscr(mrb_state* mrb, mrb_value self) {
   return stdscr == NULL ? mrb_nil_value() : mruby_box__win(mrb, stdscr);
 }
 
@@ -15588,10 +15588,104 @@ mrb_Curses_COLOR_PAIR(mrb_state* mrb, mrb_value self) {
   return mrb_fixnum_value(COLOR_PAIR(num));
 }
 
+#define ACS_FUNCTION(chr) \
+mrb_value \
+mrb_Curses_ACS_ ## chr (mrb_state* mrb, mrb_value self) {\
+  return mrb_fixnum_value( ACS_ ## chr );\
+}
+ACS_FUNCTION(BLOCK)
+ACS_FUNCTION(BOARD)
+ACS_FUNCTION(BSBS)
+ACS_FUNCTION(BSSB)
+ACS_FUNCTION(BSSS)
+ACS_FUNCTION(BTEE)
+ACS_FUNCTION(BULLET)
+ACS_FUNCTION(CKBOARD)
+ACS_FUNCTION(DARROW)
+ACS_FUNCTION(DEGREE)
+ACS_FUNCTION(DIAMOND)
+ACS_FUNCTION(GEQUAL)
+ACS_FUNCTION(HLINE)
+ACS_FUNCTION(LANTERN)
+ACS_FUNCTION(LARROW)
+ACS_FUNCTION(LEQUAL)
+ACS_FUNCTION(LLCORNER)
+ACS_FUNCTION(LRCORNER)
+ACS_FUNCTION(LTEE)
+ACS_FUNCTION(NEQUAL)
+ACS_FUNCTION(PI)
+ACS_FUNCTION(PLMINUS)
+ACS_FUNCTION(PLUS)
+ACS_FUNCTION(RARROW)
+ACS_FUNCTION(RTEE)
+ACS_FUNCTION(S1)
+ACS_FUNCTION(S3)
+ACS_FUNCTION(S7)
+ACS_FUNCTION(S9)
+ACS_FUNCTION(SBBS)
+ACS_FUNCTION(SBSB)
+ACS_FUNCTION(SBSS)
+ACS_FUNCTION(SSBB)
+ACS_FUNCTION(SSBS)
+ACS_FUNCTION(SSSB)
+ACS_FUNCTION(SSSS)
+ACS_FUNCTION(STERLING)
+ACS_FUNCTION(TTEE)
+ACS_FUNCTION(UARROW)
+ACS_FUNCTION(ULCORNER)
+ACS_FUNCTION(URCORNER)
+ACS_FUNCTION(VLINE)
+#undef ACS_FUNCTION
+
 void mrb_mruby_curses_gem_init(mrb_state* mrb) {
   struct RClass* Curses_module = mrb_define_module(mrb, "Curses");
   mruby_Curses_define_macro_constants(mrb);
 
+  #define BIND_ACS_FUNCTION(chr)\
+  mrb_define_class_method(mrb, Curses_module, "ACS_" #chr, mrb_Curses_ACS_ ## chr, MRB_ARGS_ARG(0, 0));
+  BIND_ACS_FUNCTION(BLOCK)
+  BIND_ACS_FUNCTION(BOARD)
+  BIND_ACS_FUNCTION(BSBS)
+  BIND_ACS_FUNCTION(BSSB)
+  BIND_ACS_FUNCTION(BSSS)
+  BIND_ACS_FUNCTION(BTEE)
+  BIND_ACS_FUNCTION(BULLET)
+  BIND_ACS_FUNCTION(CKBOARD)
+  BIND_ACS_FUNCTION(DARROW)
+  BIND_ACS_FUNCTION(DEGREE)
+  BIND_ACS_FUNCTION(DIAMOND)
+  BIND_ACS_FUNCTION(GEQUAL)
+  BIND_ACS_FUNCTION(HLINE)
+  BIND_ACS_FUNCTION(LANTERN)
+  BIND_ACS_FUNCTION(LARROW)
+  BIND_ACS_FUNCTION(LEQUAL)
+  BIND_ACS_FUNCTION(LLCORNER)
+  BIND_ACS_FUNCTION(LRCORNER)
+  BIND_ACS_FUNCTION(LTEE)
+  BIND_ACS_FUNCTION(NEQUAL)
+  BIND_ACS_FUNCTION(PI)
+  BIND_ACS_FUNCTION(PLMINUS)
+  BIND_ACS_FUNCTION(PLUS)
+  BIND_ACS_FUNCTION(RARROW)
+  BIND_ACS_FUNCTION(RTEE)
+  BIND_ACS_FUNCTION(S1)
+  BIND_ACS_FUNCTION(S3)
+  BIND_ACS_FUNCTION(S7)
+  BIND_ACS_FUNCTION(S9)
+  BIND_ACS_FUNCTION(SBBS)
+  BIND_ACS_FUNCTION(SBSB)
+  BIND_ACS_FUNCTION(SBSS)
+  BIND_ACS_FUNCTION(SSBB)
+  BIND_ACS_FUNCTION(SSBS)
+  BIND_ACS_FUNCTION(SSSB)
+  BIND_ACS_FUNCTION(SSSS)
+  BIND_ACS_FUNCTION(STERLING)
+  BIND_ACS_FUNCTION(TTEE)
+  BIND_ACS_FUNCTION(UARROW)
+  BIND_ACS_FUNCTION(ULCORNER)
+  BIND_ACS_FUNCTION(URCORNER)
+  BIND_ACS_FUNCTION(VLINE)
+  #undef BIND_ACS_FUNCTION
   /*
    * Initialize class bindings
    */
@@ -15620,7 +15714,7 @@ void mrb_mruby_curses_gem_init(mrb_state* mrb) {
   /*
    * Global Functions
    */
-mrb_define_class_method(mrb, Curses_module, "stdscr", mruby_Curses_stdscr, MRB_ARGS_ARG(0, 0));
+mrb_define_class_method(mrb, Curses_module, "stdscr", mrb_Curses_stdscr, MRB_ARGS_ARG(0, 0));
 mrb_define_class_method(mrb, Curses_module, "LINES", mrb_Curses_LINES, MRB_ARGS_ARG(0, 0));
 mrb_define_class_method(mrb, Curses_module, "COLS", mrb_Curses_COLS, MRB_ARGS_ARG(0, 0));
 mrb_define_class_method(mrb, Curses_module, "COLORS", mrb_Curses_COLORS, MRB_ARGS_ARG(0, 0));

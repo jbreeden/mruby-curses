@@ -586,6 +586,8 @@
  #define BIND_wsyncup_FUNCTION TRUE
  #define BIND_wtimeout_FUNCTION TRUE
  #define BIND_wtouchln_FUNCTION TRUE
+ #define BIND_wvline_FUNCTION TRUE
+ #define BIND_whline_FUNCTION TRUE
 
 /*
  * Header Files
