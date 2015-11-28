@@ -29,7 +29,7 @@ The exact steps are as follows:
     `conf.linker.library_paths = ['PATH/TO/NCURSES/lib']`  
     `conf.linker.libraries = %w(panel ncurses)`
   + Ex: Building against pdcurses  
-    _I renamed pdcurses.a to libpdcurses.s so the linker would find it under the -L directories_
+    _I renamed pdcurses.a to libpdcurses.a so the linker would find it under the -L directories_  
     `conf.linker.library_paths = ['PATH/TO/PDCURSES']`  
     `conf.linker.libraries = %w(pdcurses)`
 - Run `rake` in MRuby's root directory.
