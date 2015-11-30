@@ -9,7 +9,6 @@ module CUI
 
     def initialize
       @event_handlers = Hash.new { |h, k| h[k] = [] }
-      @event_listeners = Hash.new { |h, k| h[k] = Hash.new { |h, k| h[k] = [] } }
     end
 
     def trigger(event, *args)
@@ -44,16 +43,6 @@ module CUI
         end
       end
     end
-
-    def listen(obj, event_type, &block)
-      # raise ArgumentError.new("listen called without a block") unless block_given?
-      # @event_listeners[obj][event_type].push(block)
-      # obj.on(event_type, &block)
-    end
-
-    def stop_listening(obj=nil, event_type=nil, &block)
-
-    end
   end
 
   # Most basic instantiable event emitting object
@@ -70,6 +59,8 @@ module CUI
   # provide a default, globally accessible, hash of hubs.
   # - Recommend using fetch (eg `CUI.hubs.fetch().trigger(...)`)
   #   when referencing hubs to expose typos in hub names.
-  @hubs = Hash.new
-  attr_reader :hubs
+  @hubs = Hash.new { |h, k| h[k] = EventEmitter.new }
+  def self.hubs
+    @hubs
+  end
 end
