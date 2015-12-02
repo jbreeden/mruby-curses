@@ -6,7 +6,8 @@ module CUI
     # Instance Methods
     # ----------------
 
-    attr_accessor :win, :panel, :model, :io
+    attr_reader :win, :panel, :io
+    attr_accessor :model
 
     def initialize(*opt)
       super() # initialize events
@@ -37,6 +38,12 @@ module CUI
       Curses.nodelay @win, true
     end
 
+    def children
+      # We need to know if our children are updated...
+      # so only hand out copies of the array
+      @children.dup
+    end
+
     def add_child(child)
       unless @children.include?(child)
         @invalid = true
@@ -54,7 +61,12 @@ module CUI
     end
 
     def remove_children(*children)
-      children.flatten.each { |c| remove_child(c) }
+      if children.empty? && !@children.empty?
+        @invalid = true
+        @children = []
+      else
+        children.flatten.each { |c| remove_child(c) }
+      end
     end
 
     # Called by refresh, before the screen is updated.

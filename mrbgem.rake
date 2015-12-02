@@ -8,6 +8,7 @@ MRuby::Gem::Specification.new('mruby-curses') do |spec|
   spec.rbfiles.clear
   spec.rbfiles.push "#{gem_dir}/mrblib/curses.rb"
   spec.rbfiles.push "#{gem_dir}/mrblib/cui/cui.rb"
+  spec.rbfiles.push "#{gem_dir}/mrblib/cui/colors.rb"
   spec.rbfiles.push "#{gem_dir}/mrblib/cui/events.rb"
   spec.rbfiles.push "#{gem_dir}/mrblib/cui/model.rb"
   spec.rbfiles.push "#{gem_dir}/mrblib/cui/builtin_events.rb"
