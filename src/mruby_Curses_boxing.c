@@ -20,6 +20,7 @@ static void free_MEVENT(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type MEVENT_data_type = {
@@ -80,6 +81,7 @@ static void free_MOUSE_STATUS(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type MOUSE_STATUS_data_type = {
@@ -140,6 +142,7 @@ static void free_SCREEN(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type SCREEN_data_type = {
@@ -200,6 +203,7 @@ static void free_TERMINAL(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type TERMINAL_data_type = {
@@ -260,6 +264,7 @@ static void free__win(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type _win_data_type = {
@@ -320,6 +325,7 @@ static void free_panel(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type panel_data_type = {
@@ -380,6 +386,7 @@ static void free_panelobs(mrb_state* mrb, void* ptr) {
       box->obj = NULL;
     }
   }
+  free(box);
 }
 
 static const mrb_data_type panelobs_data_type = {
