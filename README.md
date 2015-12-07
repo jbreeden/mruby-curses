@@ -35,9 +35,11 @@ The exact steps are as follows:
 - Run `rake` in MRuby's root directory.
 
 You can try running the scripts in the `examples/` directory to test your build.
-Note that on Mac it may be required (read: it was on my machine) to `make install`
-ncurses so that the terminfo files could be found. Simply `make`-ing ncurses
-and linking into MRuby resulted in errors like "Error opening terminal xterm-256color."
+
+_Note for Mac users: If you get errors like "Error opening terminal xterm-256color" that means
+ncurses can't find your terminfo files. You can get around this by `make install`-ing ncurses,
+or by setting the environment variable `TERMINFO=/usr/shar/terminfo`. You can do this within
+your appliction, as long as it's set before you call `Curses.init`._
 
 On windows, building pdcurses with clang (via mingw32-make & cygwin) then linking
 to MRuby (also building with clang) is very straightforward and "just works."
@@ -45,12 +47,36 @@ to MRuby (also building with clang) is very straightforward and "just works."
 API
 ---
 
-The API is 1-to-1 with the C API for curses. Parameters map the way you would expect (char* to String, int to Fixnum, etc).
-A point of note is that characters in curses are handled as numbers (same as the MRI Curses gem). Though, the *addch family
-of functions will allow you to pass a single character string as well.
+The main API is 1-to-1 with the C API for curses. Parameters map the way you would expect (char* to String, int to Fixnum, etc). A point of note is that characters in curses are handled as numbers (same as the MRI Curses gem). Though, the *addch family of functions will allow you to pass a single character string as well.
 
 The bound functions are listed below. If you're new to curses development, you can find documentation online.
 You might start [here](http://tldp.org/HOWTO/NCURSES-Programming-HOWTO/) or [here](http://pdcurses.sourceforge.net/doc/).
+
+There is also a higher-level, Backbone.js inspired framework included called `CUI`. `CUI` includes:
+
+- Easy initialization of curses for raw input `CUI.init`
+- An `Events` module that can be mixed in to any class
+  + Just like Backbone, CUI itself mixis in `Events`
+- An event loop
+  + Triggers all input events on the focused window, if any, and `CUI` itself.
+  + Resizes all Windows when the terminal is resized
+    - Calls the window's `layout` method and sets `@invalid` to true, which you can check in your `Window#render` method.
+  + Re-renders any invalid windows at ~50fps.
+- A `Model` class, which provides the `model_attr` class macro
+  + `model_attr`s are just like `attr_accessor`s, but they trigger change events on changes.
+  + This allows the familiar Backone idiom in your views  
+    `@model.on(:change) { @invalid = true } # Make sure we re-render on the next render frame`
+- A `Window` class used to create views
+  + Each window is backed by a curses panel, which allows curses to render overlapping windows correctly.
+  + The `layout` and `render` methods can be overridden to customize interaction with the event loop.
+  + All windows have an `io` property, which is a `WindowIO` object.
+- A `WindowIO` class
+  + Provides higher-level window output routines built on the `Curses` module.
+- An example `TextInput` class
+  + A single-line text input window
+  + Gets input asynchronously from the event loop, rather than in a blocking manner like `Curses.getstr`
+
+`CUI` is meant to provide the basic building blocks that I think all curses applicaitons are going to need, and nothing more. Have a peek at `examples/cui_windows.rb` to see it in action. A larger example is available [here](https://github.com/jbreeden/mruby-bin-git-curses). CUI is brand new, so any bug reports are appreciated!
 
 Bound Functions
 ---------------
