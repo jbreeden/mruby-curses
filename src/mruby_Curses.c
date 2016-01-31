@@ -182,10 +182,6 @@ mrb_Curses_addrawch(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = addrawch(native_arg1);
 
@@ -256,10 +252,6 @@ mrb_Curses_assume_default_colors(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "ii", &native_arg1, &native_arg2);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   int result = assume_default_colors(native_arg1, native_arg2);
@@ -456,10 +448,6 @@ mrb_Curses_attroff(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = attroff(native_arg1);
 
@@ -490,10 +478,6 @@ mrb_Curses_attron(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = attron(native_arg1);
 
@@ -523,10 +507,6 @@ mrb_Curses_attrset(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   int result = attrset(native_arg1);
@@ -606,10 +586,6 @@ mrb_Curses_bkgd(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = bkgd(native_arg1);
 
@@ -639,10 +615,6 @@ mrb_Curses_bkgdset(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   bkgdset(native_arg1);
@@ -680,10 +652,6 @@ mrb_Curses_border(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "iiiiiiii", &native_arg1, &native_arg2, &native_arg3, &native_arg4, &native_arg5, &native_arg6, &native_arg7, &native_arg8);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   int result = border(native_arg1, native_arg2, native_arg3, native_arg4, native_arg5, native_arg6, native_arg7, native_arg8);
@@ -1144,10 +1112,6 @@ mrb_Curses_curs_set(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = curs_set(native_arg1);
 
@@ -1323,10 +1287,6 @@ mrb_Curses_delay_output(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   int result = delay_output(native_arg1);
@@ -1544,10 +1504,6 @@ mrb_Curses_draino(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = draino(native_arg1);
 
@@ -1636,10 +1592,6 @@ mrb_Curses_echochar(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   int result = echochar(native_arg1);
@@ -2338,10 +2290,6 @@ mrb_Curses_halfdelay(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = halfdelay(native_arg1);
 
@@ -2417,10 +2365,6 @@ mrb_Curses_has_key(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   return has_key(native_arg1) ? mrb_true_value() : mrb_false_value();
 }
@@ -2482,10 +2426,6 @@ mrb_Curses_hline(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "ii", &native_arg1, &native_arg2);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   int result = hline(native_arg1, native_arg2);
@@ -2730,10 +2670,6 @@ mrb_Curses_init_color(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "iiii", &native_arg1, &native_arg2, &native_arg3, &native_arg4);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = init_color(native_arg1, native_arg2, native_arg3, native_arg4);
 
@@ -2767,10 +2703,6 @@ mrb_Curses_init_pair(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "iii", &native_arg1, &native_arg2, &native_arg3);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   int result = init_pair(native_arg1, native_arg2, native_arg3);
@@ -2841,10 +2773,6 @@ mrb_Curses_innstr(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_insch(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
-
-  /* Fetch the args */
-  mrb_get_args(mrb, "i", &native_arg1);
-
   /* Type checking */
 
   /* Unbox parameters */
@@ -2878,10 +2806,6 @@ mrb_Curses_insdelln(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   int result = insdelln(native_arg1);
@@ -2980,10 +2904,6 @@ mrb_Curses_insrawch(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   int result = insrawch(native_arg1);
@@ -3208,10 +3128,6 @@ mrb_Curses_keyname(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   const char * result = keyname(native_arg1);
 
@@ -3360,10 +3276,6 @@ mrb_Curses_map_button(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = map_button(native_arg1);
 
@@ -3435,10 +3347,6 @@ mrb_Curses_mouse_off(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = mouse_off(native_arg1);
 
@@ -3469,10 +3377,6 @@ mrb_Curses_mouse_on(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = mouse_on(native_arg1);
 
@@ -3502,10 +3406,6 @@ mrb_Curses_mouse_set(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   int result = mouse_set(native_arg1);
@@ -3570,10 +3470,6 @@ mrb_Curses_mouseinterval(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   int result = mouseinterval(native_arg1);
@@ -3645,10 +3541,6 @@ mrb_Curses_move(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "ii", &native_arg1, &native_arg2);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   int result = move(native_arg1, native_arg2);
@@ -3726,10 +3618,6 @@ mrb_Curses_mvaddch(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "iii", &native_arg1, &native_arg2, &native_arg3);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   int result = mvaddch(native_arg1, native_arg2, native_arg3);
@@ -3895,10 +3783,6 @@ mrb_Curses_mvaddrawch(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "iii", &native_arg1, &native_arg2, &native_arg3);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = mvaddrawch(native_arg1, native_arg2, native_arg3);
 
@@ -4026,10 +3910,6 @@ mrb_Curses_mvcur(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "iiii", &native_arg1, &native_arg2, &native_arg3, &native_arg4);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = mvcur(native_arg1, native_arg2, native_arg3, native_arg4);
 
@@ -4062,10 +3942,6 @@ mrb_Curses_mvdelch(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "ii", &native_arg1, &native_arg2);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = mvdelch(native_arg1, native_arg2);
 
@@ -4097,10 +3973,6 @@ mrb_Curses_mvdeleteln(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "ii", &native_arg1, &native_arg2);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   int result = mvdeleteln(native_arg1, native_arg2);
@@ -4176,10 +4048,6 @@ mrb_Curses_mvgetch(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "ii", &native_arg1, &native_arg2);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   int result = mvgetch(native_arg1, native_arg2);
@@ -4270,10 +4138,6 @@ mrb_Curses_mvhline(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "iiii", &native_arg1, &native_arg2, &native_arg3, &native_arg4);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = mvhline(native_arg1, native_arg2, native_arg3, native_arg4);
 
@@ -4305,10 +4169,6 @@ mrb_Curses_mvinch(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "ii", &native_arg1, &native_arg2);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   chtype result = mvinch(native_arg1, native_arg2);
@@ -4455,10 +4315,6 @@ mrb_Curses_mvinsch(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "iii", &native_arg1, &native_arg2, &native_arg3);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = mvinsch(native_arg1, native_arg2, native_arg3);
 
@@ -4490,10 +4346,6 @@ mrb_Curses_mvinsertln(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "ii", &native_arg1, &native_arg2);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   int result = mvinsertln(native_arg1, native_arg2);
@@ -4574,10 +4426,6 @@ mrb_Curses_mvinsrawch(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "iii", &native_arg1, &native_arg2, &native_arg3);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   int result = mvinsrawch(native_arg1, native_arg2, native_arg3);
@@ -4772,10 +4620,6 @@ mrb_Curses_mvvline(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "iiii", &native_arg1, &native_arg2, &native_arg3, &native_arg4);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   int result = mvvline(native_arg1, native_arg2, native_arg3, native_arg4);
@@ -6142,10 +5986,6 @@ mrb_Curses_newpad(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "ii", &native_arg1, &native_arg2);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   WINDOW * result = newpad(native_arg1, native_arg2);
 
@@ -7123,10 +6963,6 @@ mrb_Curses_PDC_set_line_color(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = PDC_set_line_color(native_arg1);
 
@@ -7229,10 +7065,6 @@ mrb_Curses_PDC_ungetch(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   int result = PDC_ungetch(native_arg1);
@@ -7832,10 +7664,6 @@ mrb_Curses_resize_term(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "ii", &native_arg1, &native_arg2);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = resize_term(native_arg1, native_arg2);
 
@@ -8243,10 +8071,6 @@ mrb_Curses_scrl(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = scrl(native_arg1);
 
@@ -8473,10 +8297,6 @@ mrb_Curses_setscrreg(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "ii", &native_arg1, &native_arg2);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = setscrreg(native_arg1, native_arg2);
 
@@ -8508,10 +8328,6 @@ mrb_Curses_setsyx(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "ii", &native_arg1, &native_arg2);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   int result = setsyx(native_arg1, native_arg2);
@@ -8786,10 +8602,6 @@ mrb_Curses_slk_attroff(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = slk_attroff(native_arg1);
 
@@ -8820,10 +8632,6 @@ mrb_Curses_slk_attron(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = slk_attron(native_arg1);
 
@@ -8853,10 +8661,6 @@ mrb_Curses_slk_attrset(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   int result = slk_attrset(native_arg1);
@@ -8912,10 +8716,6 @@ mrb_Curses_slk_color(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = slk_color(native_arg1);
 
@@ -8946,10 +8746,6 @@ mrb_Curses_slk_init(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = slk_init(native_arg1);
 
@@ -8979,10 +8775,6 @@ mrb_Curses_slk_label(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   char * result = slk_label(native_arg1);
@@ -9738,10 +9530,6 @@ mrb_Curses_timeout(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   timeout(native_arg1);
 
@@ -10021,10 +9809,6 @@ mrb_Curses_typeahead(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = typeahead(native_arg1);
 
@@ -10054,10 +9838,6 @@ mrb_Curses_unctrl(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   const char * result = unctrl(native_arg1);
@@ -10316,10 +10096,6 @@ mrb_Curses_vidattr(mrb_state* mrb, mrb_value self) {
   /* Fetch the args */
   mrb_get_args(mrb, "i", &native_arg1);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
   int result = vidattr(native_arg1);
 
@@ -10392,10 +10168,6 @@ mrb_Curses_vline(mrb_state* mrb, mrb_value self) {
 
   /* Fetch the args */
   mrb_get_args(mrb, "ii", &native_arg1, &native_arg2);
-
-  /* Type checking */
-
-  /* Unbox parameters */
 
   /* Invocation */
   int result = vline(native_arg1, native_arg2);
