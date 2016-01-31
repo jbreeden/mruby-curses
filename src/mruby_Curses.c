@@ -137,20 +137,16 @@ mrb_Curses_addchstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_addnstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
   mrb_int native_arg2;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "oi", &arg1, &native_arg2);
+  mrb_get_args(mrb, "zi", &native_arg1, &native_arg2);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   /* Invocation */
   int result = addnstr(native_arg1, native_arg2);
@@ -207,19 +203,15 @@ mrb_Curses_addrawch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_addstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "o", &arg1);
+  mrb_get_args(mrb, "z", &native_arg1);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   /* Invocation */
   int result = addstr(native_arg1);
@@ -2860,20 +2852,16 @@ mrb_Curses_insertln(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_insnstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
   mrb_int native_arg2;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "oi", &arg1, &native_arg2);
+  mrb_get_args(mrb, "zi", &native_arg1, &native_arg2);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   /* Invocation */
   int result = insnstr(native_arg1, native_arg2);
@@ -2930,19 +2918,15 @@ mrb_Curses_insrawch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_insstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "o", &arg1);
+  mrb_get_args(mrb, "z", &native_arg1);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   /* Invocation */
   int result = insstr(native_arg1);
@@ -3733,21 +3717,17 @@ mrb_value
 mrb_Curses_mvaddnstr(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
   mrb_int native_arg2;
-  mrb_value arg3;
+  char * native_arg3;
   mrb_int native_arg4;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "iioi", &native_arg1, &native_arg2, &arg3, &native_arg4);
+  mrb_get_args(mrb, "iizi", &native_arg1, &native_arg2, &native_arg3, &native_arg4);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg3, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
 
-  const char * native_arg3 = mrb_string_value_cstr(mrb, &arg3);
+
 
   /* Invocation */
   int result = mvaddnstr(native_arg1, native_arg2, native_arg3, native_arg4);
@@ -3812,20 +3792,16 @@ mrb_value
 mrb_Curses_mvaddstr(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
   mrb_int native_arg2;
-  mrb_value arg3;
+  char * native_arg3;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "iio", &native_arg1, &native_arg2, &arg3);
+  mrb_get_args(mrb, "iiz", &native_arg1, &native_arg2, &native_arg3);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg3, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
 
-  const char * native_arg3 = mrb_string_value_cstr(mrb, &arg3);
+
 
   /* Invocation */
   int result = mvaddstr(native_arg1, native_arg2, native_arg3);
@@ -4377,21 +4353,17 @@ mrb_value
 mrb_Curses_mvinsnstr(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
   mrb_int native_arg2;
-  mrb_value arg3;
+  char * native_arg3;
   mrb_int native_arg4;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "iioi", &native_arg1, &native_arg2, &arg3, &native_arg4);
+  mrb_get_args(mrb, "iizi", &native_arg1, &native_arg2, &native_arg3, &native_arg4);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg3, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
 
-  const char * native_arg3 = mrb_string_value_cstr(mrb, &arg3);
+
 
   /* Invocation */
   int result = mvinsnstr(native_arg1, native_arg2, native_arg3, native_arg4);
@@ -4456,20 +4428,16 @@ mrb_value
 mrb_Curses_mvinsstr(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
   mrb_int native_arg2;
-  mrb_value arg3;
+  char * native_arg3;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "iio", &native_arg1, &native_arg2, &arg3);
+  mrb_get_args(mrb, "iiz", &native_arg1, &native_arg2, &native_arg3);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg3, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
 
-  const char * native_arg3 = mrb_string_value_cstr(mrb, &arg3);
+
 
   /* Invocation */
   int result = mvinsstr(native_arg1, native_arg2, native_arg3);
@@ -4526,20 +4494,16 @@ mrb_value
 mrb_Curses_mvprintw(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
   mrb_int native_arg2;
-  mrb_value arg3;
+  char * native_arg3;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "iio", &native_arg1, &native_arg2, &arg3);
+  mrb_get_args(mrb, "iiz", &native_arg1, &native_arg2, &native_arg3);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg3, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
 
-  const char * native_arg3 = mrb_string_value_cstr(mrb, &arg3);
+
 
   /* Invocation */
   int result = mvprintw(native_arg1, native_arg2, native_arg3);
@@ -4570,20 +4534,16 @@ mrb_value
 mrb_Curses_mvscanw(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
   mrb_int native_arg2;
-  mrb_value arg3;
+  char * native_arg3;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "iio", &native_arg1, &native_arg2, &arg3);
+  mrb_get_args(mrb, "iiz", &native_arg1, &native_arg2, &native_arg3);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg3, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
 
-  const char * native_arg3 = mrb_string_value_cstr(mrb, &arg3);
+
 
   /* Invocation */
   int result = mvscanw(native_arg1, native_arg2, native_arg3);
@@ -4796,26 +4756,22 @@ mrb_Curses_mvwaddnstr(mrb_state* mrb, mrb_value self) {
   mrb_value arg1;
   mrb_int native_arg2;
   mrb_int native_arg3;
-  mrb_value arg4;
+  char * native_arg4;
   mrb_int native_arg5;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "oiioi", &arg1, &native_arg2, &native_arg3, &arg4, &native_arg5);
+  mrb_get_args(mrb, "oiizi", &arg1, &native_arg2, &native_arg3, &native_arg4, &native_arg5);
 
   /* Type checking */
   if (!mrb_obj_is_kind_of(mrb, arg1, Win_class(mrb))) {
     mrb_raise(mrb, E_TYPE_ERROR, "Win expected");
     return mrb_nil_value();
   }
-  if (!mrb_obj_is_kind_of(mrb, arg4, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-  const char * native_arg4 = mrb_string_value_cstr(mrb, &arg4);
+
 
   /* Invocation */
   int result = mvwaddnstr(native_arg1, native_arg2, native_arg3, native_arg4, native_arg5);
@@ -4893,25 +4849,21 @@ mrb_Curses_mvwaddstr(mrb_state* mrb, mrb_value self) {
   mrb_value arg1;
   mrb_int native_arg2;
   mrb_int native_arg3;
-  mrb_value arg4;
+  char * native_arg4;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "oiio", &arg1, &native_arg2, &native_arg3, &arg4);
+  mrb_get_args(mrb, "oiiz", &arg1, &native_arg2, &native_arg3, &native_arg4);
 
   /* Type checking */
   if (!mrb_obj_is_kind_of(mrb, arg1, Win_class(mrb))) {
     mrb_raise(mrb, E_TYPE_ERROR, "Win expected");
     return mrb_nil_value();
   }
-  if (!mrb_obj_is_kind_of(mrb, arg4, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-  const char * native_arg4 = mrb_string_value_cstr(mrb, &arg4);
+
 
   /* Invocation */
   int result = mvwaddstr(native_arg1, native_arg2, native_arg3, native_arg4);
@@ -5559,26 +5511,22 @@ mrb_Curses_mvwinsnstr(mrb_state* mrb, mrb_value self) {
   mrb_value arg1;
   mrb_int native_arg2;
   mrb_int native_arg3;
-  mrb_value arg4;
+  char * native_arg4;
   mrb_int native_arg5;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "oiioi", &arg1, &native_arg2, &native_arg3, &arg4, &native_arg5);
+  mrb_get_args(mrb, "oiizi", &arg1, &native_arg2, &native_arg3, &native_arg4, &native_arg5);
 
   /* Type checking */
   if (!mrb_obj_is_kind_of(mrb, arg1, Win_class(mrb))) {
     mrb_raise(mrb, E_TYPE_ERROR, "Win expected");
     return mrb_nil_value();
   }
-  if (!mrb_obj_is_kind_of(mrb, arg4, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-  const char * native_arg4 = mrb_string_value_cstr(mrb, &arg4);
+
 
   /* Invocation */
   int result = mvwinsnstr(native_arg1, native_arg2, native_arg3, native_arg4, native_arg5);
@@ -5656,25 +5604,21 @@ mrb_Curses_mvwinsstr(mrb_state* mrb, mrb_value self) {
   mrb_value arg1;
   mrb_int native_arg2;
   mrb_int native_arg3;
-  mrb_value arg4;
+  char * native_arg4;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "oiio", &arg1, &native_arg2, &native_arg3, &arg4);
+  mrb_get_args(mrb, "oiiz", &arg1, &native_arg2, &native_arg3, &native_arg4);
 
   /* Type checking */
   if (!mrb_obj_is_kind_of(mrb, arg1, Win_class(mrb))) {
     mrb_raise(mrb, E_TYPE_ERROR, "Win expected");
     return mrb_nil_value();
   }
-  if (!mrb_obj_is_kind_of(mrb, arg4, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-  const char * native_arg4 = mrb_string_value_cstr(mrb, &arg4);
+
 
   /* Invocation */
   int result = mvwinsstr(native_arg1, native_arg2, native_arg3, native_arg4);
@@ -5743,25 +5687,21 @@ mrb_Curses_mvwprintw(mrb_state* mrb, mrb_value self) {
   mrb_value arg1;
   mrb_int native_arg2;
   mrb_int native_arg3;
-  mrb_value arg4;
+  char * native_arg4;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "oiio", &arg1, &native_arg2, &native_arg3, &arg4);
+  mrb_get_args(mrb, "oiiz", &arg1, &native_arg2, &native_arg3, &native_arg4);
 
   /* Type checking */
   if (!mrb_obj_is_kind_of(mrb, arg1, Win_class(mrb))) {
     mrb_raise(mrb, E_TYPE_ERROR, "Win expected");
     return mrb_nil_value();
   }
-  if (!mrb_obj_is_kind_of(mrb, arg4, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-  const char * native_arg4 = mrb_string_value_cstr(mrb, &arg4);
+
 
   /* Invocation */
   int result = mvwprintw(native_arg1, native_arg2, native_arg3, native_arg4);
@@ -5794,25 +5734,21 @@ mrb_Curses_mvwscanw(mrb_state* mrb, mrb_value self) {
   mrb_value arg1;
   mrb_int native_arg2;
   mrb_int native_arg3;
-  mrb_value arg4;
+  char * native_arg4;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "oiio", &arg1, &native_arg2, &native_arg3, &arg4);
+  mrb_get_args(mrb, "oiiz", &arg1, &native_arg2, &native_arg3, &native_arg4);
 
   /* Type checking */
   if (!mrb_obj_is_kind_of(mrb, arg1, Win_class(mrb))) {
     mrb_raise(mrb, E_TYPE_ERROR, "Win expected");
     return mrb_nil_value();
   }
-  if (!mrb_obj_is_kind_of(mrb, arg4, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-  const char * native_arg4 = mrb_string_value_cstr(mrb, &arg4);
+
 
   /* Invocation */
   int result = mvwscanw(native_arg1, native_arg2, native_arg3, native_arg4);
@@ -6009,23 +5945,19 @@ mrb_Curses_newpad(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_newterm(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
   mrb_value arg2;
   mrb_value arg3;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "ooo", &arg1, &arg2, &arg3);
+  mrb_get_args(mrb, "zoo", &native_arg1, &arg2, &arg3);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
   TODO_type_check__iobuf_PTR(arg2);
   TODO_type_check__iobuf_PTR(arg3);
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   struct _iobuf * native_arg2 = TODO_mruby_unbox__iobuf_PTR(arg2);
 
@@ -6668,19 +6600,15 @@ mrb_Curses_PDC_clearclipboard(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_PDC_debug(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "o", &arg1);
+  mrb_get_args(mrb, "z", &native_arg1);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   /* Invocation */
   PDC_debug(native_arg1);
@@ -6700,16 +6628,12 @@ mrb_Curses_PDC_debug(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_PDC_freeclipboard(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "o", &arg1);
+  mrb_get_args(mrb, "z", &native_arg1);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
   /* WARNING: Allocating new memory to create 'char *' from 'const char *'.
@@ -6717,7 +6641,7 @@ mrb_Curses_PDC_freeclipboard(mrb_state* mrb, mrb_value self) {
    *
    *          Has this been verified? [No]
    */
-  char * native_arg1 = strdup(mrb_string_value_cstr(mrb, &arg1));
+
 
   /* Invocation */
   int result = PDC_freeclipboard(native_arg1);
@@ -6841,16 +6765,12 @@ mrb_Curses_PDC_getclipboard(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_PDC_return_key_modifiers(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "o", &arg1);
+  mrb_get_args(mrb, "z", &native_arg1);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
   unsigned char native_arg1 = *mrb_string_value_ptr(mrb, arg1);
@@ -6880,16 +6800,12 @@ mrb_Curses_PDC_return_key_modifiers(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_PDC_save_key_modifiers(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "o", &arg1);
+  mrb_get_args(mrb, "z", &native_arg1);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
   unsigned char native_arg1 = *mrb_string_value_ptr(mrb, arg1);
@@ -6919,16 +6835,12 @@ mrb_Curses_PDC_save_key_modifiers(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_PDC_set_blink(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "o", &arg1);
+  mrb_get_args(mrb, "z", &native_arg1);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
   unsigned char native_arg1 = *mrb_string_value_ptr(mrb, arg1);
@@ -6988,19 +6900,15 @@ mrb_Curses_PDC_set_line_color(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_PDC_set_title(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "o", &arg1);
+  mrb_get_args(mrb, "z", &native_arg1);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   /* Invocation */
   PDC_set_title(native_arg1);
@@ -7021,20 +6929,16 @@ mrb_Curses_PDC_set_title(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_PDC_setclipboard(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
   mrb_int native_arg2;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "oi", &arg1, &native_arg2);
+  mrb_get_args(mrb, "zi", &native_arg1, &native_arg2);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   /* Invocation */
   int result = PDC_setclipboard(native_arg1, native_arg2);
@@ -7234,19 +7138,15 @@ mrb_Curses_prefresh(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_printw(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "o", &arg1);
+  mrb_get_args(mrb, "z", &native_arg1);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   /* Invocation */
   int result = printw(native_arg1);
@@ -7273,19 +7173,15 @@ mrb_Curses_printw(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_putp(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "o", &arg1);
+  mrb_get_args(mrb, "z", &native_arg1);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   /* Invocation */
   int result = putp(native_arg1);
@@ -7730,22 +7626,18 @@ mrb_Curses_resize_window(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_restartterm(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
   mrb_int native_arg2;
   mrb_value arg3;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "oio", &arg1, &native_arg2, &arg3);
+  mrb_get_args(mrb, "zio", &native_arg1, &native_arg2, &arg3);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
   TODO_type_check_int_PTR(arg3);
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   int * native_arg3 = TODO_mruby_unbox_int_PTR(arg3);
 
@@ -7871,19 +7763,15 @@ mrb_Curses_savetty(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_scanw(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "o", &arg1);
+  mrb_get_args(mrb, "z", &native_arg1);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   /* Invocation */
   int result = scanw(native_arg1);
@@ -7910,19 +7798,15 @@ mrb_Curses_scanw(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_scr_dump(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "o", &arg1);
+  mrb_get_args(mrb, "z", &native_arg1);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   /* Invocation */
   int result = scr_dump(native_arg1);
@@ -7949,19 +7833,15 @@ mrb_Curses_scr_dump(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_scr_init(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "o", &arg1);
+  mrb_get_args(mrb, "z", &native_arg1);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   /* Invocation */
   int result = scr_init(native_arg1);
@@ -7988,19 +7868,15 @@ mrb_Curses_scr_init(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_scr_restore(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "o", &arg1);
+  mrb_get_args(mrb, "z", &native_arg1);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   /* Invocation */
   int result = scr_restore(native_arg1);
@@ -8027,19 +7903,15 @@ mrb_Curses_scr_restore(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_scr_set(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "o", &arg1);
+  mrb_get_args(mrb, "z", &native_arg1);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   /* Invocation */
   int result = scr_set(native_arg1);
@@ -8354,19 +8226,15 @@ mrb_Curses_setsyx(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_setterm(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "o", &arg1);
+  mrb_get_args(mrb, "z", &native_arg1);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   /* Invocation */
   int result = setterm(native_arg1);
@@ -8395,22 +8263,18 @@ mrb_Curses_setterm(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_setupterm(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
   mrb_int native_arg2;
   mrb_value arg3;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "oio", &arg1, &native_arg2, &arg3);
+  mrb_get_args(mrb, "zio", &native_arg1, &native_arg2, &arg3);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
   TODO_type_check_int_PTR(arg3);
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   int * native_arg3 = TODO_mruby_unbox_int_PTR(arg3);
 
@@ -8872,21 +8736,17 @@ mrb_Curses_slk_restore(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_slk_set(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
-  mrb_value arg2;
+  char * native_arg2;
   mrb_int native_arg3;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "ioi", &native_arg1, &arg2, &native_arg3);
+  mrb_get_args(mrb, "izi", &native_arg1, &native_arg2, &native_arg3);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg2, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
 
-  const char * native_arg2 = mrb_string_value_cstr(mrb, &arg2);
+
 
   /* Invocation */
   int result = slk_set(native_arg1, native_arg2, native_arg3);
@@ -9201,21 +9061,13 @@ mrb_Curses_termname(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_tgetent(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  mrb_value arg2;
+  char * native_arg1;
+  char * native_arg2;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "oo", &arg1, &arg2);
+  mrb_get_args(mrb, "zz", &native_arg1, &native_arg2);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
-  if (!mrb_obj_is_kind_of(mrb, arg2, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
   /* WARNING: Allocating new memory to create 'char *' from 'const char *'.
@@ -9223,9 +9075,9 @@ mrb_Curses_tgetent(mrb_state* mrb, mrb_value self) {
    *
    *          Has this been verified? [No]
    */
-  char * native_arg1 = strdup(mrb_string_value_cstr(mrb, &arg1));
 
-  const char * native_arg2 = mrb_string_value_cstr(mrb, &arg2);
+
+
 
   /* Invocation */
   int result = tgetent(native_arg1, native_arg2);
@@ -9260,19 +9112,15 @@ mrb_Curses_tgetent(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_tgetflag(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "o", &arg1);
+  mrb_get_args(mrb, "z", &native_arg1);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   /* Invocation */
   int result = tgetflag(native_arg1);
@@ -9299,19 +9147,15 @@ mrb_Curses_tgetflag(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_tgetnum(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "o", &arg1);
+  mrb_get_args(mrb, "z", &native_arg1);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   /* Invocation */
   int result = tgetnum(native_arg1);
@@ -9339,21 +9183,17 @@ mrb_Curses_tgetnum(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_tgetstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
   mrb_value arg2;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "oo", &arg1, &arg2);
+  mrb_get_args(mrb, "zo", &native_arg1, &arg2);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
   TODO_type_check_char_PTR_PTR(arg2);
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   char ** native_arg2 = TODO_mruby_unbox_char_PTR_PTR(arg2);
 
@@ -9380,21 +9220,17 @@ mrb_Curses_tgetstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_tgoto(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
   mrb_int native_arg2;
   mrb_int native_arg3;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "oii", &arg1, &native_arg2, &native_arg3);
+  mrb_get_args(mrb, "zii", &native_arg1, &native_arg2, &native_arg3);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   /* Invocation */
   char * result = tgoto(native_arg1, native_arg2, native_arg3);
@@ -9417,19 +9253,15 @@ mrb_Curses_tgoto(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_tigetflag(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "o", &arg1);
+  mrb_get_args(mrb, "z", &native_arg1);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   /* Invocation */
   int result = tigetflag(native_arg1);
@@ -9456,19 +9288,15 @@ mrb_Curses_tigetflag(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_tigetnum(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "o", &arg1);
+  mrb_get_args(mrb, "z", &native_arg1);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   /* Invocation */
   int result = tigetnum(native_arg1);
@@ -9678,7 +9506,7 @@ mrb_Curses_touchwin(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_tparm(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
   mrb_int native_arg2;
   mrb_int native_arg3;
   mrb_int native_arg4;
@@ -9690,16 +9518,12 @@ mrb_Curses_tparm(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg10;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "oiiiiiiiii", &arg1, &native_arg2, &native_arg3, &native_arg4, &native_arg5, &native_arg6, &native_arg7, &native_arg8, &native_arg9, &native_arg10);
+  mrb_get_args(mrb, "ziiiiiiiii", &native_arg1, &native_arg2, &native_arg3, &native_arg4, &native_arg5, &native_arg6, &native_arg7, &native_arg8, &native_arg9, &native_arg10);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   /* Invocation */
   char * result = tparm(native_arg1, native_arg2, native_arg3, native_arg4, native_arg5, native_arg6, native_arg7, native_arg8, native_arg9, native_arg10);
@@ -9725,23 +9549,19 @@ mrb_Curses_tparm(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_tputs(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  char * native_arg1;
   mrb_int native_arg2;
   mrb_value arg3;
   mrb_int native_arg4;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "oioi", &arg1, &native_arg2, &arg3, &native_arg4);
+  mrb_get_args(mrb, "zioi", &native_arg1, &native_arg2, &arg3, &native_arg4);
 
   /* Type checking */
-  if (!mrb_obj_is_kind_of(mrb, arg1, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
   TODO_type_check_int_LPAREN_PTR_RPAREN_LPAREN_int_RPAREN(arg3);
 
   /* Unbox parameters */
-  const char * native_arg1 = mrb_string_value_cstr(mrb, &arg1);
+
 
   int (*native_arg3)(int) = TODO_mruby_unbox_int_LPAREN_PTR_RPAREN_LPAREN_int_RPAREN(arg3);
 
@@ -10197,26 +10017,22 @@ mrb_Curses_vline(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_vw_printw(mrb_state* mrb, mrb_value self) {
   mrb_value arg1;
-  mrb_value arg2;
+  char * native_arg2;
   mrb_int native_va_list;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "ooi", &arg1, &arg2, &native_va_list);
+  mrb_get_args(mrb, "ozi", &arg1, &native_arg2, &native_va_list);
 
   /* Type checking */
   if (!mrb_obj_is_kind_of(mrb, arg1, Win_class(mrb))) {
     mrb_raise(mrb, E_TYPE_ERROR, "Win expected");
     return mrb_nil_value();
   }
-  if (!mrb_obj_is_kind_of(mrb, arg2, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-  const char * native_arg2 = mrb_string_value_cstr(mrb, &arg2);
+
 
   /* Invocation */
   int result = vw_printw(native_arg1, native_arg2, native_va_list);
@@ -10246,26 +10062,22 @@ mrb_Curses_vw_printw(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_vw_scanw(mrb_state* mrb, mrb_value self) {
   mrb_value arg1;
-  mrb_value arg2;
+  char * native_arg2;
   mrb_int native_va_list;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "ooi", &arg1, &arg2, &native_va_list);
+  mrb_get_args(mrb, "ozi", &arg1, &native_arg2, &native_va_list);
 
   /* Type checking */
   if (!mrb_obj_is_kind_of(mrb, arg1, Win_class(mrb))) {
     mrb_raise(mrb, E_TYPE_ERROR, "Win expected");
     return mrb_nil_value();
   }
-  if (!mrb_obj_is_kind_of(mrb, arg2, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-  const char * native_arg2 = mrb_string_value_cstr(mrb, &arg2);
+
 
   /* Invocation */
   int result = vw_scanw(native_arg1, native_arg2, native_va_list);
@@ -10295,26 +10107,22 @@ mrb_Curses_vw_scanw(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_vwprintw(mrb_state* mrb, mrb_value self) {
   mrb_value arg1;
-  mrb_value arg2;
+  char * native_arg2;
   mrb_int native_va_list;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "ooi", &arg1, &arg2, &native_va_list);
+  mrb_get_args(mrb, "ozi", &arg1, &native_arg2, &native_va_list);
 
   /* Type checking */
   if (!mrb_obj_is_kind_of(mrb, arg1, Win_class(mrb))) {
     mrb_raise(mrb, E_TYPE_ERROR, "Win expected");
     return mrb_nil_value();
   }
-  if (!mrb_obj_is_kind_of(mrb, arg2, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-  const char * native_arg2 = mrb_string_value_cstr(mrb, &arg2);
+
 
   /* Invocation */
   int result = vwprintw(native_arg1, native_arg2, native_va_list);
@@ -10344,26 +10152,22 @@ mrb_Curses_vwprintw(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_vwscanw(mrb_state* mrb, mrb_value self) {
   mrb_value arg1;
-  mrb_value arg2;
+  char * native_arg2;
   mrb_int native_va_list;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "ooi", &arg1, &arg2, &native_va_list);
+  mrb_get_args(mrb, "ozi", &arg1, &native_arg2, &native_va_list);
 
   /* Type checking */
   if (!mrb_obj_is_kind_of(mrb, arg1, Win_class(mrb))) {
     mrb_raise(mrb, E_TYPE_ERROR, "Win expected");
     return mrb_nil_value();
   }
-  if (!mrb_obj_is_kind_of(mrb, arg2, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-  const char * native_arg2 = mrb_string_value_cstr(mrb, &arg2);
+
 
   /* Invocation */
   int result = vwscanw(native_arg1, native_arg2, native_va_list);
@@ -10524,26 +10328,22 @@ mrb_Curses_waddchstr(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_waddnstr(mrb_state* mrb, mrb_value self) {
   mrb_value arg1;
-  mrb_value arg2;
+  char * native_arg2;
   mrb_int native_arg3;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "ooi", &arg1, &arg2, &native_arg3);
+  mrb_get_args(mrb, "ozi", &arg1, &native_arg2, &native_arg3);
 
   /* Type checking */
   if (!mrb_obj_is_kind_of(mrb, arg1, Win_class(mrb))) {
     mrb_raise(mrb, E_TYPE_ERROR, "Win expected");
     return mrb_nil_value();
   }
-  if (!mrb_obj_is_kind_of(mrb, arg2, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-  const char * native_arg2 = mrb_string_value_cstr(mrb, &arg2);
+
 
   /* Invocation */
   int result = waddnstr(native_arg1, native_arg2, native_arg3);
@@ -10613,25 +10413,21 @@ mrb_Curses_waddrawch(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_waddstr(mrb_state* mrb, mrb_value self) {
   mrb_value arg1;
-  mrb_value arg2;
+  char * native_arg2;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "oo", &arg1, &arg2);
+  mrb_get_args(mrb, "oz", &arg1, &native_arg2);
 
   /* Type checking */
   if (!mrb_obj_is_kind_of(mrb, arg1, Win_class(mrb))) {
     mrb_raise(mrb, E_TYPE_ERROR, "Win expected");
     return mrb_nil_value();
   }
-  if (!mrb_obj_is_kind_of(mrb, arg2, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-  const char * native_arg2 = mrb_string_value_cstr(mrb, &arg2);
+
 
   /* Invocation */
   int result = waddstr(native_arg1, native_arg2);
@@ -11968,26 +11764,22 @@ mrb_Curses_winsertln(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_winsnstr(mrb_state* mrb, mrb_value self) {
   mrb_value arg1;
-  mrb_value arg2;
+  char * native_arg2;
   mrb_int native_arg3;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "ooi", &arg1, &arg2, &native_arg3);
+  mrb_get_args(mrb, "ozi", &arg1, &native_arg2, &native_arg3);
 
   /* Type checking */
   if (!mrb_obj_is_kind_of(mrb, arg1, Win_class(mrb))) {
     mrb_raise(mrb, E_TYPE_ERROR, "Win expected");
     return mrb_nil_value();
   }
-  if (!mrb_obj_is_kind_of(mrb, arg2, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-  const char * native_arg2 = mrb_string_value_cstr(mrb, &arg2);
+
 
   /* Invocation */
   int result = winsnstr(native_arg1, native_arg2, native_arg3);
@@ -12057,25 +11849,21 @@ mrb_Curses_winsrawch(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_winsstr(mrb_state* mrb, mrb_value self) {
   mrb_value arg1;
-  mrb_value arg2;
+  char * native_arg2;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "oo", &arg1, &arg2);
+  mrb_get_args(mrb, "oz", &arg1, &native_arg2);
 
   /* Type checking */
   if (!mrb_obj_is_kind_of(mrb, arg1, Win_class(mrb))) {
     mrb_raise(mrb, E_TYPE_ERROR, "Win expected");
     return mrb_nil_value();
   }
-  if (!mrb_obj_is_kind_of(mrb, arg2, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-  const char * native_arg2 = mrb_string_value_cstr(mrb, &arg2);
+
 
   /* Invocation */
   int result = winsstr(native_arg1, native_arg2);
@@ -12322,25 +12110,21 @@ mrb_Curses_wordchar(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_wprintw(mrb_state* mrb, mrb_value self) {
   mrb_value arg1;
-  mrb_value arg2;
+  char * native_arg2;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "oo", &arg1, &arg2);
+  mrb_get_args(mrb, "oz", &arg1, &native_arg2);
 
   /* Type checking */
   if (!mrb_obj_is_kind_of(mrb, arg1, Win_class(mrb))) {
     mrb_raise(mrb, E_TYPE_ERROR, "Win expected");
     return mrb_nil_value();
   }
-  if (!mrb_obj_is_kind_of(mrb, arg2, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-  const char * native_arg2 = mrb_string_value_cstr(mrb, &arg2);
+
 
   /* Invocation */
   int result = wprintw(native_arg1, native_arg2);
@@ -12494,25 +12278,21 @@ mrb_Curses_wresize(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_wscanw(mrb_state* mrb, mrb_value self) {
   mrb_value arg1;
-  mrb_value arg2;
+  char * native_arg2;
 
   /* Fetch the args */
-  mrb_get_args(mrb, "oo", &arg1, &arg2);
+  mrb_get_args(mrb, "oz", &arg1, &native_arg2);
 
   /* Type checking */
   if (!mrb_obj_is_kind_of(mrb, arg1, Win_class(mrb))) {
     mrb_raise(mrb, E_TYPE_ERROR, "Win expected");
     return mrb_nil_value();
   }
-  if (!mrb_obj_is_kind_of(mrb, arg2, mrb->string_class)) {
-    mrb_raise(mrb, E_TYPE_ERROR, "String expected");
-    return mrb_nil_value();
-  }
 
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-  const char * native_arg2 = mrb_string_value_cstr(mrb, &arg2);
+
 
   /* Invocation */
   int result = wscanw(native_arg1, native_arg2);
