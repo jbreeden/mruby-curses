@@ -147,7 +147,6 @@ mrb_Curses_addnstr(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
 
-
   /* Invocation */
   int result = addnstr(native_arg1, native_arg2);
 
@@ -211,7 +210,6 @@ mrb_Curses_addstr(mrb_state* mrb, mrb_value self) {
   /* Type checking */
 
   /* Unbox parameters */
-
 
   /* Invocation */
   int result = addstr(native_arg1);
@@ -2862,7 +2860,6 @@ mrb_Curses_insnstr(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
 
-
   /* Invocation */
   int result = insnstr(native_arg1, native_arg2);
 
@@ -2926,7 +2923,6 @@ mrb_Curses_insstr(mrb_state* mrb, mrb_value self) {
   /* Type checking */
 
   /* Unbox parameters */
-
 
   /* Invocation */
   int result = insstr(native_arg1);
@@ -3727,8 +3723,6 @@ mrb_Curses_mvaddnstr(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
 
-
-
   /* Invocation */
   int result = mvaddnstr(native_arg1, native_arg2, native_arg3, native_arg4);
 
@@ -3800,8 +3794,6 @@ mrb_Curses_mvaddstr(mrb_state* mrb, mrb_value self) {
   /* Type checking */
 
   /* Unbox parameters */
-
-
 
   /* Invocation */
   int result = mvaddstr(native_arg1, native_arg2, native_arg3);
@@ -4363,8 +4355,6 @@ mrb_Curses_mvinsnstr(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
 
-
-
   /* Invocation */
   int result = mvinsnstr(native_arg1, native_arg2, native_arg3, native_arg4);
 
@@ -4437,8 +4427,6 @@ mrb_Curses_mvinsstr(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
 
-
-
   /* Invocation */
   int result = mvinsstr(native_arg1, native_arg2, native_arg3);
 
@@ -4503,8 +4491,6 @@ mrb_Curses_mvprintw(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
 
-
-
   /* Invocation */
   int result = mvprintw(native_arg1, native_arg2, native_arg3);
 
@@ -4542,8 +4528,6 @@ mrb_Curses_mvscanw(mrb_state* mrb, mrb_value self) {
   /* Type checking */
 
   /* Unbox parameters */
-
-
 
   /* Invocation */
   int result = mvscanw(native_arg1, native_arg2, native_arg3);
@@ -4771,8 +4755,6 @@ mrb_Curses_mvwaddnstr(mrb_state* mrb, mrb_value self) {
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-
-
   /* Invocation */
   int result = mvwaddnstr(native_arg1, native_arg2, native_arg3, native_arg4, native_arg5);
 
@@ -4862,8 +4844,6 @@ mrb_Curses_mvwaddstr(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
-
-
 
   /* Invocation */
   int result = mvwaddstr(native_arg1, native_arg2, native_arg3, native_arg4);
@@ -5526,8 +5506,6 @@ mrb_Curses_mvwinsnstr(mrb_state* mrb, mrb_value self) {
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-
-
   /* Invocation */
   int result = mvwinsnstr(native_arg1, native_arg2, native_arg3, native_arg4, native_arg5);
 
@@ -5618,8 +5596,6 @@ mrb_Curses_mvwinsstr(mrb_state* mrb, mrb_value self) {
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-
-
   /* Invocation */
   int result = mvwinsstr(native_arg1, native_arg2, native_arg3, native_arg4);
 
@@ -5701,8 +5677,6 @@ mrb_Curses_mvwprintw(mrb_state* mrb, mrb_value self) {
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-
-
   /* Invocation */
   int result = mvwprintw(native_arg1, native_arg2, native_arg3, native_arg4);
 
@@ -5747,8 +5721,6 @@ mrb_Curses_mvwscanw(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
-
-
 
   /* Invocation */
   int result = mvwscanw(native_arg1, native_arg2, native_arg3, native_arg4);
@@ -5957,7 +5929,6 @@ mrb_Curses_newterm(mrb_state* mrb, mrb_value self) {
   TODO_type_check__iobuf_PTR(arg3);
 
   /* Unbox parameters */
-
 
   struct _iobuf * native_arg2 = TODO_mruby_unbox__iobuf_PTR(arg2);
 
@@ -6609,7 +6580,6 @@ mrb_Curses_PDC_debug(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
 
-
   /* Invocation */
   PDC_debug(native_arg1);
 
@@ -6641,7 +6611,6 @@ mrb_Curses_PDC_freeclipboard(mrb_state* mrb, mrb_value self) {
    *
    *          Has this been verified? [No]
    */
-
 
   /* Invocation */
   int result = PDC_freeclipboard(native_arg1);
@@ -6909,7 +6878,6 @@ mrb_Curses_PDC_set_title(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
 
-
   /* Invocation */
   PDC_set_title(native_arg1);
 
@@ -6938,7 +6906,6 @@ mrb_Curses_PDC_setclipboard(mrb_state* mrb, mrb_value self) {
   /* Type checking */
 
   /* Unbox parameters */
-
 
   /* Invocation */
   int result = PDC_setclipboard(native_arg1, native_arg2);
@@ -7147,7 +7114,6 @@ mrb_Curses_printw(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
 
-
   /* Invocation */
   int result = printw(native_arg1);
 
@@ -7181,7 +7147,6 @@ mrb_Curses_putp(mrb_state* mrb, mrb_value self) {
   /* Type checking */
 
   /* Unbox parameters */
-
 
   /* Invocation */
   int result = putp(native_arg1);
@@ -7638,7 +7603,6 @@ mrb_Curses_restartterm(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
 
-
   int * native_arg3 = TODO_mruby_unbox_int_PTR(arg3);
 
   /* Invocation */
@@ -7772,7 +7736,6 @@ mrb_Curses_scanw(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
 
-
   /* Invocation */
   int result = scanw(native_arg1);
 
@@ -7806,7 +7769,6 @@ mrb_Curses_scr_dump(mrb_state* mrb, mrb_value self) {
   /* Type checking */
 
   /* Unbox parameters */
-
 
   /* Invocation */
   int result = scr_dump(native_arg1);
@@ -7842,7 +7804,6 @@ mrb_Curses_scr_init(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
 
-
   /* Invocation */
   int result = scr_init(native_arg1);
 
@@ -7877,7 +7838,6 @@ mrb_Curses_scr_restore(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
 
-
   /* Invocation */
   int result = scr_restore(native_arg1);
 
@@ -7911,7 +7871,6 @@ mrb_Curses_scr_set(mrb_state* mrb, mrb_value self) {
   /* Type checking */
 
   /* Unbox parameters */
-
 
   /* Invocation */
   int result = scr_set(native_arg1);
@@ -8235,7 +8194,6 @@ mrb_Curses_setterm(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
 
-
   /* Invocation */
   int result = setterm(native_arg1);
 
@@ -8274,7 +8232,6 @@ mrb_Curses_setupterm(mrb_state* mrb, mrb_value self) {
   TODO_type_check_int_PTR(arg3);
 
   /* Unbox parameters */
-
 
   int * native_arg3 = TODO_mruby_unbox_int_PTR(arg3);
 
@@ -8746,8 +8703,6 @@ mrb_Curses_slk_set(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
 
-
-
   /* Invocation */
   int result = slk_set(native_arg1, native_arg2, native_arg3);
 
@@ -9076,9 +9031,6 @@ mrb_Curses_tgetent(mrb_state* mrb, mrb_value self) {
    *          Has this been verified? [No]
    */
 
-
-
-
   /* Invocation */
   int result = tgetent(native_arg1, native_arg2);
 
@@ -9121,7 +9073,6 @@ mrb_Curses_tgetflag(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
 
-
   /* Invocation */
   int result = tgetflag(native_arg1);
 
@@ -9155,7 +9106,6 @@ mrb_Curses_tgetnum(mrb_state* mrb, mrb_value self) {
   /* Type checking */
 
   /* Unbox parameters */
-
 
   /* Invocation */
   int result = tgetnum(native_arg1);
@@ -9194,7 +9144,6 @@ mrb_Curses_tgetstr(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
 
-
   char ** native_arg2 = TODO_mruby_unbox_char_PTR_PTR(arg2);
 
   /* Invocation */
@@ -9231,7 +9180,6 @@ mrb_Curses_tgoto(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
 
-
   /* Invocation */
   char * result = tgoto(native_arg1, native_arg2, native_arg3);
 
@@ -9261,7 +9209,6 @@ mrb_Curses_tigetflag(mrb_state* mrb, mrb_value self) {
   /* Type checking */
 
   /* Unbox parameters */
-
 
   /* Invocation */
   int result = tigetflag(native_arg1);
@@ -9296,7 +9243,6 @@ mrb_Curses_tigetnum(mrb_state* mrb, mrb_value self) {
   /* Type checking */
 
   /* Unbox parameters */
-
 
   /* Invocation */
   int result = tigetnum(native_arg1);
@@ -9524,7 +9470,6 @@ mrb_Curses_tparm(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
 
-
   /* Invocation */
   char * result = tparm(native_arg1, native_arg2, native_arg3, native_arg4, native_arg5, native_arg6, native_arg7, native_arg8, native_arg9, native_arg10);
 
@@ -9561,7 +9506,6 @@ mrb_Curses_tputs(mrb_state* mrb, mrb_value self) {
   TODO_type_check_int_LPAREN_PTR_RPAREN_LPAREN_int_RPAREN(arg3);
 
   /* Unbox parameters */
-
 
   int (*native_arg3)(int) = TODO_mruby_unbox_int_LPAREN_PTR_RPAREN_LPAREN_int_RPAREN(arg3);
 
@@ -10032,8 +9976,6 @@ mrb_Curses_vw_printw(mrb_state* mrb, mrb_value self) {
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-
-
   /* Invocation */
   int result = vw_printw(native_arg1, native_arg2, native_va_list);
 
@@ -10076,8 +10018,6 @@ mrb_Curses_vw_scanw(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
-
-
 
   /* Invocation */
   int result = vw_scanw(native_arg1, native_arg2, native_va_list);
@@ -10122,8 +10062,6 @@ mrb_Curses_vwprintw(mrb_state* mrb, mrb_value self) {
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-
-
   /* Invocation */
   int result = vwprintw(native_arg1, native_arg2, native_va_list);
 
@@ -10166,8 +10104,6 @@ mrb_Curses_vwscanw(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
-
-
 
   /* Invocation */
   int result = vwscanw(native_arg1, native_arg2, native_va_list);
@@ -10343,8 +10279,6 @@ mrb_Curses_waddnstr(mrb_state* mrb, mrb_value self) {
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-
-
   /* Invocation */
   int result = waddnstr(native_arg1, native_arg2, native_arg3);
 
@@ -10426,8 +10360,6 @@ mrb_Curses_waddstr(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
-
-
 
   /* Invocation */
   int result = waddstr(native_arg1, native_arg2);
@@ -11779,8 +11711,6 @@ mrb_Curses_winsnstr(mrb_state* mrb, mrb_value self) {
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-
-
   /* Invocation */
   int result = winsnstr(native_arg1, native_arg2, native_arg3);
 
@@ -11862,8 +11792,6 @@ mrb_Curses_winsstr(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
-
-
 
   /* Invocation */
   int result = winsstr(native_arg1, native_arg2);
@@ -12124,8 +12052,6 @@ mrb_Curses_wprintw(mrb_state* mrb, mrb_value self) {
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
-
-
   /* Invocation */
   int result = wprintw(native_arg1, native_arg2);
 
@@ -12291,8 +12217,6 @@ mrb_Curses_wscanw(mrb_state* mrb, mrb_value self) {
 
   /* Unbox parameters */
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
-
-
 
   /* Invocation */
   int result = wscanw(native_arg1, native_arg2);
