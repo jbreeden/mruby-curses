@@ -39,10 +39,6 @@ mrb_Curses_addch(mrb_state* mrb, mrb_value self) {
   int result = addch(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -79,10 +75,6 @@ mrb_Curses_addchnstr(mrb_state* mrb, mrb_value self) {
   int result = addchnstr(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -115,10 +107,6 @@ mrb_Curses_addchstr(mrb_state* mrb, mrb_value self) {
   int result = addchstr(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -151,10 +139,6 @@ mrb_Curses_addnstr(mrb_state* mrb, mrb_value self) {
   int result = addnstr(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -181,10 +165,6 @@ mrb_Curses_addrawch(mrb_state* mrb, mrb_value self) {
   int result = addrawch(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -215,10 +195,6 @@ mrb_Curses_addstr(mrb_state* mrb, mrb_value self) {
   int result = addstr(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -247,10 +223,6 @@ mrb_Curses_assume_default_colors(mrb_state* mrb, mrb_value self) {
   int result = assume_default_colors(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -293,10 +265,6 @@ mrb_Curses_attr_get(mrb_state* mrb, mrb_value self) {
   int result = attr_get(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -332,10 +300,6 @@ mrb_Curses_attr_off(mrb_state* mrb, mrb_value self) {
   int result = attr_off(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -371,10 +335,6 @@ mrb_Curses_attr_on(mrb_state* mrb, mrb_value self) {
   int result = attr_on(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -412,10 +372,6 @@ mrb_Curses_attr_set(mrb_state* mrb, mrb_value self) {
   int result = attr_set(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -442,10 +398,6 @@ mrb_Curses_attroff(mrb_state* mrb, mrb_value self) {
   int result = attroff(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -472,10 +424,6 @@ mrb_Curses_attron(mrb_state* mrb, mrb_value self) {
   int result = attron(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -502,10 +450,6 @@ mrb_Curses_attrset(mrb_state* mrb, mrb_value self) {
   int result = attrset(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -526,10 +470,6 @@ mrb_Curses_baudrate(mrb_state* mrb, mrb_value self) {
   int result = baudrate();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -550,10 +490,6 @@ mrb_Curses_beep(mrb_state* mrb, mrb_value self) {
   int result = beep();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -580,10 +516,6 @@ mrb_Curses_bkgd(mrb_state* mrb, mrb_value self) {
   int result = bkgd(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -647,10 +579,6 @@ mrb_Curses_border(mrb_state* mrb, mrb_value self) {
   int result = border(native_arg1, native_arg2, native_arg3, native_arg4, native_arg5, native_arg6, native_arg7, native_arg8);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -686,10 +614,6 @@ mrb_Curses_bottom_panel(mrb_state* mrb, mrb_value self) {
   int result = bottom_panel(native_pan);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -729,10 +653,6 @@ mrb_Curses_box(mrb_state* mrb, mrb_value self) {
   int result = box(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -768,10 +688,6 @@ mrb_Curses_cbreak(mrb_state* mrb, mrb_value self) {
   int result = cbreak();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -811,10 +727,6 @@ mrb_Curses_chgat(mrb_state* mrb, mrb_value self) {
   int result = chgat(native_arg1, native_arg2, native_arg3, native_arg4);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -835,10 +747,6 @@ mrb_Curses_clear(mrb_state* mrb, mrb_value self) {
   int result = clear();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -876,10 +784,6 @@ mrb_Curses_clearok(mrb_state* mrb, mrb_value self) {
   int result = clearok(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -900,10 +804,6 @@ mrb_Curses_clrtobot(mrb_state* mrb, mrb_value self) {
   int result = clrtobot();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -924,10 +824,6 @@ mrb_Curses_clrtoeol(mrb_state* mrb, mrb_value self) {
   int result = clrtoeol();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -973,10 +869,6 @@ mrb_Curses_color_content(mrb_state* mrb, mrb_value self) {
   int result = color_content(native_arg1, native_arg2, native_arg3, native_arg4);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1052,10 +944,6 @@ mrb_Curses_copywin(mrb_state* mrb, mrb_value self) {
   int result = copywin(native_arg1, native_arg2, native_arg3, native_arg4, native_arg5, native_arg6, native_arg7, native_arg8, native_arg9);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1076,10 +964,6 @@ mrb_Curses_crmode(mrb_state* mrb, mrb_value self) {
   int result = crmode();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1106,10 +990,6 @@ mrb_Curses_curs_set(mrb_state* mrb, mrb_value self) {
   int result = curs_set(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1150,10 +1030,6 @@ mrb_Curses_def_prog_mode(mrb_state* mrb, mrb_value self) {
   int result = def_prog_mode();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1174,10 +1050,6 @@ mrb_Curses_def_shell_mode(mrb_state* mrb, mrb_value self) {
   int result = def_shell_mode();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1213,10 +1085,6 @@ mrb_Curses_del_curterm(mrb_state* mrb, mrb_value self) {
   int result = del_curterm(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1252,10 +1120,6 @@ mrb_Curses_del_panel(mrb_state* mrb, mrb_value self) {
   int result = del_panel(native_pan);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1282,10 +1146,6 @@ mrb_Curses_delay_output(mrb_state* mrb, mrb_value self) {
   int result = delay_output(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1306,10 +1166,6 @@ mrb_Curses_delch(mrb_state* mrb, mrb_value self) {
   int result = delch();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1330,10 +1186,6 @@ mrb_Curses_deleteln(mrb_state* mrb, mrb_value self) {
   int result = deleteln();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1401,10 +1253,6 @@ mrb_Curses_delwin(mrb_state* mrb, mrb_value self) {
   int result = delwin(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1468,10 +1316,6 @@ mrb_Curses_doupdate(mrb_state* mrb, mrb_value self) {
   int result = doupdate();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1498,10 +1342,6 @@ mrb_Curses_draino(mrb_state* mrb, mrb_value self) {
   int result = draino(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1557,10 +1397,6 @@ mrb_Curses_echo(mrb_state* mrb, mrb_value self) {
   int result = echo();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1587,10 +1423,6 @@ mrb_Curses_echochar(mrb_state* mrb, mrb_value self) {
   int result = echochar(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1611,10 +1443,6 @@ mrb_Curses_endwin(mrb_state* mrb, mrb_value self) {
   int result = endwin();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1635,10 +1463,6 @@ mrb_Curses_erase(mrb_state* mrb, mrb_value self) {
   int result = erase();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1696,10 +1520,6 @@ mrb_Curses_fixterm(mrb_state* mrb, mrb_value self) {
   int result = fixterm();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1720,10 +1540,6 @@ mrb_Curses_flash(mrb_state* mrb, mrb_value self) {
   int result = flash();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1744,10 +1560,6 @@ mrb_Curses_flushinp(mrb_state* mrb, mrb_value self) {
   int result = flushinp();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1783,10 +1595,6 @@ mrb_Curses_getattrs(mrb_state* mrb, mrb_value self) {
   chtype result = getattrs(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1822,10 +1630,6 @@ mrb_Curses_getbegx(mrb_state* mrb, mrb_value self) {
   int result = getbegx(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1861,10 +1665,6 @@ mrb_Curses_getbegy(mrb_state* mrb, mrb_value self) {
   int result = getbegy(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1900,10 +1700,6 @@ mrb_Curses_getbkgd(mrb_state* mrb, mrb_value self) {
   chtype result = getbkgd(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1924,10 +1720,6 @@ mrb_Curses_getbmap(mrb_state* mrb, mrb_value self) {
   unsigned long result = getbmap();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -1963,10 +1755,6 @@ mrb_Curses_getcurx(mrb_state* mrb, mrb_value self) {
   int result = getcurx(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -2002,10 +1790,6 @@ mrb_Curses_getcury(mrb_state* mrb, mrb_value self) {
   int result = getcury(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -2041,10 +1825,6 @@ mrb_Curses_getmaxx(mrb_state* mrb, mrb_value self) {
   int result = getmaxx(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -2080,10 +1860,6 @@ mrb_Curses_getmaxy(mrb_state* mrb, mrb_value self) {
   int result = getmaxy(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -2104,10 +1880,6 @@ mrb_Curses_getmouse(mrb_state* mrb, mrb_value self) {
   unsigned long result = getmouse();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -2166,10 +1938,6 @@ mrb_Curses_getparx(mrb_state* mrb, mrb_value self) {
   int result = getparx(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -2205,10 +1973,6 @@ mrb_Curses_getpary(mrb_state* mrb, mrb_value self) {
   int result = getpary(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -2284,10 +2048,6 @@ mrb_Curses_halfdelay(mrb_state* mrb, mrb_value self) {
   int result = halfdelay(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -2389,10 +2149,6 @@ mrb_Curses_hide_panel(mrb_state* mrb, mrb_value self) {
   int result = hide_panel(native_pan);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -2421,10 +2177,6 @@ mrb_Curses_hline(mrb_state* mrb, mrb_value self) {
   int result = hline(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -2496,10 +2248,6 @@ mrb_Curses_idlok(mrb_state* mrb, mrb_value self) {
   int result = idlok(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -2554,10 +2302,6 @@ mrb_Curses_inch(mrb_state* mrb, mrb_value self) {
   chtype result = inch();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -2592,10 +2336,6 @@ mrb_Curses_inchnstr(mrb_state* mrb, mrb_value self) {
   int result = inchnstr(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -2628,10 +2368,6 @@ mrb_Curses_inchstr(mrb_state* mrb, mrb_value self) {
   int result = inchstr(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -2664,10 +2400,6 @@ mrb_Curses_init_color(mrb_state* mrb, mrb_value self) {
   int result = init_color(native_arg1, native_arg2, native_arg3, native_arg4);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -2698,10 +2430,6 @@ mrb_Curses_init_pair(mrb_state* mrb, mrb_value self) {
   int result = init_pair(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -2772,10 +2500,6 @@ mrb_Curses_insch(mrb_state* mrb, mrb_value self) {
   int result = insch(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -2802,10 +2526,6 @@ mrb_Curses_insdelln(mrb_state* mrb, mrb_value self) {
   int result = insdelln(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -2829,10 +2549,6 @@ mrb_Curses_insertln(mrb_state* mrb, mrb_value self) {
   int result = insertln();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -2865,10 +2581,6 @@ mrb_Curses_insnstr(mrb_state* mrb, mrb_value self) {
   int result = insnstr(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -2895,10 +2607,6 @@ mrb_Curses_insrawch(mrb_state* mrb, mrb_value self) {
   int result = insrawch(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -2929,10 +2637,6 @@ mrb_Curses_insstr(mrb_state* mrb, mrb_value self) {
   int result = insstr(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -2991,10 +2695,6 @@ mrb_Curses_intrflush(mrb_state* mrb, mrb_value self) {
   int result = intrflush(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -3150,10 +2850,6 @@ mrb_Curses_keypad(mrb_state* mrb, mrb_value self) {
   int result = keypad(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -3211,10 +2907,6 @@ mrb_Curses_leaveok(mrb_state* mrb, mrb_value self) {
   int result = leaveok(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -3261,10 +2953,6 @@ mrb_Curses_map_button(mrb_state* mrb, mrb_value self) {
   int result = map_button(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -3302,10 +2990,6 @@ mrb_Curses_meta(mrb_state* mrb, mrb_value self) {
   int result = meta(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -3332,10 +3016,6 @@ mrb_Curses_mouse_off(mrb_state* mrb, mrb_value self) {
   int result = mouse_off(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -3362,10 +3042,6 @@ mrb_Curses_mouse_on(mrb_state* mrb, mrb_value self) {
   int result = mouse_on(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -3392,10 +3068,6 @@ mrb_Curses_mouse_set(mrb_state* mrb, mrb_value self) {
   int result = mouse_set(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -3456,10 +3128,6 @@ mrb_Curses_mouseinterval(mrb_state* mrb, mrb_value self) {
   int result = mouseinterval(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -3495,10 +3163,6 @@ mrb_Curses_mousemask(mrb_state* mrb, mrb_value self) {
   mmask_t result = mousemask(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -3527,10 +3191,6 @@ mrb_Curses_move(mrb_state* mrb, mrb_value self) {
   int result = move(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -3570,10 +3230,6 @@ mrb_Curses_move_panel(mrb_state* mrb, mrb_value self) {
   int result = move_panel(native_pan, native_starty, native_startx);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -3604,10 +3260,6 @@ mrb_Curses_mvaddch(mrb_state* mrb, mrb_value self) {
   int result = mvaddch(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -3647,10 +3299,6 @@ mrb_Curses_mvaddchnstr(mrb_state* mrb, mrb_value self) {
   int result = mvaddchnstr(native_arg1, native_arg2, native_arg3, native_arg4);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -3688,10 +3336,6 @@ mrb_Curses_mvaddchstr(mrb_state* mrb, mrb_value self) {
   int result = mvaddchstr(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -3728,10 +3372,6 @@ mrb_Curses_mvaddnstr(mrb_state* mrb, mrb_value self) {
   int result = mvaddnstr(native_arg1, native_arg2, native_arg3, native_arg4);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -3762,10 +3402,6 @@ mrb_Curses_mvaddrawch(mrb_state* mrb, mrb_value self) {
   int result = mvaddrawch(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -3800,10 +3436,6 @@ mrb_Curses_mvaddstr(mrb_state* mrb, mrb_value self) {
   int result = mvaddstr(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -3847,10 +3479,6 @@ mrb_Curses_mvchgat(mrb_state* mrb, mrb_value self) {
   int result = mvchgat(native_arg1, native_arg2, native_arg3, native_arg4, native_arg5, native_arg6);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -3883,10 +3511,6 @@ mrb_Curses_mvcur(mrb_state* mrb, mrb_value self) {
   int result = mvcur(native_arg1, native_arg2, native_arg3, native_arg4);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -3915,10 +3539,6 @@ mrb_Curses_mvdelch(mrb_state* mrb, mrb_value self) {
   int result = mvdelch(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -3947,10 +3567,6 @@ mrb_Curses_mvdeleteln(mrb_state* mrb, mrb_value self) {
   int result = mvdeleteln(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -3990,10 +3606,6 @@ mrb_Curses_mvderwin(mrb_state* mrb, mrb_value self) {
   int result = mvderwin(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -4022,10 +3634,6 @@ mrb_Curses_mvgetch(mrb_state* mrb, mrb_value self) {
   int result = mvgetch(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -4111,10 +3719,6 @@ mrb_Curses_mvhline(mrb_state* mrb, mrb_value self) {
   int result = mvhline(native_arg1, native_arg2, native_arg3, native_arg4);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -4143,10 +3747,6 @@ mrb_Curses_mvinch(mrb_state* mrb, mrb_value self) {
   chtype result = mvinch(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -4186,10 +3786,6 @@ mrb_Curses_mvinchnstr(mrb_state* mrb, mrb_value self) {
   int result = mvinchnstr(native_arg1, native_arg2, native_arg3, native_arg4);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -4227,10 +3823,6 @@ mrb_Curses_mvinchstr(mrb_state* mrb, mrb_value self) {
   int result = mvinchstr(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -4288,10 +3880,6 @@ mrb_Curses_mvinsch(mrb_state* mrb, mrb_value self) {
   int result = mvinsch(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -4320,10 +3908,6 @@ mrb_Curses_mvinsertln(mrb_state* mrb, mrb_value self) {
   int result = mvinsertln(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -4360,10 +3944,6 @@ mrb_Curses_mvinsnstr(mrb_state* mrb, mrb_value self) {
   int result = mvinsnstr(native_arg1, native_arg2, native_arg3, native_arg4);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -4394,10 +3974,6 @@ mrb_Curses_mvinsrawch(mrb_state* mrb, mrb_value self) {
   int result = mvinsrawch(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -4432,10 +4008,6 @@ mrb_Curses_mvinsstr(mrb_state* mrb, mrb_value self) {
   int result = mvinsstr(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -4496,10 +4068,6 @@ mrb_Curses_mvprintw(mrb_state* mrb, mrb_value self) {
   int result = mvprintw(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -4534,10 +4102,6 @@ mrb_Curses_mvscanw(mrb_state* mrb, mrb_value self) {
   int result = mvscanw(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -4570,10 +4134,6 @@ mrb_Curses_mvvline(mrb_state* mrb, mrb_value self) {
   int result = mvvline(native_arg1, native_arg2, native_arg3, native_arg4);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -4615,10 +4175,6 @@ mrb_Curses_mvwaddch(mrb_state* mrb, mrb_value self) {
   int result = mvwaddch(native_arg1, native_arg2, native_arg3, native_arg4);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -4665,10 +4221,6 @@ mrb_Curses_mvwaddchnstr(mrb_state* mrb, mrb_value self) {
   int result = mvwaddchnstr(native_arg1, native_arg2, native_arg3, native_arg4, native_arg5);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -4713,10 +4265,6 @@ mrb_Curses_mvwaddchstr(mrb_state* mrb, mrb_value self) {
   int result = mvwaddchstr(native_arg1, native_arg2, native_arg3, native_arg4);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -4760,10 +4308,6 @@ mrb_Curses_mvwaddnstr(mrb_state* mrb, mrb_value self) {
   int result = mvwaddnstr(native_arg1, native_arg2, native_arg3, native_arg4, native_arg5);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -4805,10 +4349,6 @@ mrb_Curses_mvwaddrawch(mrb_state* mrb, mrb_value self) {
   int result = mvwaddrawch(native_arg1, native_arg2, native_arg3, native_arg4);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -4850,10 +4390,6 @@ mrb_Curses_mvwaddstr(mrb_state* mrb, mrb_value self) {
   int result = mvwaddstr(native_arg1, native_arg2, native_arg3, native_arg4);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -4904,10 +4440,6 @@ mrb_Curses_mvwchgat(mrb_state* mrb, mrb_value self) {
   int result = mvwchgat(native_arg1, native_arg2, native_arg3, native_arg4, native_arg5, native_arg6, native_arg7);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -4947,10 +4479,6 @@ mrb_Curses_mvwdelch(mrb_state* mrb, mrb_value self) {
   int result = mvwdelch(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -4990,10 +4518,6 @@ mrb_Curses_mvwdeleteln(mrb_state* mrb, mrb_value self) {
   int result = mvwdeleteln(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -5033,10 +4557,6 @@ mrb_Curses_mvwgetch(mrb_state* mrb, mrb_value self) {
   int result = mvwgetch(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -5154,10 +4674,6 @@ mrb_Curses_mvwhline(mrb_state* mrb, mrb_value self) {
   int result = mvwhline(native_arg1, native_arg2, native_arg3, native_arg4, native_arg5);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -5197,10 +4713,6 @@ mrb_Curses_mvwin(mrb_state* mrb, mrb_value self) {
   int result = mvwin(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -5240,10 +4752,6 @@ mrb_Curses_mvwinch(mrb_state* mrb, mrb_value self) {
   chtype result = mvwinch(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -5290,10 +4798,6 @@ mrb_Curses_mvwinchnstr(mrb_state* mrb, mrb_value self) {
   int result = mvwinchnstr(native_arg1, native_arg2, native_arg3, native_arg4, native_arg5);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -5338,10 +4842,6 @@ mrb_Curses_mvwinchstr(mrb_state* mrb, mrb_value self) {
   int result = mvwinchstr(native_arg1, native_arg2, native_arg3, native_arg4);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -5421,10 +4921,6 @@ mrb_Curses_mvwinsch(mrb_state* mrb, mrb_value self) {
   int result = mvwinsch(native_arg1, native_arg2, native_arg3, native_arg4);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -5464,10 +4960,6 @@ mrb_Curses_mvwinsertln(mrb_state* mrb, mrb_value self) {
   int result = mvwinsertln(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -5511,10 +5003,6 @@ mrb_Curses_mvwinsnstr(mrb_state* mrb, mrb_value self) {
   int result = mvwinsnstr(native_arg1, native_arg2, native_arg3, native_arg4, native_arg5);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -5556,10 +5044,6 @@ mrb_Curses_mvwinsrawch(mrb_state* mrb, mrb_value self) {
   int result = mvwinsrawch(native_arg1, native_arg2, native_arg3, native_arg4);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -5601,10 +5085,6 @@ mrb_Curses_mvwinsstr(mrb_state* mrb, mrb_value self) {
   int result = mvwinsstr(native_arg1, native_arg2, native_arg3, native_arg4);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -5682,10 +5162,6 @@ mrb_Curses_mvwprintw(mrb_state* mrb, mrb_value self) {
   int result = mvwprintw(native_arg1, native_arg2, native_arg3, native_arg4);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -5727,10 +5203,6 @@ mrb_Curses_mvwscanw(mrb_state* mrb, mrb_value self) {
   int result = mvwscanw(native_arg1, native_arg2, native_arg3, native_arg4);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -5774,10 +5246,6 @@ mrb_Curses_mvwvline(mrb_state* mrb, mrb_value self) {
   int result = mvwvline(native_arg1, native_arg2, native_arg3, native_arg4, native_arg5);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -5832,10 +5300,6 @@ mrb_Curses_nc_getmouse(mrb_state* mrb, mrb_value self) {
   int result = nc_getmouse(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -5991,10 +5455,6 @@ mrb_Curses_nl(mrb_state* mrb, mrb_value self) {
   int result = nl();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -6015,10 +5475,6 @@ mrb_Curses_nocbreak(mrb_state* mrb, mrb_value self) {
   int result = nocbreak();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -6039,10 +5495,6 @@ mrb_Curses_nocrmode(mrb_state* mrb, mrb_value self) {
   int result = nocrmode();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -6080,10 +5532,6 @@ mrb_Curses_nodelay(mrb_state* mrb, mrb_value self) {
   int result = nodelay(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -6104,10 +5552,6 @@ mrb_Curses_noecho(mrb_state* mrb, mrb_value self) {
   int result = noecho();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -6128,10 +5572,6 @@ mrb_Curses_nonl(mrb_state* mrb, mrb_value self) {
   int result = nonl();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -6169,10 +5609,6 @@ mrb_Curses_noraw(mrb_state* mrb, mrb_value self) {
   int result = noraw();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -6210,10 +5646,6 @@ mrb_Curses_notimeout(mrb_state* mrb, mrb_value self) {
   int result = notimeout(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -6257,10 +5689,6 @@ mrb_Curses_overlay(mrb_state* mrb, mrb_value self) {
   int result = overlay(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -6304,10 +5732,6 @@ mrb_Curses_overwrite(mrb_state* mrb, mrb_value self) {
   int result = overwrite(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -6348,10 +5772,6 @@ mrb_Curses_pair_content(mrb_state* mrb, mrb_value self) {
   int result = pair_content(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -6457,10 +5877,6 @@ mrb_Curses_panel_hidden(mrb_state* mrb, mrb_value self) {
   int result = panel_hidden(native_pan);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -6551,10 +5967,6 @@ mrb_Curses_PDC_clearclipboard(mrb_state* mrb, mrb_value self) {
   int result = PDC_clearclipboard();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -6617,10 +6029,6 @@ mrb_Curses_PDC_freeclipboard(mrb_state* mrb, mrb_value self) {
   int result = PDC_freeclipboard(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   /* WARNING: Assuming that the new string can be deallocated after the function call.
@@ -6649,10 +6057,6 @@ mrb_Curses_PDC_get_input_fd(mrb_state* mrb, mrb_value self) {
   unsigned long result = PDC_get_input_fd();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -6673,10 +6077,6 @@ mrb_Curses_PDC_get_key_modifiers(mrb_state* mrb, mrb_value self) {
   unsigned long result = PDC_get_key_modifiers();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -6714,10 +6114,6 @@ mrb_Curses_PDC_getclipboard(mrb_state* mrb, mrb_value self) {
   int result = PDC_getclipboard(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -6749,10 +6145,6 @@ mrb_Curses_PDC_return_key_modifiers(mrb_state* mrb, mrb_value self) {
   int result = PDC_return_key_modifiers(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -6784,10 +6176,6 @@ mrb_Curses_PDC_save_key_modifiers(mrb_state* mrb, mrb_value self) {
   int result = PDC_save_key_modifiers(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -6819,10 +6207,6 @@ mrb_Curses_PDC_set_blink(mrb_state* mrb, mrb_value self) {
   int result = PDC_set_blink(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -6849,10 +6233,6 @@ mrb_Curses_PDC_set_line_color(mrb_state* mrb, mrb_value self) {
   int result = PDC_set_line_color(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -6912,10 +6292,6 @@ mrb_Curses_PDC_setclipboard(mrb_state* mrb, mrb_value self) {
   int result = PDC_setclipboard(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -6942,10 +6318,6 @@ mrb_Curses_PDC_ungetch(mrb_state* mrb, mrb_value self) {
   int result = PDC_ungetch(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -6983,10 +6355,6 @@ mrb_Curses_pechochar(mrb_state* mrb, mrb_value self) {
   int result = pechochar(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7034,10 +6402,6 @@ mrb_Curses_pnoutrefresh(mrb_state* mrb, mrb_value self) {
   int result = pnoutrefresh(native_arg1, native_arg2, native_arg3, native_arg4, native_arg5, native_arg6, native_arg7);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7085,10 +6449,6 @@ mrb_Curses_prefresh(mrb_state* mrb, mrb_value self) {
   int result = prefresh(native_arg1, native_arg2, native_arg3, native_arg4, native_arg5, native_arg6, native_arg7);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7119,10 +6479,6 @@ mrb_Curses_printw(mrb_state* mrb, mrb_value self) {
   int result = printw(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7153,10 +6509,6 @@ mrb_Curses_putp(mrb_state* mrb, mrb_value self) {
   int result = putp(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7197,10 +6549,6 @@ mrb_Curses_putwin(mrb_state* mrb, mrb_value self) {
   int result = putwin(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7238,10 +6586,6 @@ mrb_Curses_raw(mrb_state* mrb, mrb_value self) {
   int result = raw();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7268,10 +6612,6 @@ mrb_Curses_raw_output(mrb_state* mrb, mrb_value self) {
   int result = raw_output(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7307,10 +6647,6 @@ mrb_Curses_redrawwin(mrb_state* mrb, mrb_value self) {
   int result = redrawwin(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7331,10 +6667,6 @@ mrb_Curses_refresh(mrb_state* mrb, mrb_value self) {
   int result = refresh();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7378,10 +6710,6 @@ mrb_Curses_replace_panel(mrb_state* mrb, mrb_value self) {
   int result = replace_panel(native_pan, native_win);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7402,10 +6730,6 @@ mrb_Curses_request_mouse_pos(mrb_state* mrb, mrb_value self) {
   int result = request_mouse_pos();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7426,10 +6750,6 @@ mrb_Curses_reset_prog_mode(mrb_state* mrb, mrb_value self) {
   int result = reset_prog_mode();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7450,10 +6770,6 @@ mrb_Curses_reset_shell_mode(mrb_state* mrb, mrb_value self) {
   int result = reset_shell_mode();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7474,10 +6790,6 @@ mrb_Curses_resetterm(mrb_state* mrb, mrb_value self) {
   int result = resetterm();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7498,10 +6810,6 @@ mrb_Curses_resetty(mrb_state* mrb, mrb_value self) {
   int result = resetty();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7530,10 +6838,6 @@ mrb_Curses_resize_term(mrb_state* mrb, mrb_value self) {
   int result = resize_term(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7610,10 +6914,6 @@ mrb_Curses_restartterm(mrb_state* mrb, mrb_value self) {
   int result = restartterm(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7659,10 +6959,6 @@ mrb_Curses_ripoffline(mrb_state* mrb, mrb_value self) {
   int result = ripoffline(native_arg1, native_arg2, native_arg3, native_arg4);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7683,10 +6979,6 @@ mrb_Curses_saveterm(mrb_state* mrb, mrb_value self) {
   int result = saveterm();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7707,10 +6999,6 @@ mrb_Curses_savetty(mrb_state* mrb, mrb_value self) {
   int result = savetty();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7741,10 +7029,6 @@ mrb_Curses_scanw(mrb_state* mrb, mrb_value self) {
   int result = scanw(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7775,10 +7059,6 @@ mrb_Curses_scr_dump(mrb_state* mrb, mrb_value self) {
   int result = scr_dump(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7809,10 +7089,6 @@ mrb_Curses_scr_init(mrb_state* mrb, mrb_value self) {
   int result = scr_init(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7843,10 +7119,6 @@ mrb_Curses_scr_restore(mrb_state* mrb, mrb_value self) {
   int result = scr_restore(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7877,10 +7149,6 @@ mrb_Curses_scr_set(mrb_state* mrb, mrb_value self) {
   int result = scr_set(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7907,10 +7175,6 @@ mrb_Curses_scrl(mrb_state* mrb, mrb_value self) {
   int result = scrl(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7946,10 +7210,6 @@ mrb_Curses_scroll(mrb_state* mrb, mrb_value self) {
   int result = scroll(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -7987,10 +7247,6 @@ mrb_Curses_scrollok(mrb_state* mrb, mrb_value self) {
   int result = scrollok(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -8066,10 +7322,6 @@ mrb_Curses_set_panel_userptr(mrb_state* mrb, mrb_value self) {
   int result = set_panel_userptr(native_pan, native_uptr);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -8133,10 +7385,6 @@ mrb_Curses_setscrreg(mrb_state* mrb, mrb_value self) {
   int result = setscrreg(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -8165,10 +7413,6 @@ mrb_Curses_setsyx(mrb_state* mrb, mrb_value self) {
   int result = setsyx(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -8199,10 +7443,6 @@ mrb_Curses_setterm(mrb_state* mrb, mrb_value self) {
   int result = setterm(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -8240,10 +7480,6 @@ mrb_Curses_setupterm(mrb_state* mrb, mrb_value self) {
   int result = setupterm(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -8279,10 +7515,6 @@ mrb_Curses_show_panel(mrb_state* mrb, mrb_value self) {
   int result = show_panel(native_pan);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -8318,10 +7550,6 @@ mrb_Curses_slk_attr_off(mrb_state* mrb, mrb_value self) {
   int result = slk_attr_off(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -8357,10 +7585,6 @@ mrb_Curses_slk_attr_on(mrb_state* mrb, mrb_value self) {
   int result = slk_attr_on(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -8398,10 +7622,6 @@ mrb_Curses_slk_attr_set(mrb_state* mrb, mrb_value self) {
   int result = slk_attr_set(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -8428,10 +7648,6 @@ mrb_Curses_slk_attroff(mrb_state* mrb, mrb_value self) {
   int result = slk_attroff(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -8458,10 +7674,6 @@ mrb_Curses_slk_attron(mrb_state* mrb, mrb_value self) {
   int result = slk_attron(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -8488,10 +7700,6 @@ mrb_Curses_slk_attrset(mrb_state* mrb, mrb_value self) {
   int result = slk_attrset(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -8512,10 +7720,6 @@ mrb_Curses_slk_clear(mrb_state* mrb, mrb_value self) {
   int result = slk_clear();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -8542,10 +7746,6 @@ mrb_Curses_slk_color(mrb_state* mrb, mrb_value self) {
   int result = slk_color(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -8572,10 +7772,6 @@ mrb_Curses_slk_init(mrb_state* mrb, mrb_value self) {
   int result = slk_init(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -8622,10 +7818,6 @@ mrb_Curses_slk_noutrefresh(mrb_state* mrb, mrb_value self) {
   int result = slk_noutrefresh();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -8646,10 +7838,6 @@ mrb_Curses_slk_refresh(mrb_state* mrb, mrb_value self) {
   int result = slk_refresh();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -8670,10 +7858,6 @@ mrb_Curses_slk_restore(mrb_state* mrb, mrb_value self) {
   int result = slk_restore();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -8708,10 +7892,6 @@ mrb_Curses_slk_set(mrb_state* mrb, mrb_value self) {
   int result = slk_set(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -8732,10 +7912,6 @@ mrb_Curses_slk_touch(mrb_state* mrb, mrb_value self) {
   int result = slk_touch();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -8756,10 +7932,6 @@ mrb_Curses_standend(mrb_state* mrb, mrb_value self) {
   int result = standend();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -8780,10 +7952,6 @@ mrb_Curses_standout(mrb_state* mrb, mrb_value self) {
   int result = standout();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -8804,10 +7972,6 @@ mrb_Curses_start_color(mrb_state* mrb, mrb_value self) {
   int result = start_color();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -8931,10 +8095,6 @@ mrb_Curses_syncok(mrb_state* mrb, mrb_value self) {
   int result = syncok(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -8975,10 +8135,6 @@ mrb_Curses_termattrs(mrb_state* mrb, mrb_value self) {
   chtype result = termattrs();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -9036,10 +8192,6 @@ mrb_Curses_tgetent(mrb_state* mrb, mrb_value self) {
   int result = tgetent(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   /* WARNING: Assuming that the new string can be deallocated after the function call.
@@ -9078,10 +8230,6 @@ mrb_Curses_tgetflag(mrb_state* mrb, mrb_value self) {
   int result = tgetflag(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -9112,10 +8260,6 @@ mrb_Curses_tgetnum(mrb_state* mrb, mrb_value self) {
   int result = tgetnum(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -9215,10 +8359,6 @@ mrb_Curses_tigetflag(mrb_state* mrb, mrb_value self) {
   int result = tigetflag(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -9249,10 +8389,6 @@ mrb_Curses_tigetnum(mrb_state* mrb, mrb_value self) {
   int result = tigetnum(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -9341,10 +8477,6 @@ mrb_Curses_top_panel(mrb_state* mrb, mrb_value self) {
   int result = top_panel(native_pan);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -9384,10 +8516,6 @@ mrb_Curses_touchline(mrb_state* mrb, mrb_value self) {
   int result = touchline(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -9423,10 +8551,6 @@ mrb_Curses_touchwin(mrb_state* mrb, mrb_value self) {
   int result = touchwin(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -9514,10 +8638,6 @@ mrb_Curses_tputs(mrb_state* mrb, mrb_value self) {
   int result = tputs(native_arg1, native_arg2, native_arg3, native_arg4);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -9578,10 +8698,6 @@ mrb_Curses_typeahead(mrb_state* mrb, mrb_value self) {
   int result = typeahead(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -9643,10 +8759,6 @@ mrb_Curses_ungetmouse(mrb_state* mrb, mrb_value self) {
   int result = ungetmouse(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -9682,10 +8794,6 @@ mrb_Curses_untouchwin(mrb_state* mrb, mrb_value self) {
   int result = untouchwin(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -9723,10 +8831,6 @@ mrb_Curses_use_default_colors(mrb_state* mrb, mrb_value self) {
   int result = use_default_colors();
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -9787,10 +8891,6 @@ mrb_Curses_vid_attr(mrb_state* mrb, mrb_value self) {
   int result = vid_attr(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -9835,10 +8935,6 @@ mrb_Curses_vid_puts(mrb_state* mrb, mrb_value self) {
   int result = vid_puts(native_arg1, native_arg2, native_arg3, native_arg4, native_arg5);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -9865,10 +8961,6 @@ mrb_Curses_vidattr(mrb_state* mrb, mrb_value self) {
   int result = vidattr(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -9906,10 +8998,6 @@ mrb_Curses_vidputs(mrb_state* mrb, mrb_value self) {
   int result = vidputs(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -9938,10 +9026,6 @@ mrb_Curses_vline(mrb_state* mrb, mrb_value self) {
   int result = vline(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -9981,10 +9065,6 @@ mrb_Curses_vw_printw(mrb_state* mrb, mrb_value self) {
   int result = vw_printw(native_arg1, native_arg2, native_va_list);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -10024,10 +9104,6 @@ mrb_Curses_vw_scanw(mrb_state* mrb, mrb_value self) {
   int result = vw_scanw(native_arg1, native_arg2, native_va_list);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -10067,10 +9143,6 @@ mrb_Curses_vwprintw(mrb_state* mrb, mrb_value self) {
   int result = vwprintw(native_arg1, native_arg2, native_va_list);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -10110,10 +9182,6 @@ mrb_Curses_vwscanw(mrb_state* mrb, mrb_value self) {
   int result = vwscanw(native_arg1, native_arg2, native_va_list);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -10151,10 +9219,6 @@ mrb_Curses_waddch(mrb_state* mrb, mrb_value self) {
   int result = waddch(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -10197,10 +9261,6 @@ mrb_Curses_waddchnstr(mrb_state* mrb, mrb_value self) {
   int result = waddchnstr(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -10241,10 +9301,6 @@ mrb_Curses_waddchstr(mrb_state* mrb, mrb_value self) {
   int result = waddchstr(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -10284,10 +9340,6 @@ mrb_Curses_waddnstr(mrb_state* mrb, mrb_value self) {
   int result = waddnstr(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -10325,10 +9377,6 @@ mrb_Curses_waddrawch(mrb_state* mrb, mrb_value self) {
   int result = waddrawch(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -10366,10 +9414,6 @@ mrb_Curses_waddstr(mrb_state* mrb, mrb_value self) {
   int result = waddstr(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -10420,10 +9464,6 @@ mrb_Curses_wattr_get(mrb_state* mrb, mrb_value self) {
   int result = wattr_get(native_arg1, native_arg2, native_arg3, native_arg4);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -10466,10 +9506,6 @@ mrb_Curses_wattr_off(mrb_state* mrb, mrb_value self) {
   int result = wattr_off(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -10512,10 +9548,6 @@ mrb_Curses_wattr_on(mrb_state* mrb, mrb_value self) {
   int result = wattr_on(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -10560,10 +9592,6 @@ mrb_Curses_wattr_set(mrb_state* mrb, mrb_value self) {
   int result = wattr_set(native_arg1, native_arg2, native_arg3, native_arg4);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -10601,10 +9629,6 @@ mrb_Curses_wattroff(mrb_state* mrb, mrb_value self) {
   int result = wattroff(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -10642,10 +9666,6 @@ mrb_Curses_wattron(mrb_state* mrb, mrb_value self) {
   int result = wattron(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -10683,10 +9703,6 @@ mrb_Curses_wattrset(mrb_state* mrb, mrb_value self) {
   int result = wattrset(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -10724,10 +9740,6 @@ mrb_Curses_wbkgd(mrb_state* mrb, mrb_value self) {
   int result = wbkgd(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -10813,10 +9825,6 @@ mrb_Curses_wborder(mrb_state* mrb, mrb_value self) {
   int result = wborder(native_arg1, native_arg2, native_arg3, native_arg4, native_arg5, native_arg6, native_arg7, native_arg8, native_arg9);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -10863,10 +9871,6 @@ mrb_Curses_wchgat(mrb_state* mrb, mrb_value self) {
   int result = wchgat(native_arg1, native_arg2, native_arg3, native_arg4, native_arg5);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -10902,10 +9906,6 @@ mrb_Curses_wclear(mrb_state* mrb, mrb_value self) {
   int result = wclear(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -10941,10 +9941,6 @@ mrb_Curses_wclrtobot(mrb_state* mrb, mrb_value self) {
   int result = wclrtobot(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -10980,10 +9976,6 @@ mrb_Curses_wclrtoeol(mrb_state* mrb, mrb_value self) {
   int result = wclrtoeol(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -11085,10 +10077,6 @@ mrb_Curses_wdelch(mrb_state* mrb, mrb_value self) {
   int result = wdelch(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -11124,10 +10112,6 @@ mrb_Curses_wdeleteln(mrb_state* mrb, mrb_value self) {
   int result = wdeleteln(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -11165,10 +10149,6 @@ mrb_Curses_wechochar(mrb_state* mrb, mrb_value self) {
   int result = wechochar(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -11238,10 +10218,6 @@ mrb_Curses_werase(mrb_state* mrb, mrb_value self) {
   int result = werase(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -11277,10 +10253,6 @@ mrb_Curses_wgetch(mrb_state* mrb, mrb_value self) {
   int result = wgetch(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -11389,10 +10361,6 @@ mrb_Curses_whline(mrb_state* mrb, mrb_value self) {
   int result = whline(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -11428,10 +10396,6 @@ mrb_Curses_winch(mrb_state* mrb, mrb_value self) {
   chtype result = winch(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -11474,10 +10438,6 @@ mrb_Curses_winchnstr(mrb_state* mrb, mrb_value self) {
   int result = winchnstr(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -11518,10 +10478,6 @@ mrb_Curses_winchstr(mrb_state* mrb, mrb_value self) {
   int result = winchstr(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -11593,10 +10549,6 @@ mrb_Curses_winsch(mrb_state* mrb, mrb_value self) {
   int result = winsch(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -11634,10 +10586,6 @@ mrb_Curses_winsdelln(mrb_state* mrb, mrb_value self) {
   int result = winsdelln(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -11673,10 +10621,6 @@ mrb_Curses_winsertln(mrb_state* mrb, mrb_value self) {
   int result = winsertln(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -11716,10 +10660,6 @@ mrb_Curses_winsnstr(mrb_state* mrb, mrb_value self) {
   int result = winsnstr(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -11757,10 +10697,6 @@ mrb_Curses_winsrawch(mrb_state* mrb, mrb_value self) {
   int result = winsrawch(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -11798,10 +10734,6 @@ mrb_Curses_winsstr(mrb_state* mrb, mrb_value self) {
   int result = winsstr(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -11957,10 +10889,6 @@ mrb_Curses_wmove(mrb_state* mrb, mrb_value self) {
   int result = wmove(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -11996,10 +10924,6 @@ mrb_Curses_wnoutrefresh(mrb_state* mrb, mrb_value self) {
   int result = wnoutrefresh(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -12057,10 +10981,6 @@ mrb_Curses_wprintw(mrb_state* mrb, mrb_value self) {
   int result = wprintw(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -12100,10 +11020,6 @@ mrb_Curses_wredrawln(mrb_state* mrb, mrb_value self) {
   int result = wredrawln(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -12139,10 +11055,6 @@ mrb_Curses_wrefresh(mrb_state* mrb, mrb_value self) {
   int result = wrefresh(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -12182,10 +11094,6 @@ mrb_Curses_wresize(mrb_state* mrb, mrb_value self) {
   int result = wresize(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -12223,10 +11131,6 @@ mrb_Curses_wscanw(mrb_state* mrb, mrb_value self) {
   int result = wscanw(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -12264,10 +11168,6 @@ mrb_Curses_wscrl(mrb_state* mrb, mrb_value self) {
   int result = wscrl(native_arg1, native_arg2);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -12307,10 +11207,6 @@ mrb_Curses_wsetscrreg(mrb_state* mrb, mrb_value self) {
   int result = wsetscrreg(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -12346,10 +11242,6 @@ mrb_Curses_wstandend(mrb_state* mrb, mrb_value self) {
   int result = wstandend(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -12385,10 +11277,6 @@ mrb_Curses_wstandout(mrb_state* mrb, mrb_value self) {
   int result = wstandout(native_arg1);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -12528,10 +11416,6 @@ mrb_Curses_wtouchln(mrb_state* mrb, mrb_value self) {
   int result = wtouchln(native_arg1, native_arg2, native_arg3, native_arg4);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
@@ -12571,10 +11455,6 @@ mrb_Curses_wvline(mrb_state* mrb, mrb_value self) {
   int result = wvline(native_arg1, native_arg2, native_arg3);
 
   /* Box the return value */
-  if (result > MRB_INT_MAX) {
-    mrb_raise(mrb, mrb->eStandardError_class, "MRuby cannot represent integers greater than MRB_INT_MAX");
-    return mrb_nil_value();
-  }
   mrb_value return_value = mrb_fixnum_value(result);
 
   return return_value;
