@@ -2764,6 +2764,7 @@ mrb_value
 mrb_Curses_insch(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
   /* Type checking */
+  mrb_get_args(mrb, "i", &native_arg1);
 
   /* Unbox parameters */
 
