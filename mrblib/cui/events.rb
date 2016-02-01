@@ -55,7 +55,7 @@ module CUI
   extend Events
   initialize
 
-  # Extending the ideo of the CUI module as a global event hub,
+  # Extending the idea of the CUI module as a global event hub,
   # provide a default, globally accessible, hash of hubs.
   # - Recommend using fetch (eg `CUI.hubs.fetch().trigger(...)`)
   #   when referencing hubs to expose typos in hub names.

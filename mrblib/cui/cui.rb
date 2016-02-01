@@ -12,8 +12,17 @@ module CUI
   def self.run
     EventLoop.run
   end
+  
+  def self.run_once
+    EventLoop.run_once
+  end
 
-  def self.exit
-    EventLoop.exit
+  def self.stop
+    EventLoop.stop
+  end
+  
+  def self.exit!(val = 0)
+    Curses.endwin
+    exit(val)
   end
 end
