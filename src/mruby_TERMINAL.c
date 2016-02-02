@@ -26,7 +26,7 @@ mrb_Curses_TERMINAL_initialize(mrb_state* mrb, mrb_value self) {
 
 mrb_value
 mrb_Curses_TERMINAL_disown(mrb_state* mrb, mrb_value self) {
-  mrb_value ruby_object;
+  mrb_value ruby_object = mrb_nil_value();
   mrb_get_args(mrb, "o", &ruby_object);
 
   if (!mrb_obj_is_kind_of(mrb, ruby_object, mrb_class_ptr(self))) {
@@ -41,7 +41,7 @@ mrb_Curses_TERMINAL_disown(mrb_state* mrb, mrb_value self) {
 
 mrb_value
 mrb_Curses_TERMINAL_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
-  mrb_value ruby_object;
+  mrb_value ruby_object = mrb_nil_value();
   mrb_get_args(mrb, "o", &ruby_object);
 
   if (!mrb_obj_is_kind_of(mrb, ruby_object, mrb_class_ptr(self))) {
@@ -86,7 +86,7 @@ mrb_Curses_TERMINAL_get__termname(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_TERMINAL_set__termname(mrb_state* mrb, mrb_value self) {
   TERMINAL * native_self = mruby_unbox_TERMINAL(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 

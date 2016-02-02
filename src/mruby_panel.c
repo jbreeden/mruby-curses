@@ -26,7 +26,7 @@ mrb_Curses_Panel_initialize(mrb_state* mrb, mrb_value self) {
 
 mrb_value
 mrb_Curses_Panel_disown(mrb_state* mrb, mrb_value self) {
-  mrb_value ruby_object;
+  mrb_value ruby_object = mrb_nil_value();
   mrb_get_args(mrb, "o", &ruby_object);
 
   if (!mrb_obj_is_kind_of(mrb, ruby_object, mrb_class_ptr(self))) {
@@ -41,7 +41,7 @@ mrb_Curses_Panel_disown(mrb_state* mrb, mrb_value self) {
 
 mrb_value
 mrb_Curses_Panel_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
-  mrb_value ruby_object;
+  mrb_value ruby_object = mrb_nil_value();
   mrb_get_args(mrb, "o", &ruby_object);
 
   if (!mrb_obj_is_kind_of(mrb, ruby_object, mrb_class_ptr(self))) {
@@ -86,7 +86,7 @@ mrb_Curses_Panel_get_win(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_Panel_set_win(mrb_state* mrb, mrb_value self) {
   struct panel * native_self = mruby_unbox_struct panel(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -134,7 +134,7 @@ mrb_Curses_Panel_get_wstarty(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_Panel_set_wstarty(mrb_state* mrb, mrb_value self) {
   struct panel * native_self = mruby_unbox_struct panel(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -182,7 +182,7 @@ mrb_Curses_Panel_get_wendy(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_Panel_set_wendy(mrb_state* mrb, mrb_value self) {
   struct panel * native_self = mruby_unbox_struct panel(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -230,7 +230,7 @@ mrb_Curses_Panel_get_wstartx(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_Panel_set_wstartx(mrb_state* mrb, mrb_value self) {
   struct panel * native_self = mruby_unbox_struct panel(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -278,7 +278,7 @@ mrb_Curses_Panel_get_wendx(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_Panel_set_wendx(mrb_state* mrb, mrb_value self) {
   struct panel * native_self = mruby_unbox_struct panel(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -322,7 +322,7 @@ mrb_Curses_Panel_get_below(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_Panel_set_below(mrb_state* mrb, mrb_value self) {
   struct panel * native_self = mruby_unbox_struct panel(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -366,7 +366,7 @@ mrb_Curses_Panel_get_above(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_Panel_set_above(mrb_state* mrb, mrb_value self) {
   struct panel * native_self = mruby_unbox_struct panel(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -410,7 +410,7 @@ mrb_Curses_Panel_get_user(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_Panel_set_user(mrb_state* mrb, mrb_value self) {
   struct panel * native_self = mruby_unbox_struct panel(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -451,7 +451,7 @@ mrb_Curses_Panel_get_obscure(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_Panel_set_obscure(mrb_state* mrb, mrb_value self) {
   struct panel * native_self = mruby_unbox_struct panel(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 

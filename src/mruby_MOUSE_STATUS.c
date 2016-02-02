@@ -26,7 +26,7 @@ mrb_Curses_MOUSESTATUS_initialize(mrb_state* mrb, mrb_value self) {
 
 mrb_value
 mrb_Curses_MOUSESTATUS_disown(mrb_state* mrb, mrb_value self) {
-  mrb_value ruby_object;
+  mrb_value ruby_object = mrb_nil_value();
   mrb_get_args(mrb, "o", &ruby_object);
 
   if (!mrb_obj_is_kind_of(mrb, ruby_object, mrb_class_ptr(self))) {
@@ -41,7 +41,7 @@ mrb_Curses_MOUSESTATUS_disown(mrb_state* mrb, mrb_value self) {
 
 mrb_value
 mrb_Curses_MOUSESTATUS_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
-  mrb_value ruby_object;
+  mrb_value ruby_object = mrb_nil_value();
   mrb_get_args(mrb, "o", &ruby_object);
 
   if (!mrb_obj_is_kind_of(mrb, ruby_object, mrb_class_ptr(self))) {
@@ -90,7 +90,7 @@ mrb_Curses_MOUSESTATUS_get_x(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_MOUSESTATUS_set_x(mrb_state* mrb, mrb_value self) {
   MOUSE_STATUS * native_self = mruby_unbox_MOUSE_STATUS(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -138,7 +138,7 @@ mrb_Curses_MOUSESTATUS_get_y(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_MOUSESTATUS_set_y(mrb_state* mrb, mrb_value self) {
   MOUSE_STATUS * native_self = mruby_unbox_MOUSE_STATUS(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -182,7 +182,7 @@ mrb_Curses_MOUSESTATUS_get_button(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_MOUSESTATUS_set_button(mrb_state* mrb, mrb_value self) {
   MOUSE_STATUS * native_self = mruby_unbox_MOUSE_STATUS(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -227,7 +227,7 @@ mrb_Curses_MOUSESTATUS_get_changes(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_MOUSESTATUS_set_changes(mrb_state* mrb, mrb_value self) {
   MOUSE_STATUS * native_self = mruby_unbox_MOUSE_STATUS(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 

@@ -8,6 +8,7 @@ class TextInput < CUI::Window
     @cursor = 0
 
     self.on(CUI::KeyEvent) do |k|
+      @invalid = true
       if k.backspace?
         if self.cursor > 0
           new_value = pre_cursor[0...-1]
@@ -78,7 +79,7 @@ class TextInput < CUI::Window
   end
 
   def cursor=(val)
-    @invalid
+    @invalid = true
     move(0, val)
     @cursor = val
   end
@@ -89,15 +90,15 @@ class TextInput < CUI::Window
   end
 
   def render
-    @io = CUI::WindowIO.new(self)
-    # if @invalid
+    # @io = CUI::WindowIO.new(self)
+    if @invalid
       x = getx
       y = gety
-      @io.goto(0, 0)
-      @io.clear_line
-      @io.write_line(value)
-      @io.goto(y, x)
-    # end
+      io.goto(0, 0)
+      io.clear_line
+      io.write_line(value)
+      io.goto(y, x)
+    end
   end
 end
 end

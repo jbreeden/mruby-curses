@@ -26,7 +26,7 @@ mrb_Curses_MEVENT_initialize(mrb_state* mrb, mrb_value self) {
 
 mrb_value
 mrb_Curses_MEVENT_disown(mrb_state* mrb, mrb_value self) {
-  mrb_value ruby_object;
+  mrb_value ruby_object = mrb_nil_value();
   mrb_get_args(mrb, "o", &ruby_object);
 
   if (!mrb_obj_is_kind_of(mrb, ruby_object, mrb_class_ptr(self))) {
@@ -41,7 +41,7 @@ mrb_Curses_MEVENT_disown(mrb_state* mrb, mrb_value self) {
 
 mrb_value
 mrb_Curses_MEVENT_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
-  mrb_value ruby_object;
+  mrb_value ruby_object = mrb_nil_value();
   mrb_get_args(mrb, "o", &ruby_object);
 
   if (!mrb_obj_is_kind_of(mrb, ruby_object, mrb_class_ptr(self))) {
@@ -90,7 +90,7 @@ mrb_Curses_MEVENT_get_id(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_MEVENT_set_id(mrb_state* mrb, mrb_value self) {
   MEVENT * native_self = mruby_unbox_MEVENT(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -138,7 +138,7 @@ mrb_Curses_MEVENT_get_x(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_MEVENT_set_x(mrb_state* mrb, mrb_value self) {
   MEVENT * native_self = mruby_unbox_MEVENT(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -186,7 +186,7 @@ mrb_Curses_MEVENT_get_y(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_MEVENT_set_y(mrb_state* mrb, mrb_value self) {
   MEVENT * native_self = mruby_unbox_MEVENT(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -234,7 +234,7 @@ mrb_Curses_MEVENT_get_z(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_MEVENT_set_z(mrb_state* mrb, mrb_value self) {
   MEVENT * native_self = mruby_unbox_MEVENT(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -282,7 +282,7 @@ mrb_Curses_MEVENT_get_bstate(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_MEVENT_set_bstate(mrb_state* mrb, mrb_value self) {
   MEVENT * native_self = mruby_unbox_MEVENT(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 

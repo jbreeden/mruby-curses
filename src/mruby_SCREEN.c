@@ -26,7 +26,7 @@ mrb_Curses_SCREEN_initialize(mrb_state* mrb, mrb_value self) {
 
 mrb_value
 mrb_Curses_SCREEN_disown(mrb_state* mrb, mrb_value self) {
-  mrb_value ruby_object;
+  mrb_value ruby_object = mrb_nil_value();
   mrb_get_args(mrb, "o", &ruby_object);
 
   if (!mrb_obj_is_kind_of(mrb, ruby_object, mrb_class_ptr(self))) {
@@ -41,7 +41,7 @@ mrb_Curses_SCREEN_disown(mrb_state* mrb, mrb_value self) {
 
 mrb_value
 mrb_Curses_SCREEN_belongs_to_ruby(mrb_state* mrb, mrb_value self) {
-  mrb_value ruby_object;
+  mrb_value ruby_object = mrb_nil_value();
   mrb_get_args(mrb, "o", &ruby_object);
 
   if (!mrb_obj_is_kind_of(mrb, ruby_object, mrb_class_ptr(self))) {
@@ -86,7 +86,7 @@ mrb_Curses_SCREEN_get_alive(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_alive(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -130,7 +130,7 @@ mrb_Curses_SCREEN_get_autocr(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_autocr(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -174,7 +174,7 @@ mrb_Curses_SCREEN_get_cbreak(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_cbreak(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -218,7 +218,7 @@ mrb_Curses_SCREEN_get_echo(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_echo(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -262,7 +262,7 @@ mrb_Curses_SCREEN_get_raw_inp(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_raw_inp(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -306,7 +306,7 @@ mrb_Curses_SCREEN_get_raw_out(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_raw_out(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -350,7 +350,7 @@ mrb_Curses_SCREEN_get_audible(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_audible(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -394,7 +394,7 @@ mrb_Curses_SCREEN_get_mono(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_mono(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -438,7 +438,7 @@ mrb_Curses_SCREEN_get_resized(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_resized(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -482,7 +482,7 @@ mrb_Curses_SCREEN_get_orig_attr(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_orig_attr(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -530,7 +530,7 @@ mrb_Curses_SCREEN_get_orig_fore(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_orig_fore(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -578,7 +578,7 @@ mrb_Curses_SCREEN_get_orig_back(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_orig_back(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -626,7 +626,7 @@ mrb_Curses_SCREEN_get_cursrow(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_cursrow(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -674,7 +674,7 @@ mrb_Curses_SCREEN_get_curscol(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_curscol(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -722,7 +722,7 @@ mrb_Curses_SCREEN_get_visibility(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_visibility(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -770,7 +770,7 @@ mrb_Curses_SCREEN_get_orig_cursor(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_orig_cursor(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -818,7 +818,7 @@ mrb_Curses_SCREEN_get_lines(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_lines(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -866,7 +866,7 @@ mrb_Curses_SCREEN_get_cols(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_cols(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -914,7 +914,7 @@ mrb_Curses_SCREEN_get__trap_mbe(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set__trap_mbe(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -962,7 +962,7 @@ mrb_Curses_SCREEN_get__map_mbe_to_key(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set__map_mbe_to_key(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -1010,7 +1010,7 @@ mrb_Curses_SCREEN_get_mouse_wait(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_mouse_wait(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -1058,7 +1058,7 @@ mrb_Curses_SCREEN_get_slklines(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_slklines(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -1102,7 +1102,7 @@ mrb_Curses_SCREEN_get_slk_winptr(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_slk_winptr(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -1150,7 +1150,7 @@ mrb_Curses_SCREEN_get_linesrippedoff(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_linesrippedoff(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -1198,7 +1198,7 @@ mrb_Curses_SCREEN_get_linesrippedoffontop(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_linesrippedoffontop(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -1246,7 +1246,7 @@ mrb_Curses_SCREEN_get_delaytenths(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_delaytenths(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -1290,7 +1290,7 @@ mrb_Curses_SCREEN_get__preserve(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set__preserve(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -1338,7 +1338,7 @@ mrb_Curses_SCREEN_get__restore(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set__restore(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -1382,7 +1382,7 @@ mrb_Curses_SCREEN_get_save_key_modifiers(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_save_key_modifiers(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -1426,7 +1426,7 @@ mrb_Curses_SCREEN_get_return_key_modifiers(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_return_key_modifiers(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -1470,7 +1470,7 @@ mrb_Curses_SCREEN_get_key_code(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_key_code(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 
@@ -1518,7 +1518,7 @@ mrb_Curses_SCREEN_get_line_color(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_SCREEN_set_line_color(mrb_state* mrb, mrb_value self) {
   SCREEN * native_self = mruby_unbox_SCREEN(self);
-  mrb_value ruby_field;
+  mrb_value ruby_field = mrb_nil_value();
 
   mrb_get_args(mrb, "o", &ruby_field);
 

@@ -9,7 +9,7 @@ extern "C" {
 
 #define RETURN_TEMP_BUF(err, buf) \
   do { \
-    mrb_value return_value; \
+    mrb_value return_value = mrb_nil_value(); \
     if (err == ERR) { \
       return_value = mrb_nil_value(); \
     } else { \
@@ -57,7 +57,7 @@ mrb_Curses_addch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_addchnstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
 
   /* Fetch the args */
@@ -92,7 +92,7 @@ mrb_Curses_addchnstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_addchstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -125,7 +125,7 @@ mrb_Curses_addchstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_addnstr(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
   mrb_int native_arg2;
 
   /* Fetch the args */
@@ -182,7 +182,7 @@ mrb_Curses_addrawch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_addstr(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "z", &native_arg1);
@@ -242,9 +242,9 @@ mrb_Curses_assume_default_colors(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_attr_get(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  mrb_value arg2;
-  mrb_value arg3;
+  mrb_value arg1 = mrb_nil_value();
+  mrb_value arg2 = mrb_nil_value();
+  mrb_value arg3 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "ooo", &arg1, &arg2, &arg3);
@@ -284,7 +284,7 @@ mrb_Curses_attr_get(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_attr_off(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
-  mrb_value arg2;
+  mrb_value arg2 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "io", &native_arg1, &arg2);
@@ -319,7 +319,7 @@ mrb_Curses_attr_off(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_attr_on(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
-  mrb_value arg2;
+  mrb_value arg2 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "io", &native_arg1, &arg2);
@@ -356,7 +356,7 @@ mrb_value
 mrb_Curses_attr_set(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
   mrb_int native_arg2;
-  mrb_value arg3;
+  mrb_value arg3 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "iio", &native_arg1, &native_arg2, &arg3);
@@ -596,7 +596,7 @@ mrb_Curses_border(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_bottom_panel(mrb_state* mrb, mrb_value self) {
-  mrb_value pan;
+  mrb_value pan = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &pan);
@@ -633,7 +633,7 @@ mrb_Curses_bottom_panel(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_box(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
 
@@ -711,7 +711,7 @@ mrb_Curses_chgat(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
   mrb_int native_arg2;
   mrb_int native_arg3;
-  mrb_value arg4;
+  mrb_value arg4 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "iiio", &native_arg1, &native_arg2, &native_arg3, &arg4);
@@ -765,7 +765,7 @@ mrb_Curses_clear(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_clearok(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_bool native_arg2;
 
   /* Fetch the args */
@@ -845,9 +845,9 @@ mrb_Curses_clrtoeol(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_color_content(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
-  mrb_value arg2;
-  mrb_value arg3;
-  mrb_value arg4;
+  mrb_value arg2 = mrb_nil_value();
+  mrb_value arg3 = mrb_nil_value();
+  mrb_value arg4 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "iooo", &native_arg1, &arg2, &arg3, &arg4);
@@ -886,7 +886,7 @@ mrb_Curses_color_content(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_color_set(mrb_state* mrb, mrb_value self) {
-  mrb_value native_arg1;
+  mrb_value native_arg1 = mrb_nil_value();
   mrb_get_args(mrb, "i", &native_arg1);
   /* Third param is not used, only reserved */
   return mrb_fixnum_value(color_set(native_arg1, NULL));
@@ -912,8 +912,8 @@ mrb_Curses_color_set(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_copywin(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  mrb_value arg2;
+  mrb_value arg1 = mrb_nil_value();
+  mrb_value arg2 = mrb_nil_value();
   mrb_int native_arg3;
   mrb_int native_arg4;
   mrb_int native_arg5;
@@ -1067,7 +1067,7 @@ mrb_Curses_def_shell_mode(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_del_curterm(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -1102,7 +1102,7 @@ mrb_Curses_del_curterm(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_del_panel(mrb_state* mrb, mrb_value self) {
-  mrb_value pan;
+  mrb_value pan = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &pan);
@@ -1203,7 +1203,7 @@ mrb_Curses_deleteln(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_delscreen(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -1235,7 +1235,7 @@ mrb_Curses_delscreen(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_delwin(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -1274,7 +1274,7 @@ mrb_Curses_delwin(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_derwin(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
   mrb_int native_arg4;
@@ -1359,7 +1359,7 @@ mrb_Curses_draino(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_dupwin(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -1577,7 +1577,7 @@ mrb_Curses_flushinp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_getattrs(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -1612,7 +1612,7 @@ mrb_Curses_getattrs(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_getbegx(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -1647,7 +1647,7 @@ mrb_Curses_getbegx(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_getbegy(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -1682,7 +1682,7 @@ mrb_Curses_getbegy(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_getbkgd(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -1737,7 +1737,7 @@ mrb_Curses_getbmap(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_getcurx(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -1772,7 +1772,7 @@ mrb_Curses_getcurx(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_getcury(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -1807,7 +1807,7 @@ mrb_Curses_getcury(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_getmaxx(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -1842,7 +1842,7 @@ mrb_Curses_getmaxx(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_getmaxy(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -1920,7 +1920,7 @@ mrb_Curses_getnstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_getparx(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -1955,7 +1955,7 @@ mrb_Curses_getparx(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_getpary(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -2007,7 +2007,7 @@ mrb_Curses_getstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_getwin(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -2131,7 +2131,7 @@ mrb_Curses_has_key(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_hide_panel(mrb_state* mrb, mrb_value self) {
-  mrb_value pan;
+  mrb_value pan = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &pan);
@@ -2195,7 +2195,7 @@ mrb_Curses_hline(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_idcok(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_bool native_arg2;
 
   /* Fetch the args */
@@ -2229,7 +2229,7 @@ mrb_Curses_idcok(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_idlok(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_bool native_arg2;
 
   /* Fetch the args */
@@ -2266,7 +2266,7 @@ mrb_Curses_idlok(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_immedok(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_bool native_arg2;
 
   /* Fetch the args */
@@ -2320,7 +2320,7 @@ mrb_Curses_inch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_inchnstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
 
   /* Fetch the args */
@@ -2353,7 +2353,7 @@ mrb_Curses_inchnstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_inchstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -2567,7 +2567,7 @@ mrb_Curses_insertln(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_insnstr(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
   mrb_int native_arg2;
 
   /* Fetch the args */
@@ -2624,7 +2624,7 @@ mrb_Curses_insrawch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_insstr(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "z", &native_arg1);
@@ -2676,7 +2676,7 @@ mrb_Curses_instr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_intrflush(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_bool native_arg2;
 
   /* Fetch the args */
@@ -2713,7 +2713,7 @@ mrb_Curses_intrflush(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_is_linetouched(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
 
   /* Fetch the args */
@@ -2759,7 +2759,7 @@ mrb_Curses_is_termresized(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_is_wintouched(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -2831,7 +2831,7 @@ mrb_Curses_keyname(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_keypad(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_bool native_arg2;
 
   /* Fetch the args */
@@ -2888,7 +2888,7 @@ mrb_Curses_killchar(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_leaveok(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_bool native_arg2;
 
   /* Fetch the args */
@@ -2971,7 +2971,7 @@ mrb_Curses_map_button(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_meta(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_bool native_arg2;
 
   /* Fetch the args */
@@ -3087,8 +3087,8 @@ mrb_Curses_mouse_set(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mouse_trafo(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  mrb_value arg2;
+  mrb_value arg1 = mrb_nil_value();
+  mrb_value arg2 = mrb_nil_value();
   mrb_bool native_arg3;
 
   /* Fetch the args */
@@ -3147,7 +3147,7 @@ mrb_Curses_mouseinterval(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_mousemask(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
-  mrb_value arg2;
+  mrb_value arg2 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "io", &native_arg1, &arg2);
@@ -3210,7 +3210,7 @@ mrb_Curses_move(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_move_panel(mrb_state* mrb, mrb_value self) {
-  mrb_value pan;
+  mrb_value pan = mrb_nil_value();
   mrb_int native_starty;
   mrb_int native_startx;
 
@@ -3282,7 +3282,7 @@ mrb_value
 mrb_Curses_mvaddchnstr(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
   mrb_int native_arg2;
-  mrb_value arg3;
+  mrb_value arg3 = mrb_nil_value();
   mrb_int native_arg4;
 
   /* Fetch the args */
@@ -3320,7 +3320,7 @@ mrb_value
 mrb_Curses_mvaddchstr(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
   mrb_int native_arg2;
-  mrb_value arg3;
+  mrb_value arg3 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "iio", &native_arg1, &native_arg2, &arg3);
@@ -3358,7 +3358,7 @@ mrb_value
 mrb_Curses_mvaddnstr(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
   mrb_int native_arg2;
-  char * native_arg3;
+  char * native_arg3 = NULL;
   mrb_int native_arg4;
 
   /* Fetch the args */
@@ -3423,7 +3423,7 @@ mrb_value
 mrb_Curses_mvaddstr(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
   mrb_int native_arg2;
-  char * native_arg3;
+  char * native_arg3 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "iiz", &native_arg1, &native_arg2, &native_arg3);
@@ -3463,7 +3463,7 @@ mrb_Curses_mvchgat(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg3;
   mrb_int native_arg4;
   mrb_int native_arg5;
-  mrb_value arg6;
+  mrb_value arg6 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "iiiiio", &native_arg1, &native_arg2, &native_arg3, &native_arg4, &native_arg5, &arg6);
@@ -3586,7 +3586,7 @@ mrb_Curses_mvdeleteln(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvderwin(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
 
@@ -3769,7 +3769,7 @@ mrb_value
 mrb_Curses_mvinchnstr(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
   mrb_int native_arg2;
-  mrb_value arg3;
+  mrb_value arg3 = mrb_nil_value();
   mrb_int native_arg4;
 
   /* Fetch the args */
@@ -3807,7 +3807,7 @@ mrb_value
 mrb_Curses_mvinchstr(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
   mrb_int native_arg2;
-  mrb_value arg3;
+  mrb_value arg3 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "iio", &native_arg1, &native_arg2, &arg3);
@@ -3930,7 +3930,7 @@ mrb_value
 mrb_Curses_mvinsnstr(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
   mrb_int native_arg2;
-  char * native_arg3;
+  char * native_arg3 = NULL;
   mrb_int native_arg4;
 
   /* Fetch the args */
@@ -3995,7 +3995,7 @@ mrb_value
 mrb_Curses_mvinsstr(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
   mrb_int native_arg2;
-  char * native_arg3;
+  char * native_arg3 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "iiz", &native_arg1, &native_arg2, &native_arg3);
@@ -4055,17 +4055,13 @@ mrb_value
 mrb_Curses_mvprintw(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
   mrb_int native_arg2;
-  char * native_arg3;
+  char * native_arg3 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "iiz", &native_arg1, &native_arg2, &native_arg3);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
-  int result = mvprintw(native_arg1, native_arg2, native_arg3);
+  int result = mvprintw(native_arg1, native_arg2, "%s", native_arg3);
 
   /* Box the return value */
   mrb_value return_value = mrb_fixnum_value(result);
@@ -4089,7 +4085,7 @@ mrb_value
 mrb_Curses_mvscanw(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
   mrb_int native_arg2;
-  char * native_arg3;
+  char * native_arg3 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "iiz", &native_arg1, &native_arg2, &native_arg3);
@@ -4154,7 +4150,7 @@ mrb_Curses_mvvline(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwaddch(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
   mrb_int native_arg4;
@@ -4196,10 +4192,10 @@ mrb_Curses_mvwaddch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwaddchnstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
-  mrb_value arg4;
+  mrb_value arg4 = mrb_nil_value();
   mrb_int native_arg5;
 
   /* Fetch the args */
@@ -4241,10 +4237,10 @@ mrb_Curses_mvwaddchnstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwaddchstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
-  mrb_value arg4;
+  mrb_value arg4 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "oiio", &arg1, &native_arg2, &native_arg3, &arg4);
@@ -4286,10 +4282,10 @@ mrb_Curses_mvwaddchstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwaddnstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
-  char * native_arg4;
+  char * native_arg4 = NULL;
   mrb_int native_arg5;
 
   /* Fetch the args */
@@ -4328,7 +4324,7 @@ mrb_Curses_mvwaddnstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwaddrawch(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
   mrb_int native_arg4;
@@ -4369,10 +4365,10 @@ mrb_Curses_mvwaddrawch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwaddstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
-  char * native_arg4;
+  char * native_arg4 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "oiiz", &arg1, &native_arg2, &native_arg3, &native_arg4);
@@ -4413,13 +4409,13 @@ mrb_Curses_mvwaddstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwchgat(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
   mrb_int native_arg4;
   mrb_int native_arg5;
   mrb_int native_arg6;
-  mrb_value arg7;
+  mrb_value arg7 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "oiiiiio", &arg1, &native_arg2, &native_arg3, &native_arg4, &native_arg5, &native_arg6, &arg7);
@@ -4459,7 +4455,7 @@ mrb_Curses_mvwchgat(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwdelch(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
 
@@ -4498,7 +4494,7 @@ mrb_Curses_mvwdelch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwdeleteln(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
 
@@ -4537,7 +4533,7 @@ mrb_Curses_mvwdeleteln(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwgetch(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
 
@@ -4577,7 +4573,7 @@ mrb_Curses_mvwgetch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwgetnstr(mrb_state* mrb, mrb_value self) {
-  mrb_value win;
+  mrb_value win = mrb_nil_value();
   mrb_int native_y;
   mrb_int native_x;
   mrb_int native_len;
@@ -4614,7 +4610,7 @@ mrb_Curses_mvwgetnstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwgetstr(mrb_state* mrb, mrb_value self) {
-  mrb_value win;
+  mrb_value win = mrb_nil_value();
   mrb_int native_y;
   mrb_int native_x;
 
@@ -4652,7 +4648,7 @@ mrb_Curses_mvwgetstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwhline(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
   mrb_int native_arg4;
@@ -4693,7 +4689,7 @@ mrb_Curses_mvwhline(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwin(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
 
@@ -4732,7 +4728,7 @@ mrb_Curses_mvwin(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwinch(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
 
@@ -4773,10 +4769,10 @@ mrb_Curses_mvwinch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwinchnstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
-  mrb_value arg4;
+  mrb_value arg4 = mrb_nil_value();
   mrb_int native_arg5;
 
   /* Fetch the args */
@@ -4818,10 +4814,10 @@ mrb_Curses_mvwinchnstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwinchstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
-  mrb_value arg4;
+  mrb_value arg4 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "oiio", &arg1, &native_arg2, &native_arg3, &arg4);
@@ -4862,7 +4858,7 @@ mrb_Curses_mvwinchstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwinnstr(mrb_state* mrb, mrb_value self) {
-  mrb_value win;
+  mrb_value win = mrb_nil_value();
   mrb_int native_y;
   mrb_int native_x;
   mrb_int native_len;
@@ -4900,7 +4896,7 @@ mrb_Curses_mvwinnstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwinsch(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
   mrb_int native_arg4;
@@ -4940,7 +4936,7 @@ mrb_Curses_mvwinsch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwinsertln(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
 
@@ -4981,10 +4977,10 @@ mrb_Curses_mvwinsertln(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwinsnstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
-  char * native_arg4;
+  char * native_arg4 = NULL;
   mrb_int native_arg5;
 
   /* Fetch the args */
@@ -5023,7 +5019,7 @@ mrb_Curses_mvwinsnstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwinsrawch(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
   mrb_int native_arg4;
@@ -5064,10 +5060,10 @@ mrb_Curses_mvwinsrawch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwinsstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
-  char * native_arg4;
+  char * native_arg4 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "oiiz", &arg1, &native_arg2, &native_arg3, &native_arg4);
@@ -5104,7 +5100,7 @@ mrb_Curses_mvwinsstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwinstr(mrb_state* mrb, mrb_value self) {
-  mrb_value win;
+  mrb_value win = mrb_nil_value();
   mrb_int native_y;
   mrb_int native_x;
 
@@ -5141,10 +5137,10 @@ mrb_Curses_mvwinstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwprintw(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
-  char * native_arg4;
+  char * native_arg4 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "oiiz", &arg1, &native_arg2, &native_arg3, &native_arg4);
@@ -5159,7 +5155,7 @@ mrb_Curses_mvwprintw(mrb_state* mrb, mrb_value self) {
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
-  int result = mvwprintw(native_arg1, native_arg2, native_arg3, native_arg4);
+  int result = mvwprintw(native_arg1, native_arg2, native_arg3, "%s", native_arg4);
 
   /* Box the return value */
   mrb_value return_value = mrb_fixnum_value(result);
@@ -5182,10 +5178,10 @@ mrb_Curses_mvwprintw(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwscanw(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
-  char * native_arg4;
+  char * native_arg4 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "oiiz", &arg1, &native_arg2, &native_arg3, &native_arg4);
@@ -5224,7 +5220,7 @@ mrb_Curses_mvwscanw(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_mvwvline(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
   mrb_int native_arg4;
@@ -5282,7 +5278,7 @@ mrb_Curses_napms(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_nc_getmouse(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -5317,7 +5313,7 @@ mrb_Curses_nc_getmouse(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_new_panel(mrb_state* mrb, mrb_value self) {
-  mrb_value win;
+  mrb_value win = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &win);
@@ -5382,9 +5378,9 @@ mrb_Curses_newpad(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_newterm(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
-  mrb_value arg2;
-  mrb_value arg3;
+  char * native_arg1 = NULL;
+  mrb_value arg2 = mrb_nil_value();
+  mrb_value arg3 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "zoo", &native_arg1, &arg2, &arg3);
@@ -5513,7 +5509,7 @@ mrb_Curses_nocrmode(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_nodelay(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_bool native_arg2;
 
   /* Fetch the args */
@@ -5627,7 +5623,7 @@ mrb_Curses_noraw(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_notimeout(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_bool native_arg2;
 
   /* Fetch the args */
@@ -5664,8 +5660,8 @@ mrb_Curses_notimeout(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_overlay(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  mrb_value arg2;
+  mrb_value arg1 = mrb_nil_value();
+  mrb_value arg2 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "oo", &arg1, &arg2);
@@ -5707,8 +5703,8 @@ mrb_Curses_overlay(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_overwrite(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  mrb_value arg2;
+  mrb_value arg1 = mrb_nil_value();
+  mrb_value arg2 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "oo", &arg1, &arg2);
@@ -5752,8 +5748,8 @@ mrb_Curses_overwrite(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_pair_content(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
-  mrb_value arg2;
-  mrb_value arg3;
+  mrb_value arg2 = mrb_nil_value();
+  mrb_value arg3 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "ioo", &native_arg1, &arg2, &arg3);
@@ -5789,7 +5785,7 @@ mrb_Curses_pair_content(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_panel_above(mrb_state* mrb, mrb_value self) {
-  mrb_value pan;
+  mrb_value pan = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &pan);
@@ -5824,7 +5820,7 @@ mrb_Curses_panel_above(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_panel_below(mrb_state* mrb, mrb_value self) {
-  mrb_value pan;
+  mrb_value pan = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &pan);
@@ -5859,7 +5855,7 @@ mrb_Curses_panel_below(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_panel_hidden(mrb_state* mrb, mrb_value self) {
-  mrb_value pan;
+  mrb_value pan = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &pan);
@@ -5894,7 +5890,7 @@ mrb_Curses_panel_hidden(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_panel_userptr(mrb_state* mrb, mrb_value self) {
-  mrb_value pan;
+  mrb_value pan = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &pan);
@@ -5929,7 +5925,7 @@ mrb_Curses_panel_userptr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_panel_window(mrb_state* mrb, mrb_value self) {
-  mrb_value pan;
+  mrb_value pan = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &pan);
@@ -5984,7 +5980,7 @@ mrb_Curses_PDC_clearclipboard(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_PDC_debug(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "z", &native_arg1);
@@ -6011,7 +6007,7 @@ mrb_Curses_PDC_debug(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_PDC_freeclipboard(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "z", &native_arg1);
@@ -6095,8 +6091,8 @@ mrb_Curses_PDC_get_key_modifiers(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_PDC_getclipboard(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  mrb_value arg2;
+  mrb_value arg1 = mrb_nil_value();
+  mrb_value arg2 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "oo", &arg1, &arg2);
@@ -6131,7 +6127,7 @@ mrb_Curses_PDC_getclipboard(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_PDC_return_key_modifiers(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "z", &native_arg1);
@@ -6162,7 +6158,7 @@ mrb_Curses_PDC_return_key_modifiers(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_PDC_save_key_modifiers(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "z", &native_arg1);
@@ -6193,7 +6189,7 @@ mrb_Curses_PDC_save_key_modifiers(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_PDC_set_blink(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "z", &native_arg1);
@@ -6250,7 +6246,7 @@ mrb_Curses_PDC_set_line_color(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_PDC_set_title(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "z", &native_arg1);
@@ -6278,7 +6274,7 @@ mrb_Curses_PDC_set_title(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_PDC_setclipboard(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
   mrb_int native_arg2;
 
   /* Fetch the args */
@@ -6336,7 +6332,7 @@ mrb_Curses_PDC_ungetch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_pechochar(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
 
   /* Fetch the args */
@@ -6378,7 +6374,7 @@ mrb_Curses_pechochar(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_pnoutrefresh(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
   mrb_int native_arg4;
@@ -6425,7 +6421,7 @@ mrb_Curses_pnoutrefresh(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_prefresh(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
   mrb_int native_arg4;
@@ -6466,17 +6462,13 @@ mrb_Curses_prefresh(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_printw(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "z", &native_arg1);
 
-  /* Type checking */
-
-  /* Unbox parameters */
-
   /* Invocation */
-  int result = printw(native_arg1);
+  int result = printw("%s", native_arg1);
 
   /* Box the return value */
   mrb_value return_value = mrb_fixnum_value(result);
@@ -6496,7 +6488,7 @@ mrb_Curses_printw(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_putp(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "z", &native_arg1);
@@ -6527,8 +6519,8 @@ mrb_Curses_putp(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_putwin(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  mrb_value arg2;
+  mrb_value arg1 = mrb_nil_value();
+  mrb_value arg2 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "oo", &arg1, &arg2);
@@ -6629,7 +6621,7 @@ mrb_Curses_raw_output(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_redrawwin(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -6685,8 +6677,8 @@ mrb_Curses_refresh(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_replace_panel(mrb_state* mrb, mrb_value self) {
-  mrb_value pan;
-  mrb_value win;
+  mrb_value pan = mrb_nil_value();
+  mrb_value win = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "oo", &pan, &win);
@@ -6857,7 +6849,7 @@ mrb_Curses_resize_term(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_resize_window(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
 
@@ -6896,9 +6888,9 @@ mrb_Curses_resize_window(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_restartterm(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
   mrb_int native_arg2;
-  mrb_value arg3;
+  mrb_value arg3 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "zio", &native_arg1, &native_arg2, &arg3);
@@ -6935,8 +6927,8 @@ mrb_Curses_restartterm(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_ripoffline(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
-  mrb_value arg2;
-  mrb_value arg3;
+  mrb_value arg2 = mrb_nil_value();
+  mrb_value arg3 = mrb_nil_value();
   mrb_int native_arg4;
 
   /* Fetch the args */
@@ -7016,7 +7008,7 @@ mrb_Curses_savetty(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_scanw(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "z", &native_arg1);
@@ -7046,7 +7038,7 @@ mrb_Curses_scanw(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_scr_dump(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "z", &native_arg1);
@@ -7076,7 +7068,7 @@ mrb_Curses_scr_dump(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_scr_init(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "z", &native_arg1);
@@ -7106,7 +7098,7 @@ mrb_Curses_scr_init(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_scr_restore(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "z", &native_arg1);
@@ -7136,7 +7128,7 @@ mrb_Curses_scr_restore(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_scr_set(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "z", &native_arg1);
@@ -7192,7 +7184,7 @@ mrb_Curses_scrl(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_scroll(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -7228,7 +7220,7 @@ mrb_Curses_scroll(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_scrollok(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_bool native_arg2;
 
   /* Fetch the args */
@@ -7264,7 +7256,7 @@ mrb_Curses_scrollok(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_set_curterm(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -7300,8 +7292,8 @@ mrb_Curses_set_curterm(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_set_panel_userptr(mrb_state* mrb, mrb_value self) {
-  mrb_value pan;
-  mrb_value uptr;
+  mrb_value pan = mrb_nil_value();
+  mrb_value uptr = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "oo", &pan, &uptr);
@@ -7339,7 +7331,7 @@ mrb_Curses_set_panel_userptr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_set_term(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -7430,7 +7422,7 @@ mrb_Curses_setsyx(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_setterm(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "z", &native_arg1);
@@ -7462,9 +7454,9 @@ mrb_Curses_setterm(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_setupterm(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
   mrb_int native_arg2;
-  mrb_value arg3;
+  mrb_value arg3 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "zio", &native_arg1, &native_arg2, &arg3);
@@ -7497,7 +7489,7 @@ mrb_Curses_setupterm(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_show_panel(mrb_state* mrb, mrb_value self) {
-  mrb_value pan;
+  mrb_value pan = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &pan);
@@ -7534,7 +7526,7 @@ mrb_Curses_show_panel(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_slk_attr_off(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
-  mrb_value arg2;
+  mrb_value arg2 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "io", &native_arg1, &arg2);
@@ -7569,7 +7561,7 @@ mrb_Curses_slk_attr_off(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_slk_attr_on(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
-  mrb_value arg2;
+  mrb_value arg2 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "io", &native_arg1, &arg2);
@@ -7606,7 +7598,7 @@ mrb_value
 mrb_Curses_slk_attr_set(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
   mrb_int native_arg2;
-  mrb_value arg3;
+  mrb_value arg3 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "iio", &native_arg1, &native_arg2, &arg3);
@@ -7878,7 +7870,7 @@ mrb_Curses_slk_restore(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_slk_set(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
-  char * native_arg2;
+  char * native_arg2 = NULL;
   mrb_int native_arg3;
 
   /* Fetch the args */
@@ -7993,7 +7985,7 @@ mrb_Curses_start_color(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_subpad(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
   mrb_int native_arg4;
@@ -8036,7 +8028,7 @@ mrb_Curses_subpad(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_subwin(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
   mrb_int native_arg4;
@@ -8076,7 +8068,7 @@ mrb_Curses_subwin(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_syncok(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_bool native_arg2;
 
   /* Fetch the args */
@@ -8173,8 +8165,8 @@ mrb_Curses_termname(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_tgetent(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
-  char * native_arg2;
+  char * native_arg1 = NULL;
+  char * native_arg2 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "zz", &native_arg1, &native_arg2);
@@ -8217,7 +8209,7 @@ mrb_Curses_tgetent(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_tgetflag(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "z", &native_arg1);
@@ -8247,7 +8239,7 @@ mrb_Curses_tgetflag(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_tgetnum(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "z", &native_arg1);
@@ -8278,8 +8270,8 @@ mrb_Curses_tgetnum(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_tgetstr(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
-  mrb_value arg2;
+  char * native_arg1 = NULL;
+  mrb_value arg2 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "zo", &native_arg1, &arg2);
@@ -8314,7 +8306,7 @@ mrb_Curses_tgetstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_tgoto(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
   mrb_int native_arg2;
   mrb_int native_arg3;
 
@@ -8346,7 +8338,7 @@ mrb_Curses_tgoto(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_tigetflag(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "z", &native_arg1);
@@ -8376,7 +8368,7 @@ mrb_Curses_tigetflag(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_tigetnum(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "z", &native_arg1);
@@ -8459,7 +8451,7 @@ mrb_Curses_timeout(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_top_panel(mrb_state* mrb, mrb_value self) {
-  mrb_value pan;
+  mrb_value pan = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &pan);
@@ -8496,7 +8488,7 @@ mrb_Curses_top_panel(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_touchline(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
 
@@ -8533,7 +8525,7 @@ mrb_Curses_touchline(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_touchwin(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -8577,7 +8569,7 @@ mrb_Curses_touchwin(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_tparm(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
   mrb_int native_arg2;
   mrb_int native_arg3;
   mrb_int native_arg4;
@@ -8619,9 +8611,9 @@ mrb_Curses_tparm(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_tputs(mrb_state* mrb, mrb_value self) {
-  char * native_arg1;
+  char * native_arg1 = NULL;
   mrb_int native_arg2;
-  mrb_value arg3;
+  mrb_value arg3 = mrb_nil_value();
   mrb_int native_arg4;
 
   /* Fetch the args */
@@ -8741,7 +8733,7 @@ mrb_Curses_unctrl(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_ungetmouse(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -8776,7 +8768,7 @@ mrb_Curses_ungetmouse(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_untouchwin(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -8875,7 +8867,7 @@ mrb_value
 mrb_Curses_vid_attr(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
   mrb_int native_arg2;
-  mrb_value arg3;
+  mrb_value arg3 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "iio", &native_arg1, &native_arg2, &arg3);
@@ -8914,8 +8906,8 @@ mrb_value
 mrb_Curses_vid_puts(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
   mrb_int native_arg2;
-  mrb_value arg3;
-  mrb_value arg4;
+  mrb_value arg3 = mrb_nil_value();
+  mrb_value arg4 = mrb_nil_value();
   mrb_int native_arg5;
 
   /* Fetch the args */
@@ -8981,7 +8973,7 @@ mrb_Curses_vidattr(mrb_state* mrb, mrb_value self) {
 mrb_value
 mrb_Curses_vidputs(mrb_state* mrb, mrb_value self) {
   mrb_int native_arg1;
-  mrb_value arg2;
+  mrb_value arg2 = mrb_nil_value();
   mrb_int native_arg3;
 
   /* Fetch the args */
@@ -9045,8 +9037,8 @@ mrb_Curses_vline(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_vw_printw(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  char * native_arg2;
+  mrb_value arg1 = mrb_nil_value();
+  char * native_arg2 = NULL;
   mrb_int native_va_list;
 
   /* Fetch the args */
@@ -9084,8 +9076,8 @@ mrb_Curses_vw_printw(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_vw_scanw(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  char * native_arg2;
+  mrb_value arg1 = mrb_nil_value();
+  char * native_arg2 = NULL;
   mrb_int native_va_list;
 
   /* Fetch the args */
@@ -9123,8 +9115,8 @@ mrb_Curses_vw_scanw(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_vwprintw(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  char * native_arg2;
+  mrb_value arg1 = mrb_nil_value();
+  char * native_arg2 = NULL;
   mrb_int native_va_list;
 
   /* Fetch the args */
@@ -9162,8 +9154,8 @@ mrb_Curses_vwprintw(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_vwscanw(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  char * native_arg2;
+  mrb_value arg1 = mrb_nil_value();
+  char * native_arg2 = NULL;
   mrb_int native_va_list;
 
   /* Fetch the args */
@@ -9200,7 +9192,7 @@ mrb_Curses_vwscanw(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_waddch(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
 
   /* Fetch the args */
@@ -9238,8 +9230,8 @@ mrb_Curses_waddch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_waddchnstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  mrb_value arg2;
+  mrb_value arg1 = mrb_nil_value();
+  mrb_value arg2 = mrb_nil_value();
   mrb_int native_arg3;
 
   /* Fetch the args */
@@ -9279,8 +9271,8 @@ mrb_Curses_waddchnstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_waddchstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  mrb_value arg2;
+  mrb_value arg1 = mrb_nil_value();
+  mrb_value arg2 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "oo", &arg1, &arg2);
@@ -9320,8 +9312,8 @@ mrb_Curses_waddchstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_waddnstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  char * native_arg2;
+  mrb_value arg1 = mrb_nil_value();
+  char * native_arg2 = NULL;
   mrb_int native_arg3;
 
   /* Fetch the args */
@@ -9358,7 +9350,7 @@ mrb_Curses_waddnstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_waddrawch(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
 
   /* Fetch the args */
@@ -9395,8 +9387,8 @@ mrb_Curses_waddrawch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_waddstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  char * native_arg2;
+  mrb_value arg1 = mrb_nil_value();
+  char * native_arg2 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "oz", &arg1, &native_arg2);
@@ -9434,10 +9426,10 @@ mrb_Curses_waddstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wattr_get(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  mrb_value arg2;
-  mrb_value arg3;
-  mrb_value arg4;
+  mrb_value arg1 = mrb_nil_value();
+  mrb_value arg2 = mrb_nil_value();
+  mrb_value arg3 = mrb_nil_value();
+  mrb_value arg4 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "oooo", &arg1, &arg2, &arg3, &arg4);
@@ -9483,9 +9475,9 @@ mrb_Curses_wattr_get(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wattr_off(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
-  mrb_value arg3;
+  mrb_value arg3 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "oio", &arg1, &native_arg2, &arg3);
@@ -9525,9 +9517,9 @@ mrb_Curses_wattr_off(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wattr_on(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
-  mrb_value arg3;
+  mrb_value arg3 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "oio", &arg1, &native_arg2, &arg3);
@@ -9568,10 +9560,10 @@ mrb_Curses_wattr_on(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wattr_set(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
-  mrb_value arg4;
+  mrb_value arg4 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "oiio", &arg1, &native_arg2, &native_arg3, &arg4);
@@ -9610,7 +9602,7 @@ mrb_Curses_wattr_set(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wattroff(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
 
   /* Fetch the args */
@@ -9647,7 +9639,7 @@ mrb_Curses_wattroff(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wattron(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
 
   /* Fetch the args */
@@ -9684,7 +9676,7 @@ mrb_Curses_wattron(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wattrset(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
 
   /* Fetch the args */
@@ -9721,7 +9713,7 @@ mrb_Curses_wattrset(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wbkgd(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
 
   /* Fetch the args */
@@ -9758,7 +9750,7 @@ mrb_Curses_wbkgd(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wbkgdset(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
 
   /* Fetch the args */
@@ -9799,7 +9791,7 @@ mrb_Curses_wbkgdset(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wborder(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
   mrb_int native_arg4;
@@ -9846,11 +9838,11 @@ mrb_Curses_wborder(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wchgat(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
   mrb_int native_arg4;
-  mrb_value arg5;
+  mrb_value arg5 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "oiiio", &arg1, &native_arg2, &native_arg3, &native_arg4, &arg5);
@@ -9888,7 +9880,7 @@ mrb_Curses_wchgat(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wclear(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -9923,7 +9915,7 @@ mrb_Curses_wclear(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wclrtobot(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -9958,7 +9950,7 @@ mrb_Curses_wclrtobot(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wclrtoeol(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -9995,7 +9987,7 @@ mrb_Curses_wclrtoeol(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wcolor_set(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
 
   /* Fetch the args */
@@ -10027,7 +10019,7 @@ mrb_Curses_wcolor_set(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wcursyncup(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -10059,7 +10051,7 @@ mrb_Curses_wcursyncup(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wdelch(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -10094,7 +10086,7 @@ mrb_Curses_wdelch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wdeleteln(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -10130,7 +10122,7 @@ mrb_Curses_wdeleteln(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wechochar(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
 
   /* Fetch the args */
@@ -10168,7 +10160,7 @@ mrb_Curses_wechochar(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wenclose(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
 
@@ -10200,7 +10192,7 @@ mrb_Curses_wenclose(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_werase(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -10235,7 +10227,7 @@ mrb_Curses_werase(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wgetch(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -10272,7 +10264,7 @@ mrb_Curses_wgetch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wgetnstr(mrb_state* mrb, mrb_value self) {
-  mrb_value win;
+  mrb_value win = mrb_nil_value();
   mrb_int native_len;
 
   /* Fetch the args */
@@ -10306,7 +10298,7 @@ mrb_Curses_wgetnstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wgetstr(mrb_state* mrb, mrb_value self) {
-  mrb_value win;
+  mrb_value win = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &win);
@@ -10341,7 +10333,7 @@ mrb_Curses_wgetstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_whline(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
 
@@ -10378,7 +10370,7 @@ mrb_Curses_whline(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_winch(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -10415,8 +10407,8 @@ mrb_Curses_winch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_winchnstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  mrb_value arg2;
+  mrb_value arg1 = mrb_nil_value();
+  mrb_value arg2 = mrb_nil_value();
   mrb_int native_arg3;
 
   /* Fetch the args */
@@ -10456,8 +10448,8 @@ mrb_Curses_winchnstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_winchstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  mrb_value arg2;
+  mrb_value arg1 = mrb_nil_value();
+  mrb_value arg2 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "oo", &arg1, &arg2);
@@ -10496,7 +10488,7 @@ mrb_Curses_winchstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_winnstr(mrb_state* mrb, mrb_value self) {
-  mrb_value win;
+  mrb_value win = mrb_nil_value();
   mrb_int native_len;
 
   /* Fetch the args */
@@ -10530,7 +10522,7 @@ mrb_Curses_winnstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_winsch(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
 
   /* Fetch the args */
@@ -10567,7 +10559,7 @@ mrb_Curses_winsch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_winsdelln(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
 
   /* Fetch the args */
@@ -10603,7 +10595,7 @@ mrb_Curses_winsdelln(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_winsertln(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -10640,8 +10632,8 @@ mrb_Curses_winsertln(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_winsnstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  char * native_arg2;
+  mrb_value arg1 = mrb_nil_value();
+  char * native_arg2 = NULL;
   mrb_int native_arg3;
 
   /* Fetch the args */
@@ -10678,7 +10670,7 @@ mrb_Curses_winsnstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_winsrawch(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
 
   /* Fetch the args */
@@ -10715,8 +10707,8 @@ mrb_Curses_winsrawch(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_winsstr(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  char * native_arg2;
+  mrb_value arg1 = mrb_nil_value();
+  char * native_arg2 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "oz", &arg1, &native_arg2);
@@ -10751,7 +10743,7 @@ mrb_Curses_winsstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_winstr(mrb_state* mrb, mrb_value self) {
-  mrb_value win;
+  mrb_value win = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &win);
@@ -10785,9 +10777,9 @@ mrb_Curses_winstr(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wmouse_position(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  mrb_value arg2;
-  mrb_value arg3;
+  mrb_value arg1 = mrb_nil_value();
+  mrb_value arg2 = mrb_nil_value();
+  mrb_value arg3 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "ooo", &arg1, &arg2, &arg3);
@@ -10828,9 +10820,9 @@ mrb_Curses_wmouse_position(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wmouse_trafo(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  mrb_value arg2;
-  mrb_value arg3;
+  mrb_value arg1 = mrb_nil_value();
+  mrb_value arg2 = mrb_nil_value();
+  mrb_value arg3 = mrb_nil_value();
   mrb_bool native_arg4;
 
   /* Fetch the args */
@@ -10869,7 +10861,7 @@ mrb_Curses_wmouse_trafo(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wmove(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
 
@@ -10906,7 +10898,7 @@ mrb_Curses_wmove(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wnoutrefresh(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -10962,8 +10954,8 @@ mrb_Curses_wordchar(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wprintw(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  char * native_arg2;
+  mrb_value arg1 = mrb_nil_value();
+  char * native_arg2 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "oz", &arg1, &native_arg2);
@@ -10978,7 +10970,7 @@ mrb_Curses_wprintw(mrb_state* mrb, mrb_value self) {
   WINDOW * native_arg1 = (mrb_nil_p(arg1) ? NULL : mruby_unbox__win(arg1));
 
   /* Invocation */
-  int result = wprintw(native_arg1, native_arg2);
+  int result = wprintw(native_arg1, "%s", native_arg2);
 
   /* Box the return value */
   mrb_value return_value = mrb_fixnum_value(result);
@@ -11000,7 +10992,7 @@ mrb_Curses_wprintw(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wredrawln(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
 
@@ -11037,7 +11029,7 @@ mrb_Curses_wredrawln(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wrefresh(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -11074,7 +11066,7 @@ mrb_Curses_wrefresh(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wresize(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
 
@@ -11112,8 +11104,8 @@ mrb_Curses_wresize(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wscanw(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
-  char * native_arg2;
+  mrb_value arg1 = mrb_nil_value();
+  char * native_arg2 = NULL;
 
   /* Fetch the args */
   mrb_get_args(mrb, "oz", &arg1, &native_arg2);
@@ -11149,7 +11141,7 @@ mrb_Curses_wscanw(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wscrl(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
 
   /* Fetch the args */
@@ -11187,7 +11179,7 @@ mrb_Curses_wscrl(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wsetscrreg(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
 
@@ -11224,7 +11216,7 @@ mrb_Curses_wsetscrreg(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wstandend(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -11259,7 +11251,7 @@ mrb_Curses_wstandend(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wstandout(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -11294,7 +11286,7 @@ mrb_Curses_wstandout(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wsyncdown(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -11326,7 +11318,7 @@ mrb_Curses_wsyncdown(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wsyncup(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
 
   /* Fetch the args */
   mrb_get_args(mrb, "o", &arg1);
@@ -11359,7 +11351,7 @@ mrb_Curses_wsyncup(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wtimeout(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
 
   /* Fetch the args */
@@ -11395,7 +11387,7 @@ mrb_Curses_wtimeout(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wtouchln(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
   mrb_int native_arg4;
@@ -11435,7 +11427,7 @@ mrb_Curses_wtouchln(mrb_state* mrb, mrb_value self) {
  */
 mrb_value
 mrb_Curses_wvline(mrb_state* mrb, mrb_value self) {
-  mrb_value arg1;
+  mrb_value arg1 = mrb_nil_value();
   mrb_int native_arg2;
   mrb_int native_arg3;
 

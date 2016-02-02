@@ -10,11 +10,11 @@ class WindowIO
     end
   end
 
-  # The WindowDelegates work on the win attr of self.
-  # During resize events, windows may be replaced, so we
-  # must always delegate to the win attr of the Window
-  # we're wrapping to get the current curses handle.
   def win
+    # The WindowDelegates work on the win attr of self.
+    # During resize events, windows may be replaced, so we
+    # must always delegate to the win attr of the Window
+    # we're wrapping to get the current curses handle.
     @window.win
   end
 
@@ -80,7 +80,8 @@ class WindowIO
     if cols_right > 1 && str
       str = str[0...(str.index("\n") || str.length)]
       visible_range = (0...cols_right)
-      printw(str[visible_range])
+      txt = str[visible_range]
+      printw(txt) if txt.kind_of?(String) && txt.length > 0
     end
   end
 
@@ -96,7 +97,8 @@ class WindowIO
         visible_range = (0...str.length)
       end
       go_left(visible_range.end - 1)
-      printw(str[visible_range])
+      txt = str[visible_range]
+      printw(txt) if txt.kind_of?(String) && txt.length > 0
     end
   end
 
