@@ -1,6 +1,6 @@
 module CUI
   def self.init
-    ENV['ESCDELAY'] ||= '10'
+    ENV['ESCDELAY'] ||= '10' if Object.const_defined?(:ENV)
     Curses.initscr
     Curses.raw # Don't generate signals, let the app handle all key presses.
     Curses.noecho

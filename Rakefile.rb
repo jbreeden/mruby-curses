@@ -1,0 +1,1 @@
+require 'mruby/rake/tasks'
