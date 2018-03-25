@@ -23,6 +23,11 @@ class WindowIO
     hline(0, width)
   end
 
+  def vrule
+    goto_line(0)
+    vline(0, height)
+  end
+
   def last_line
     maxy - 1
   end
