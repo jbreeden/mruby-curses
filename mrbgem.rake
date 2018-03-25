@@ -5,6 +5,11 @@ MRuby::Gem::Specification.new('mruby-curses') do |spec|
 
   gem_dir = File.expand_path(File.dirname(__FILE__))
 
+  if spec.respond_to? :search_package
+    search_package 'ncurses'
+    search_package 'panel'
+  end
+
   spec.rbfiles.clear
   spec.rbfiles.push "#{gem_dir}/mrblib/curses.rb"
   spec.rbfiles.push "#{gem_dir}/mrblib/cui/cui.rb"
